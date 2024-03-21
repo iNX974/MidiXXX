@@ -1,0 +1,173 @@
+
+.bg-rainbow-violet {
+  background: linear-gradient(135deg, #c946ef 0%, #6222b1 100%);
+}
+
+.bg-rainbow-indigo {
+  background: linear-gradient(135deg, #6610f2 0%, #170356 100%);
+}
+
+.bg-rainbow-blue {
+  background: linear-gradient(135deg, #00bfff 0%, #043e77 100%);
+}
+
+.bg-rainbow-turquoise {
+  background: linear-gradient(135deg, #00e3e3 0%, #014e4e 100%);
+}
+
+.bg-rainbow-lightgreen {
+  background: linear-gradient(135deg, #40ff00 0%, #003800 100%);
+}
+
+.bg-rainbow-green {
+  background: linear-gradient(135deg, #00ff00 0%, #014116 100%);
+}
+
+.bg-rainbow-lightyellow {
+  background: linear-gradient(135deg, #f4e000 0%, #535301 100%);
+}
+
+.bg-rainbow-yellow {
+  background: linear-gradient(135deg, #ffff00 0%, #3f3f01 125%);
+}
+
+.bg-rainbow-lightorange {
+  background: linear-gradient(135deg, #ffa040 25%, #421b01 125%);
+}
+
+.bg-rainbow-orange {
+  background: linear-gradient(135deg, #ff8000 0%, #ff0000 125%);
+}
+
+.bg-rainbow-lightred {
+  background: linear-gradient(135deg, #ff4d4d 0%, #440101 100%);
+}
+
+.bg-rainbow-red {
+  background: linear-gradient(135deg, #ff0000 0%, #4d0000 100%);
+}
+.bg-rainbow-white {
+  background: linear-gradient(135deg, #fff 0%, #dedede 100%);
+  /*color:#000000;*/
+}
+.bg-rainbow-lightpink {
+  background: linear-gradient(135deg, #ff66b3 0%, #460023 100%);
+}
+
+.bg-rainbow-pink {
+  background: linear-gradient(135deg, #b400cc 25%, #68034f 125%);
+}
+
+.bg-rainbow-brown {
+  background: linear-gradient(135deg, #861919 0%, #1b0000 125%);
+}
+
+.bg-rainbow-black {
+  background: linear-gradient(135deg, #000000 0%, #cacaca 100%);
+}
+
+.bg-option-violet {
+  background-color: #c946ef;
+  color: #c946ef;
+}
+
+.bg-option-indigo {
+  background-color: #6610f2;
+  color: #6610f2;
+}
+
+.bg-option-blue {
+  background-color: #00bfff;
+  color: #00bfff;
+}
+
+.bg-option-turquoise {
+  background-color: #00e3e3;
+  color: #00e3e3;
+}
+
+.bg-option-lightgreen {
+  background-color: #40ff00;
+  color: #40ff00;
+}
+
+.bg-option-green {
+  background-color: #00ff00;
+  color: #00ff00;
+}
+
+.bg-option-lightyellow {
+  background-color: #f4e000;
+  color: #f4e000;
+}
+
+.bg-option-yellow {
+  background-color: #ffff00;
+  color: #ffff00;
+}
+
+.bg-option-lightorange {
+  background-color: #ffa040;
+  color: #ffa040;
+}
+
+.bg-option-orange {
+  background-color: #ff8000;
+  color: #ff8000;
+}
+
+.bg-option-lightred {
+  background-color: #ff4d4d;
+  color: #ff4d4d;
+}
+
+.bg-option-red {
+  background-color: #ff0000;
+  color: #ff0000;
+}
+
+.bg-option-lightpink {
+  background-color: #ff66b3;
+  color: #ff66b3;
+}
+
+.bg-option-pink {
+  background-color: #b400cc;
+  color: #b400cc;
+}
+
+.bg-option-brown {
+  background-color: #861919;
+  color: #861919;
+}
+
+.bg-option-black {
+  background-color: #000000;
+  color: #000000;
+}
+
+.bg-rainbow-white > .p-button-active
+{
+  color:#000;
+}
+
+/*
+
+violet
+indigo
+blue
+turquoise
+lightgreen
+green
+lightyellow
+yellow
+lightorange
+orange
+lightred
+red
+lightpink
+pink
+brown
+black
+
+*/

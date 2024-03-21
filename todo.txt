@@ -1,0 +1,7 @@
+Bug 
+    send feedback on exp 1 on volume rabae/gojira
+    Rec Macro déclenche le resync au changement de page
+
+Feature :
+    Replicate button
+    Recent Active button

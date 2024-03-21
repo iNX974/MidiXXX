@@ -1,0 +1,807 @@
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="YCA 974" />
+	<meta name="generator" content="YCA 0.0.1" />
+	<title>Midi XXX</title>
+	<script src="./scripts/webmidi.iife.js?9"></script>
+	<script src="./scripts/class.js?9"></script>
+	<script src="./scripts/midi.js?9"></script>
+	<script src="./scripts/tools.js?9"></script>
+	<script src="./scripts/ui.js?9"></script>
+	<script src="./scripts/db.js?9"></script>
+	<script src="./scripts/validator.js?9"></script>	
+	<script src="./scripts/lfo2.js?9"></script>
+	<script src="./scripts/lightconfig.js?9"></script>		
+	<script src="./scripts/mainLight.js?9"></script>		
+	<script src="./scripts/main.js?9"></script>		
+	<link href="./css/colors.css?9" rel="stylesheet" />
+	<link href="./css/icon.css?9" rel="stylesheet" />
+	<link href="./css/main.css?9" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="level-battery">
+
+	</div>
+	<div id="div-main-page">
+		<div id="div-main-page-center" class="div-main-page-element div-main-page-element-ui">
+			<div id="div-ligne-1" class="ligne"></div>
+			<div class="bar" id="bar">
+				<div id="page-previous" onclick="PreviousPage();">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+						<path
+							d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
+					</svg>
+				</div>
+				<div id="div-page-title">
+					<h2 id="page-title">Page</h2>
+				</div>
+				<div id="macro-recording">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-record-btn-fill" viewBox="0 0 16 16">
+						<path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+					  </svg>
+				</div>
+				<div id="edit-page" onclick="OpenEditPage(GetCurrentPage().id);">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-pencil-fill" viewBox="0 0 16 16">
+						<path
+							d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+					</svg>
+				</div>
+				<div id="page-next" onclick="NextPage();">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+						<path
+							d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+					</svg>
+				</div>
+				<div onclick="OpenLogsPage();" style="position: relative;">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+						<path
+							d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z" />
+					</svg>
+					<div id="logs-count" style="display: none;"></div>
+				</div>
+				<div id="edit-buttons" onclick="ClickEditButtons();">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-pencil-square" viewBox="0 0 16 16">
+						<path
+							d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+						<path fill-rule="evenodd"
+							d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+					</svg>
+				</div>
+				<div id="button-settings" onclick="OpenSettingsPage();">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-gear-fill" viewBox="0 0 16 16">
+						<path
+							d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+					</svg>
+				</div>
+			</div>
+			<div id="div-ligne-2" class="ligne">
+			</div>
+		</div>
+	</div>
+	<div id="div-logs-page">		
+		<div class="close-settings-page" onclick="CloseLogsPage();">
+			<svg xmlns="http://www.w3.org/2000/svg" width="50%" height="10%" fill="currentColor"
+				class="bi bi-x-square-fill" viewBox="0 0 16 16">
+				<path
+					d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+			</svg>
+		</div>
+		<h1>Logs</h1>
+		<br />
+		<input type="checkbox" id="checkbox-logs" class="radio-element-custom">
+			<label for="checkbox-logs" class="radio-element-custom">Active Logs</label>
+			<br /><br />
+		<hr />
+		<br/>
+		<div id="logs">
+		
+		</div>
+	</div>
+	<div id="div-settings-page">		
+		<div class="close-settings-page" onclick="CloseSettingsPage();">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+				class="bi bi-x-square-fill" viewBox="0 0 16 16">
+				<path
+					d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+			</svg>
+		</div>
+		<h1>Settings 17/04/2023 18:52</h1>
+		<hr />
+		<button onclick="StopAllNote()">Panic Button All note off</button>
+		<hr/>
+		<div>
+			<h2>Export / Import</h2>
+			<button onclick="SaveData()">save</button>
+		</div>
+		<hr />
+		<div>
+			<h2>Misc</h2>
+			<div>
+				<div class="form">
+					<input type="text" class="txt-double-press-time" id="txt-double-press-time" name="text" autocomplete="off" required />
+					<label class="label-name">
+						<span class="content-name">
+							Double Press Time
+						</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div>
+			<h2>Main Midi Device</h2>
+			<div class="div-inline">
+				<label class="select-container">
+					<select id="select-midi-inputs" class="select-select"></select>
+					<span class="select-label">Midi Input</span>					
+				</label>
+				<button onclick="CopyMidiDeviceId(this);">Copy ID</button>
+			</div>
+			<div  class="div-inline">
+				<label class="select-container">
+					<select id="select-midi-outputs" class="select-select"></select>
+					<span class="select-label">Midi Output</span>
+					<button onclick="CopyMidiDeviceId(this);">Copy ID</button>
+			</label>
+			</div>
+		</div>
+		<div>
+			<h2>My Devices</h2>
+			<ul id="ul-my-devices"></ul>
+			<div>
+				<div onclick="AddNewMyDevice();">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+						<path
+							d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+					</svg>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div>
+			<h2>Expressions</h2>
+			<ul id="ul-global-expression"></ul>
+			<div onclick="AddNewExpression();">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+					 viewBox="0 0 16 16" class="bi bi-plus-circle-fill">
+					<path
+						d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+				</svg>
+			</div>
+		</div>
+		<hr />
+		<div>
+			<h2>Profile</h2>
+			<ul id="ul-profiles"></ul>
+			<div>
+				<div >
+					<div class="form">
+						<input type="text" class="txt-new-profile" id="txt-new-profile" name="text" autocomplete="off" required />
+						<label class="label-name">
+							<span class="content-name">
+								New Profile
+							</span>
+						</label>
+					</div>
+					<svg xmlns="http://www.w3.org/2000/svg"  onclick="AddNewProfile();" fill="currentColor"
+						class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+						<path
+							d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+					</svg>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<h2>Pages</h2>
+		<ul id="ul-list-pages"></ul>
+		<div>
+			<div onclick="AddNewPage();">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+					class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+					<path
+						d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+				</svg>
+			</div>
+		</div>
+		<hr />
+		<h2>Group</h2>
+		<ul id="ul-list-group"></ul>
+		<div>
+			<div >
+				<div class="form">
+					<input type="text" class="txt-new-group" id="txt-new-group" name="text" autocomplete="off" required />
+					<label class="label-name">
+						<span class="content-name">
+							New Group
+						</span>
+					</label>
+				</div>
+				<svg xmlns="http://www.w3.org/2000/svg"  onclick="AddNewGroup();" fill="currentColor"
+					class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+					<path
+						d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+				</svg>
+			</div>
+		</div>
+		<div class="div-button-page-action">
+			<button class="button-cancel" onclick="OpenPage($('div-main-page'));">Cancel</button>
+			<button class="button-save" onclick="SaveSettings();">Save</button>
+		</div>
+	</div>
+	<div id="div-edit-button-page">			
+		<div class="close-edit-button-page" onclick="CloseEditButtonPage();">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+				class="bi bi-x-square-fill" viewBox="0 0 16 16">
+				<path
+					d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+			</svg>
+		</div>	
+		<h1>Edit button</h1>
+		<hr />		
+		<div class="div-inline">
+			<div class="form">
+				<input type="text" id="txt-button-name" name="text" autocomplete="off" required />
+				<label for="text" class="label-name">
+					<span class="content-name">
+						Name
+					</span>
+				</label>
+			</div>
+		</div>
+		<br />
+		<div class="div-inline">
+			<label class="select-container">
+				<select id="select-item-type" class="select-select">
+					<option>Momentary</option>
+					<option>Preset</option>
+				</select>
+				<span class="select-label">Type</span>
+			</label>
+		</div>
+		<div class="div-inline">
+			<label class="select-container">
+				<select id="select-edit-button-group" class="select-select"></select>
+				<span class="select-label">Group</span>
+			</label>
+		</div><br/>
+		Button Color<br />
+		<div id="div-color-picker" class="colors"></div>
+		<hr />
+		<div id="div-edit-button-midi-actions">
+			<h2>Actions</h2>
+			<ul id="ul-edit-button-midi-actions" class="ul-button-midi-actions"></ul>
+			<div>
+				<div onclick="AddActionClick('ul-edit-button-midi-actions');">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+						<path
+							d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+					</svg>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div >
+			<h2>Global Triggers</h2>
+			<ul id="ul-edit-button-global-trigger"></ul>
+			<div>
+				<div onclick="AddGlobalTrigger();">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+						<path
+							d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+					</svg>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div >
+			<h2>Custom Triggers</h2>
+			<ul id="ul-edit-button-custom-trigger"></ul>
+			<div>
+				<div onclick="AddCustomTrigger();">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+						<path
+							d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+					</svg>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="div-button-page-action">
+			<button class="button-cancel" onclick="OpenPage($('div-main-page'));">Cancel</button>
+			<button class="button-save" onclick="SaveButton();">Save</button>
+		</div>		
+	</div>
+	<div id="div-edit-page">		
+		<div class="close-edit-button-page" onclick="CloseEditPage();">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+				class="bi bi-x-square-fill" viewBox="0 0 16 16">
+				<path
+					d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+			</svg>
+		</div>
+		<h1>Edit Page</h1>
+		<hr />
+		<div class="div-inline">
+			<div class="form">
+				<input type="text" id="txt-page-name" name="text" autocomplete="off" required />
+				<label for="text" class="label-name">
+					<span class="content-name">
+						Page Name
+					</span>
+				</label>
+			</div>
+		</div>
+		<br/>
+		<div class="div-inline">
+			<label class="select-container">
+				<select id="select-page-visible" class="select-page-visible select-select">
+					<option>true</option>
+					<option>false</option>
+				</select>
+				<span class="select-label">Visible</span>
+			</label>
+		</div>
+		
+		<div class="div-inline">
+			<label class="select-container">
+				<select id="select-nb-buttons" class="select-select"></select>
+				<span class="select-label">Nb buttons</span>
+			</label>
+		</div>
+		<div class="div-inline">
+			<label class="select-container">
+				<select id="select-nb-buttons-by-line" class="select-select"></select>
+				<span class="select-label">Btn/Line</span>
+			</label>
+		</div>		
+		<br/>
+		<hr />
+		<div id="div-edit-page-midi-actions">
+			<h2>Actions</h2>
+			<ul id="ul-edit-page-midi-actions" class="ul-button-midi-actions">
+
+			</ul>
+			<div>
+				<div onclick="AddActionClick('ul-edit-page-midi-actions', true);">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+						<path
+							d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+					</svg>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div >
+			<h2>Trigger</h2>
+			<ul id="ul-edit-page-trigger"></ul>
+			<div>
+				<div onclick="AddPageTrigger();">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+						<path
+							d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+					</svg>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div>
+			<h2>Expression to display</h2>
+			<div>
+				<ul id="ul-edit-page-exp-to-display"></ul>
+			</div>
+		</div>
+		<div class="div-button-page-action">
+			<button class="button-cancel" onclick="OpenPage($('div-main-page'));">Cancel</button>
+			<button class="button-save" onclick="SavePage();">Save</button>
+		</div>
+	</div>
+	<div id="template-action" style="display:none;">
+		<h3 class="action-id">Action</h3>
+		<div class="div-template-action-action">
+			<div class="form div-inline">
+				<input type="text" class="txt-action-name" name="text" autocomplete="off" required />
+				<label class="label-name label-txt-device-name">
+					<span class="content-name">
+						Action Name
+					</span>
+				</label>
+			</div>
+			<div class="form div-inline">
+				<input type="text" class="txt-action-description" name="text" autocomplete="off" required />
+				<label class="label-name label-txt-device-description">
+					<span class="content-name">
+						Description
+					</span>
+				</label>
+			</div>
+			<div class="form form-time div-inline">
+				<input type="text" class="txt-action-time" name="text" autocomplete="off" required value="0"/>
+				<label class="label-name label-txt-device-name">
+					<span class="content-name">
+						Time (ms)
+					</span>
+				</label>
+			</div>
+			<div class="div-delete-element div-inline" onclick="DeleteAction(this);">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+					<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+				  </svg>
+			</div>
+			<div class="div-action-up-element div-inline" onclick="ClickUpActionElement(this)">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+					<path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+				  </svg>
+			</div>
+			<div class="div-action-down-element div-inline" onclick="ClickDownActionElement(this);">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
+					<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"/>
+				  </svg>
+			</div>			
+			<br/>
+			<div class="div-select-action-event div-inline">
+				<label class="select-container">
+					<select class="select-action-event select-select">
+						<option value="OnPress">On Press</option>
+						<option value="OnRelease">On Release</option>
+					</select>
+					<span class="select-label">Event</span>
+				</label>
+			</div>
+			<div class="div-select-action-action div-inline">
+				<label class="select-container">
+					<select class="select-action-action select-select" onchange="ChangeActionAction(this);"></select>
+					<span class="select-label">Action</span>
+				</label>
+			</div>
+			<div class="div-select-step div-inline">
+				<label class="select-container">
+					<select class="select-step select-select" onchange="ChangeStep(this);"></select>
+					<span class="select-label">Step</span>
+				</label>
+			</div>
+			<div class="div-select-color div-inline" >
+				<label class="select-container">
+					<select class="select-color select-select" onchange="ChangeColor(this);">
+						<option value="">None</option>
+						<option class="bg-option-violet"      value="violet"		  >violet</option>
+						<option class="bg-option-indigo"      value="indigo"          >indigo</option>
+						<option class="bg-option-blue"        value="blue"            >blue</option>
+						<option class="bg-option-turquoise"   value="turquoise"       >turquoise</option>
+						<option class="bg-option-lightgreen"  value="lightgreen"      >lightgreen</option>
+						<option class="bg-option-green"       value="green"           >green</option>
+						<option class="bg-option-lightyellow" value="lightyellow"     >lightyellow</option>
+						<option class="bg-option-yellow"      value="yellow"          >yellow</option>
+						<option class="bg-option-lightorange" value="lightorange"     >lightorange</option>
+						<option class="bg-option-orange"      value="orange"          >orange</option>
+						<option class="bg-option-lightred"    value="lightred"        >lightred</option>
+						<option class="bg-option-red"         value="red"             >red</option>
+						<option class="bg-option-lightpink"   value="lightpink"       >lightpink</option>
+						<option class="bg-option-pink"        value="pink"            >pink</option>
+						<option class="bg-option-brown"       value="brown"           >brown</option>
+						<option class="bg-option-black"       value="black"           >black</option>
+					</select>
+					<span class="select-label">Color</span>
+				</label>
+			</div>
+			
+			<br />
+			<div class="div-select-page div-inline">
+				<h4><hr />Page</h4>
+				<label class="select-container">
+					<select class="select-page select-select"></select>
+					<span class="select-label">Page</span>
+				</label>				
+			</div>
+			<div class="div-action-exp div-inline">
+				<h4><hr/>Expression</h4>
+				<div class="div-inline">
+					<label class="select-container">
+						<select class="select-exp select-select" id="select-exp"></select>
+						<span class="select-label">Expression</span>
+					</label>	
+				</div>
+				<div class="div-inline">					
+					<label class="select-container">
+						<select class="select-exp-min select-select" id="select-exp-min"></select>
+						<span class="select-label">Exp Min</span>
+					</label>
+				</div>
+				<div class="div-inline">
+					<label class="select-container">
+						<select class="select-exp-max select-select" id="select-exp-max"></select>
+						<span class="select-label">Exp Max</span>
+					</label>	
+				</div>
+			</div>
+			<div class="div-select-linked-button">
+				<h5><hr/>Linked Button</h4>
+				<label class="select-container">
+					<select class="select-linked-button select-select"></select>
+					<span class="select-label">Linked Button</span>
+				</label>
+			</div>
+			<div class="div-select-linked-button-action div-inline">
+				<label class="select-container">
+					<select class="select-linked-button-action select-select">
+						<option>Toggle</option>
+						<option>On</option>
+						<option>Off</option>
+						<option value="StepReset">Step Reset</option>
+						<option value="StepPrevious">Step Previous</option>
+						<option value="StepNext">Step Next</option>
+						<option value="StateToggle">State Toggle</option>
+						<option value="StateOn">State On</option>
+						<option value="StateOff">State Off</option>
+					</select>
+					<span class="select-label">Linked Button Action</span>
+				</label>
+			</div>
+			
+			<div class="div-exp-trigger div-inline">
+				<div class="div-inline">
+					<label class="select-container">
+						<select class="select-exp-trigger-comparator select-select">
+							<option>Equals</option>
+							<option>LessOrEquals</option>
+							<option>Less</option>
+							<option>GreaterOrEquals</option>
+							<option>Greater</option>
+						</select>
+						<span class="select-label">Comparator</span>
+					</label>
+				</div>
+				<div class="div-inline">
+					<label class="select-container">
+						<select class="select-exp-trigger-value select-select"></select>
+						<span class="select-label">Value</span>
+					</label>
+				</div>
+			</div>
+			<div class="div-action-lfo" style="display:none;">				
+				<h4><hr />LFO</h4>
+				<div class="div-inline">
+					<label class="select-container">
+						<select class="select-action-lfo-type select-select">
+							<option>Sin</option>
+							<option>Cos</option>
+							<option>Triangle</option>
+							<option>Saw</option>
+							<option>Square</option>
+							<option>Noise</option>
+						</select>
+						<span class="select-label">Type LFO</span>
+					</label>					
+				</div>
+				<div class="div-inline">
+					<label class="select-container">
+						<select class="select-action-lfo-bypass-type select-select" onchange="ChangeTypeMidi(this);">
+							<option>Reset</option>
+							<option>Pause</option>
+							<option>Thru</option>
+						</select>
+						<span class="select-label">Bypass</span>
+					</label>
+				</div>
+				<br />
+				<div class="div-inline">
+					<div class="form">
+						<input type="text" class="txt-lfo-min" name="text" autocomplete="off" required value="-100" />
+						<label class="label-name label-txt-device-name">
+							<span class="content-name">
+								Min (-100/100)
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="div-inline">
+					<div class="form">
+						<input type="text" class="txt-lfo-max" name="text" autocomplete="off" required value="100"/>
+						<label class="label-name label-txt-device-name">
+							<span class="content-name">
+								Max (-100/100)
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="div-inline">
+					<div class="form">
+						<input type="text" class="txt-lfo-frequency" name="text" autocomplete="off" required value="0.5" />
+						<label class="label-name label-txt-device-name">
+							<span class="content-name">
+								Frequency (0.1/10)
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="div-inline">
+					<div class="form">
+						<input type="text" class="txt-lfo-refresh-time" name="text" autocomplete="off" required value="20"/>
+						<label class="label-name label-txt-device-name">
+							<span class="content-name">
+								Refresh Time (ms) (10/10000)
+							</span>
+						</label>
+					</div>
+				</div>				
+			</div>	
+			<div class="div-conditionnal div-inline">
+				<h4><hr />Conditionnal Script</h4>
+				<div class="form-x">
+					<textarea  type="text" rows="3" class="txt-conditionnal-script" name="text" autocomplete="off" required ></textarea>
+				</div>
+				<h4><hr />Conditionnal Link Buttons</h4>
+				<ul class="ul-list-conditionnal-link-button"></ul>
+				<div>
+					<div onclick="AddNewConditionnalLinkButton(this);">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+							class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+							<path
+								d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+						</svg>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+	<div id="template-midi-message" style="display:none;" class="element template-midi-message">
+		<h4><hr/>Midi Message</h4>
+		<div class="div-inline">
+			<label class="select-container">
+				<select class="select-midi-message-device select-select" onchange="ChangeTriggerDevice(this);"></select>
+				<span class="select-label">Device</span>
+			</label>	
+		</div>
+		<div class="div-inline element-keyboard-key">
+			<label class="select-container">
+				<select class="select-keyboard-key select-select" onchange="ChangeTriggerDevice(this);"></select>
+				<span class="select-label">Key</span>
+			</label>	
+		</div>
+		<div class="div-inline element-midi-message-type">
+			<label class="select-container">
+				<select class="select-midi-message-type select-select" onchange="ChangeTypeMidi(this);">
+					<option>PC</option>
+					<option>CC</option>
+					<option>NoteOn</option>
+					<option>NoteOff</option>
+					<option>NoteOnOff</option>
+					<option>Clock</option>
+				</select>
+				<span class="select-label">Type</span>
+			</label>	
+		</div>
+		<div class="div-inline element-midi-message-channel">
+			<label class="select-container element-midi-message-channel">
+				<select class="select-midi-message-channel select-select"></select>
+				<span class="select-label">Channel</span>
+			</label>
+		</div>
+		<div class="div-inline element-midi-message-value">			
+			<label class="select-container">
+				<select class="select-midi-message-value select-select"></select>
+				<span class="select-label">Value</span>
+			</label>
+		</div>
+		<div class="div-inline element-midi-message-ccValue">
+			<label class="select-container">
+				<select class="select-midi-message-ccValue select-select"></select>
+				<span class="select-label">CC# Value</span>
+			</label>
+		</div>
+		<div class="div-inline element-midi-message-bpm">
+			<label class="select-container">
+				<select class="select-midi-message-bpm select-select"></select>
+				<span class="select-label">BPM</span>
+			</label>
+		</div>
+		<div class="div-inline element-midi-message-action-trigger">
+			<label class="select-container">
+				<select class="select-midi-message-action-trigger select-select" onchange="ChangeSelectActionTrigger(this);">
+					<option value="">Toggle</option>
+					<option>StateOn</option>
+					<option>StateOff</option>
+					<option>Expression</option>
+					<option>Step</option>
+				</select>
+				<span class="select-label">Action</span>
+			</label>
+		</div>
+		<div class="div-inline element-midi-message-action-trigger-step" style="display:none">
+			<label class="select-container">
+				<select class="select-midi-message-action-trigger-step select-select">					
+				</select>
+				<span class="select-label">Step</span>
+			</label>
+		</div>
+		<div class="div-delete-element div-inline" onclick="DeleteTrigger(this);">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+				<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+			  </svg>
+		</div>
+		<div class="div-inline div-send-message-midi">
+			<button onclick="SendMidiClick(this);">Send</button>
+		</div>
+		<div class="div-inline div-learn-message-midi">
+			<button onclick="LearnMidiInput(this);">Learn</button>
+		</div>
+		
+	</div>
+	<div id="template-conditionnal-link-button" style="display:none;" class="element template-conditionnal-link-button">
+		<div class="div-inline">
+			<label class="select-container">
+				<select class="select-conditionnal-link-button-operator select-select">
+					<option>AND</option>
+					<option>OR</option>
+					<option>MustBe</option>
+					<option>MustNotBe</option>
+				</select>
+				<span class="select-label">Operator</span>
+			</label>
+		</div>
+		<div class="div-inline">
+			<label class="select-container">
+				<select class="select-conditionnal-link-button select-select"></select>
+				<span class="select-label">Operator</span>
+			</label>
+		</div>
+		<div class="div-inline">
+			<label class="select-container">
+				<select class="select-conditionnal-link-button-state select-select">
+					<option>On</option>
+					<option>Off</option>
+				</select>
+				<span class="select-label">Operator</span>
+			</label>
+		</div>
+		<div class="div-delete-element div-inline" onclick="DeleteConditionnalLinkButton(this);">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+				<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+			  </svg>
+		</div>
+	</div>
+	<div id="template-device" style="display:none;">
+		<div class="form">
+			<input type="text" class="txt-device-name" name="text" autocomplete="off" required />
+			<label class="label-name label-txt-device-name">
+				<span class="content-name">
+					Device Name
+				</span>
+			</label>
+		</div>
+		<div class="element-midi-message">
+			<div class="div-inline">
+				<label class="select-container">
+					<select class="select-midi-message-device-input select-select"></select>
+					<span class="select-label">Input</span>
+				</label>
+				<button onclick="CopyMidiDeviceId(this);">Copy ID</button>	
+			</div>
+			<div class="div-inline">
+				<label class="select-container">
+					<select class="select-midi-message-device-output select-select"></select>
+					<span class="select-label">Output</span>
+				</label>
+				<button onclick="CopyMidiDeviceId(this);">Copy ID</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

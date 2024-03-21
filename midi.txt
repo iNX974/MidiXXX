@@ -1,0 +1,160 @@
+Wow					            1			Pre
+Octaver				            2			Pre
+Portal                          3           Mix
+Octaver Rabae                   4           Pre
+Fuzz Rabae                      5           Pre
+Overdrive Rabae                 6           Pre
+Delay	Gojira		            7			Mix
+Reverb				            8			Mix
+Portal Preset                   9
+Exp Gain			            10			Pre
+Exp Volume			            11			Full
+Reverse				            12			Mix
+Exp Delay Feedback 	            13			Mix
+Wow Position		            14		
+Wow Type			            15			
+Exp Pre/Wha			            16			
+Exp Reverb	Mix 	            17			
+Exp Reverb Time 	            18	
+Looper Double                   19
+Wha On/Off			            20			Pre
+Tromolo soft		            21			Full
+Tremolo				            22			Full
+Gate				            23			Pre
+Fuzz				            24			Pre
+Rat					            25			Pre
+Shimmer				            26			Mix
+Boost				            27			Pre
+Comp				            28			Pre
+Tap Tempo			            29
+Exp Filter			            30			
+Ring Modulator		            31			Full
+Reverb Clear		            32			Mix
+Preset Chip flair	            33			Mix
+Preset Drum Pad		            34			Full
+Preset Glisten		            35			Full
+Preset Shiny roads	            36			Full
+Preset Grain Delay	            37			Mix
+Gramophone			            38			Full
+Pan 				            39			Full
+Delay Mod                       40
+Filter				            41			Full
+Parallele Gojira	            42			Parallele
+Parralele Rabae		            43			Parallele
+USB 5 Input QC		            44
+POST Mute Full Input USB3       45
+Post Mix  Mute		            46
+Delay Rabae Mix		            47
+Reverb Rabea Mix	            48
+Freeze Rabae Mix	            49
+Post Mix Guitar Rig             50
+Post Mix Gojira 	            51
+Post Mix Rabae 		            52
+Post Mix Reverb 	            53
+Synth Pre                       54
+Guillotine                      55
+Fracture                        56
+Wuw Cha chaa                    57
+Vinyl                           58
+Vynil SpinDown                  59                    
+Gojira Wow			            60
+Gojira Octaver		            61
+Gojira Rat			            62
+Gojira Fuzz			            63
+Gojira Phaser		            64
+Gojira Chorus		            65
+Gojira Delay		            66
+Gojira Reverb		            67
+Gojira Amp Type		            68
+PAN Gojira 			            69
+Rabae Comp			            70
+Rabae Octaver		            71
+Rabae Fuzz			            72
+Rabae Overdrive		            73
+Rabae Synth			            74
+Rabae Delay 		            75
+Rabae Freeze		            76
+Rabae Reverb		            77
+Rabae Amp Type		            78
+PAN Gojira 			            79
+Volume // Rabae   To Out 3/4    80
+Volume // Gojira  To Out 3/4    81
+Stereo Gojira Delay             82
+Looper half                     83                      
+Stereo Tremolo                  84
+Stereo Reverse                  85
+Post Mix GuitarRig Volume       86
+Post Mix Gojira Volume          87
+Post Mix Rabae Volume           88
+Post Mix Portal Volume          89
+Switch to 64 samples            90
+Switch to 124 samples           91
+Love On/Off                     92
+Love Presets                    93
+Tremolo Sync                    94
+Tremolo Soft Sync               95
+Exp Tremolo Rate                96
+Exp Tremolo Soft Rate           97
+Exp Tremolo Mix                 98
+Exp Tremolo Soft Mix            99
+Off Pre Guitar Rig              100
+Off Pre Gojira                  101
+Off Pre Rabae                   102
+Off // Rabae                    103
+Off // Gojira                   104
+Off Full Guitar Rig             105
+Off Mix Guitar Rig              106
+Off Mix Gojira                  107
+Off Mix Rabae                   108
+Off Mix Portal                  109
+Off Maschine                    110
+Off Cab                         111
+Looper Play 1                   112
+Looper Play 2                   113
+Looper Play 3                   114
+Looper Play 4                   115
+Looper Rec 1                    116
+Looper Rec 2                    117
+Looper Rec 3                    118
+Looper Rec 4                    119
+Looper Kill                     120
+Looper Stop                     121
+Looper Volume                   122
+Looper Volume  1                123
+Looper Volume  2                124
+Looper Volume  3                125
+Looper Volume  4                126
+
+=========CHANNEL 2===========
+Loop Double                     1
+Loop Half                       2
+Exp Love Mix                    3
+Love Presets                    4
+Exp Love Wet                    5
+Shimmer High Cut                6
+Shimmer Time                    7
+Delay Tone                      8
+Reverse Time                    9
+Reverse Feedback                10
+Portal Param1                   11
+Portal Param2                   12
+Looper Pan 1                    13
+Looper Pan 2                    14
+Looper Pan 3                    15
+Looper Pan 4                    16
+Grain Delay Volume              17
+Rabae Delay Hi Cut              18
+Rabae Delay Feedback            19
+Rabae Reverb Hi Cut             20
+Rabae Reverb Feedback           21      
+Rabae Freeze Volume             22        
+Vinyl Dust                      23
+Vinyl Warp                      24
+Wuw Cha Chaa Speed              25
+Delay Mod Volume                26
+Delay Mod Feedback              27
+Parallele Gojira To Out 1/2     28
+Parallele Rabae  To Out 1/2     29
+
+=========CHANNEL 3===========
+Preset Rabae 1 - 48
