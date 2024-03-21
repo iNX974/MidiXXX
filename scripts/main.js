@@ -2520,11 +2520,11 @@ function GetPageAmp2(profile)
 	page.items.push({ id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "PC", indexPresetAmp++))], group: "QCAmp", color: colors[index], name:  "FX Loop" });
 	page.items.push({ id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "PC", indexPresetAmp++))], group: "QCAmp", color: colors[index], name:  "Bassman" });
 	page.items.push({ id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "PC", indexPresetAmp++))], group: "QCAmp", color: colors[index], name:  "JCM 800" });
+	page.items.push({ id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "PC", indexPresetAmp++))], group: "QCAmp", color: colors[index], name:  "Plexi" });
+	page.items.push({ id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "PC", indexPresetAmp++))], group: "QCAmp", color: colors[index], name:  "Friedmann" });
+	page.items.push({ id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "PC", indexPresetAmp++))], group: "QCAmp", color: colors[index], name:  "SLO 100" });
 	page.items.push({ id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "PC", indexPresetAmp++))], group: "QCAmp", color: colors[index], name:  "Rectifier" });
-	page.items.push({ id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "PC", indexPresetAmp++))], group: "QCAmp", color: colors[index], name:  "" });
-	page.items.push({ id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "PC", indexPresetAmp++))], group: "QCAmp", color: colors[index], name:  "" });
-	page.items.push({ id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "PC", indexPresetAmp++))], group: "QCAmp", color: colors[index], name:  "" });
-	page.items.push({ id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "PC", indexPresetAmp++))], group: "QCAmp", color: colors[index], name:  "" });
+	page.items.push({ id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "PC", indexPresetAmp++))], group: "QCAmp", color: colors[index], name:  "Diezel VH4" });
 	return page;
 }
 function GetPageRabae1(profile) {
