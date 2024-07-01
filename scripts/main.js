@@ -1,5 +1,4 @@
 function InitApp() {
-	
 	WebMidi
 		.enable()
 		.then(onEnabled)
@@ -60,7 +59,7 @@ var colors = [
 	"white"
 ]
 var AllButtons = [];
-function InitAllButtons()
+/*function InitAllButtons()
 {
 	var index = 0;
 	AllButtons.push(new MidiXItem(index, "Amp", "Momentary", null, "", 
@@ -277,7 +276,7 @@ function InitAllButtons()
 		new MidiXMessage("FromReaper", 2, "CC", 8, null, "Expression0"),
 		new MidiXMessage("FromReaper", 1, "CC", 13, null, "Expression1"),
 	] ));
-}
+}*/
 function GetMidiXLinkButtonByName(buttonName, action, state, conditionnalOperator)
 {
   if (buttonName == "Reverb Clear")

@@ -400,7 +400,7 @@ function UpdateButtons(idButtonClicked)
 				item.buttonsInside.forEach((buttonInside, index) =>
 				{
 					
-					var divElementButtonInside = $("div-element-button-inside-"+buttonInside.id);
+					var divElementButtonInside = $("div-element-button-inside-"+item.id+"-"+buttonInside.id);
 					if(divElementButtonInside)
 					{
 						var pButtonElementInside = divElementButtonInside.firstChild.firstChild;
@@ -723,7 +723,6 @@ function HandleAction(item, obj, action, index)
 	}
 	else if(action.action == "Midi" || (action.action == "Midi" && item.type=="Momentary"))
 	{
-		console.log(item);
 		SendMidi(action.message, action);
 	}
 	else if(action.action == "EXP")
