@@ -394,7 +394,27 @@ function UpdateButtons(idButtonClicked)
 			else
 			{
 				p.className = item.active ? "p-button-active" : "p-button";
-			}			
+			}
+			if(item.buttonsInside)
+			{
+				item.buttonsInside.forEach((buttonInside, index) =>
+				{
+					
+					var divElementButtonInside = $("div-element-button-inside-"+buttonInside.id);
+					if(divElementButtonInside)
+					{
+						var pButtonElementInside = divElementButtonInside.firstChild.firstChild;
+						if(buttonInside.type=="Momentary")
+						{
+							pButtonElementInside.className = "p-button-active"; 
+						}
+						else
+						{
+							pButtonElementInside.className = buttonInside.active ? "p-button-active" : "p-button";
+						}
+					}
+				});		
+			}
 		}
 		var macroItem = itemsMacro.find(x=> x.idPage == page.id && x.idButton == item.id);
 		if(macroItem)
@@ -552,7 +572,7 @@ function UpdateLFO(item, div, idButtonClicked)
 	}
 }
 function ClickButton(item, obj)
-{	
+{
 	if(obj)
 	{
 		obj.classList.remove("animateOnce");
@@ -703,6 +723,7 @@ function HandleAction(item, obj, action, index)
 	}
 	else if(action.action == "Midi" || (action.action == "Midi" && item.type=="Momentary"))
 	{
+		console.log(item);
 		SendMidi(action.message, action);
 	}
 	else if(action.action == "EXP")
@@ -1165,25 +1186,34 @@ function HandleGroup(item)
 		});
 	});
 }
-function AddButtonToLigne(ligne, item, page)
+function AddButtonToLigne(ligne, item, page, idInsideButton, indexInsideButton)
 {	
 	
 	let divElement = document.createElement("div");
-	divElement.className = "element";
-	divElement.style.width = (100 / page.nbButtonsByLine) + "%";
+	divElement.className = "element";		
 	divElement.id = "div-element-" + item.id;
-	divElement.item = item;
-	/*divElement.onclick = function()
+	if(idInsideButton != undefined)
 	{
-		ClickButton(this.item, divElement);
-	};*/
-	divElement.addEventListener("click", function(){ClickButton(this.item, divElement);});
+		divElement.className = "element-button-inside element-button-inside-"+indexInsideButton;
+		divElement.id = "div-element-button-inside-" + idInsideButton;
+	}
+	divElement.item = item;
+	divElement.addEventListener("click", 
+		function(event)
+		{
+			ClickButton(this.item, divElement);
+			event.stopPropagation();
+		});
 	let divElementInside = document.createElement("div");
 	divElementInside.className = "element-inside shadow bg-rainbow-" + item.color;
-	if(page.items.length < 10)
+	if(page != undefined)
 	{
-		divElementInside.style.fontSize = "2.5em";
-	}
+		divElement.style.width = (100 / page.nbButtonsByLine) + "%";
+		if(page.items.length < 10)
+		{
+			divElementInside.style.fontSize = "2.5em";
+		}
+	}	
 
 	let p = document.createElement("div");
 	if(AppData.Expressions)
@@ -1242,8 +1272,21 @@ function AddButtonToLigne(ligne, item, page)
 
 	AddTouchExp(item, p);
 	AddTouchButton(item, p);
+	AddButtonsInside(item, p);
 	
 	ligne.appendChild(divElement);
+}
+function AddButtonsInside(item, p)
+{
+	if(item.buttonsInside == undefined || item.buttonsInside.length == 0) return;
+	item.buttonsInside.forEach((buttonInside, index) =>{
+		if(!buttonInside.color)
+		{
+			buttonInside.color = item.color;
+		}
+		AddButtonToLigne(p, buttonInside, null, `${item.id}-${buttonInside.id}`, index);
+	});
+	
 }
 
 var startTouchMidiValue = 0;
@@ -1994,10 +2037,8 @@ function GetHtmlMidiMessage(message, isInput, isTriggerButton, item)
 	else
 	{
 		FillListDeviceOutput(selectMidiActionDevice, message.device);
-		HideElement(divDeleteElement);
-		
-	}
-	
+		HideElement(divDeleteElement);		
+	}	
 	var selectMidiType = html.querySelector(".select-midi-message-type");
 	selectMidiType.value = message.midiType;
 	ChangeTypeMidi(selectMidiType);	

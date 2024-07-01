@@ -5,3 +5,7 @@ Bug
 Feature :
     Replicate button
     Recent Active button
+
+ spot couleur changement il faut garder le mouvement
+
+ bug envoi midi bouton inside 2

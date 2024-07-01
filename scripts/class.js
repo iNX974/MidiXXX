@@ -20,19 +20,21 @@ class MidiXItem
 {
 	constructor(id, name, type, active, group, actions, color, triggers)
 	{
-		this.id  = id;					// id du bouton
-		this.name = name;				// Nom du bouton		
-		this.type  = type;				// Type de bouton (Momentary, Preset)
-		this.active = active;			// Active
-		this.group = group;				// Groupe du bouton
-		this.actions = actions;			// List de MidiXAction
+		this.identifier = "";					// identification du bouton
+		this.id  = id;							// id du bouton
+		this.name = name;						// Nom du bouton		
+		this.type  = type;						// Type de bouton (Momentary, Preset)
+		this.active = active;					// Active
+		this.group = group;						// Groupe du bouton
+		this.actions = actions;					// List de MidiXAction
 		this.color = color;
-		this.triggers = triggers;		// [] MidiXMessage
+		this.triggers = triggers;				// [] MidiXMessage
 		this.currentStep = 0;
-		this.Interval = null;			// setInterval for LFO
+		this.Interval = null;					// setInterval for LFO
 		this.doublePressTime = null;
-		this.isPrepareMacro = false;	// use for update ui when prepare a macro
+		this.isPrepareMacro = false;			// use for update ui when prepare a macro
 		this.excludeRegisterInMacro = false;	// permet de ne pas enregistrer une action dans une macro 
+		this.buttonsInside = [];				// [] MidiXItem Bouton à l'interieur
 	}
 }
 class MidiXAction

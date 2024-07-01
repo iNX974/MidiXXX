@@ -1,4 +1,5 @@
 function InitApp() {
+	
 	WebMidi
 		.enable()
 		.then(onEnabled)
@@ -14,15 +15,34 @@ function InitApp() {
 		
 		if(IsModeLight() == false)
 		{
-			ClickButton(AppData.Pages[5].items[3]);
-			ClickButton(AppData.Pages[5].items[5]);
-			GotoPage(1);
+			if(IsModePage())
+			{
+				const queryString = window.location.search;
+
+				// Créez une instance de URLSearchParams avec la chaîne de requête
+				const urlParams = new URLSearchParams(queryString);
+
+				// Récupérez la valeur du paramètre "param1"
+				const page = urlParams.get('page');
+				GotoPage(page);
+			}
+			else
+			{				
+				ClickButton(AppData.Pages[5].items[3]);
+				ClickButton(AppData.Pages[5].items[5]);
+				GotoPage(4);
+			}
+
 		}
 		else
 		{
 			GotoPage(3)
 		}
 	}
+}
+function IsModePage()
+{
+	return window.location.href.indexOf("page") > -1
 }
 function IsModeLight()
 {
@@ -39,6 +59,225 @@ var colors = [
 	"brown", 	
 	"white"
 ]
+var AllButtons = [];
+function InitAllButtons()
+{
+	var index = 0;
+	AllButtons.push(new MidiXItem(index, "Amp", "Momentary", null, "", 
+		[
+			{
+				id : 0,
+				name : "",
+				event : "OnPress", 
+				action : "GoPage",
+				idPage : 28
+			}
+		], colors[index++]));
+	
+	page.items.push(GetSimpleFxButton(index++, 21, "Tremolo Soft<br/>.. Exp", null, null, 
+	[
+		{id:3, event : "DoublePress", action : "GoPage", idPage : 13},
+		{
+			id: 4,
+			name: "Mix",
+			event: "OnPress",
+			action: "EXP",
+			idExp: 2,
+			valueExp: 50,
+			message: new MidiXMessage("Reaper", 1, "CC", 99),
+			expMin: 0,
+			expMax: 127
+		},
+		{
+			id: 5,
+			name: "Rate",
+			event: "OnPress",
+			action: "EXP",
+			idExp: 3,
+			valueExp: 50,
+			message: new MidiXMessage("Reaper", 1, "CC", 97),
+			expMin: 0,
+			expMax: 127
+		}
+	] , 
+	[
+		new MidiXMessage("FromReaper", 1, "CC", 99, null, "Expression0"),
+		new MidiXMessage("FromReaper", 1, "CC", 97, null, "Expression1"),
+	]
+	));
+	page.items.push(GetSimpleFxButton(index++, 26, "Shimmer", GetMidiXActionsForPostMixGojira(3), null, 
+	[
+		{
+			id: 4,
+			name: "High Cut",
+			event: "OnPress",
+			action: "EXP",
+			idExp: 2,
+			valueExp: 50,
+			message: new MidiXMessage("Reaper", 2, "CC", 6),
+			expMin: 0,
+			expMax: 127
+		},
+		{
+			id: 5,
+			name: "Time",
+			event: "OnPress",
+			action: "EXP",
+			idExp: 3,
+			valueExp: 50,
+			message: new MidiXMessage("Reaper", 2, "CC", 7),
+			expMin: 0,
+			expMax: 127
+		}
+	], 
+	[
+		new MidiXMessage("FromReaper", 2, "CC", 6, null, "Expression0"),
+		new MidiXMessage("FromReaper", 2, "CC", 7, null, "Expression1")
+	] ));
+	page.items.push(GetSimpleFxButton(index++, 8, "Reverb<br/>.. Exp", GetMidiXActionsForPostMixReverb(3), null, 
+		[
+			{id:4, event : "DoublePress", action : "GoPage", idPage : 5},
+			{
+				id: 4,
+				name: "Mix",
+				event: "OnPress",
+				action: "EXP",
+				idExp: 2,
+				valueExp: 50,
+				message: new MidiXMessage("Reaper", 1, "CC", 18),
+				expMin: 0,
+				expMax: 127
+			},
+			{
+				id: 5,
+				name: "Feedback",
+				event: "OnPress",
+				action: "EXP",
+				idExp: 3,
+				valueExp: 50,
+				message: new MidiXMessage("Reaper", 1, "CC", 17),
+				expMin: 0,
+				expMax: 127
+			}
+		], 
+		[
+			new MidiXMessage("FromReaper", 1, "CC", 18, null, "Expression0"),
+			new MidiXMessage("FromReaper", 1, "CC", 17, null, "Expression1"),
+		] ));
+	page.items.push(
+		{
+			id: index++,
+			name: "Wow",
+			type: "Preset",
+			actions: [
+				new MidiXAction(0, "Wow Type", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 15, 127)), // Wow Type
+				new MidiXAction(1, "", "OnPress", "LinkButton", null, null, null, GetMidiXLinkButtonByName("Wow", "On")), // Wow
+				new MidiXAction(2, "", "OnRelease", "LinkButton", null, null, null, GetMidiXLinkButtonByName("Wow", "Off")), // Wow
+				new MidiXAction(3, "Wow Postition", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 14, 127)), // Wow Position
+				GetMidiXActionSetRouting(4)],
+			color: "red",
+			triggers: [
+				new MidiXMessage("FromReaper", 1, "CC", 1, 127, "StateOn"),
+				new MidiXMessage("FromReaper", 1, "CC", 1, 0, "StateOff")
+			]
+		});
+	page.items.push(GetSimpleFxButton(index++, 2, "Octaver" , null, "orange"));
+	
+	var indexRaw = 0;
+	page.items.push(
+		{
+			id: 6,
+			name: "Raw",
+			type: "Momentary",
+			actions: [				
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "CC", 43, 2)), 	//Scene QC 3
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 45, 127)),		//Mute Reaper Post Full
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 46, 127)),		//Mute Reaper Post Mix
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 44, 127)),		//Unmute QC
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 10, 127)), 		//Gain
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "CC", 2, 127)),	//Volume			
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 2, 0)),			//Octaver
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 7, 0)),			//Delay
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 22, 0)),			//Tremolo
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 21, 0)),			//Rotary		
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 26, 0)),			//Shimmer
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 8, 0)),			//Reverb
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 31, 0)),			//Ring Modulator
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 12, 0)),			//Reverse
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 39, 0)),			//Filter
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 24, 0)),			//Fuzz
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 25, 0)),			//Rat
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 28, 0)),			//Comp
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 1, 0)),			//Wow
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 33, 0)),			//Chip Flair
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 34, 0)),			//Drum Pad
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 35, 0)),			//Glisten
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 36, 0)),			//Shiny Roads
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 37, 0)),			//Grain Delay
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 20, 0)),			//Wha
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 38, 0)),			//Gramophone
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 47, 0)),			//Delay Rabae
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 48, 0)),			//Reverb Rabae
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 49, 0)),			//Reverb Freeze Rabae
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 4, 0)),			//Octaver Rabae
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 5, 0)),			//Fuzz Rabae
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 6, 0)),			//Overdrive Rabae
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 42, 0)),			//Parralle Gojira
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 43, 0)),			//Parallele Rabae
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 3, 0)),			//Portal
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 50, 127)),		//Post Mix Guitar Rig
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 51, 127)),		//Post Mix Gojira
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 52, 127)),		//Post Mix Rabae
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 53, 127)),		//Post Mix Reverb
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 54, 0)),			//Synth Pre
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 55, 0)),			//Guillotine
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 56, 0)),			//Fracture
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 57, 0)),			//Wuw Cha chaa
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 58, 0)),			//Vinyl
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 59, 0)),			//Vynil SpinDown
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 40, 0)),			//Delay Mod
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 92, 0)),			//Love
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 41, 127)),		//Pan Center
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 32, 0)),			//Reverb Clear
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 32, 127)),		//Reverb Clear
+				new MidiXAction(indexRaw++, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 127, 127)),		//Resync
+				new MidiXAction(indexRaw++, "", "OnPress", "LinkButton", null, null, null, GetMidiXLinkButtonByName("Resync", "On"), null, null, null, null, null, 100), //Resync
+				new MidiXAction(indexRaw++, "", "OnPress", "LinkButton", null, null, null, GetMidiXLinkButtonByName("Resync", "On"), null, null, null, null, null, 100), //Resync
+			],
+			color: "brown"
+		});
+	index++;
+	page.items.push(GetSimpleFxButton(index++, 7, "Delay<br/>.. Exp", GetMidiXActionsForPostMixGojira(3), "green", 
+	[
+		{id:4, event : "DoublePress", action : "GoPage", idPage : 5},
+		{
+			id: 4,
+			name: "Tone",
+			event: "OnPress",
+			action: "EXP",
+			idExp: 2,
+			valueExp: 50,
+			message: new MidiXMessage("Reaper", 2, "CC", 8),
+			expMin: 0,
+			expMax: 127
+		},
+		{
+			id: 5,
+			name: "Feedback",
+			event: "OnPress",
+			action: "EXP",
+			idExp: 3,
+			valueExp: 50,
+			message: new MidiXMessage("Reaper", 1, "CC", 13),
+			expMin: 0,
+			expMax: 127
+		}
+	], 
+	[
+		new MidiXMessage("FromReaper", 2, "CC", 8, null, "Expression0"),
+		new MidiXMessage("FromReaper", 1, "CC", 13, null, "Expression1"),
+	] ));
+}
 function GetMidiXLinkButtonByName(buttonName, action, state, conditionnalOperator)
 {
   if (buttonName == "Reverb Clear")
@@ -917,7 +1156,8 @@ function GetPageStomp1(profile) {
 	[
 		new MidiXMessage("FromReaper", 1, "CC", 99, null, "Expression0"),
 		new MidiXMessage("FromReaper", 1, "CC", 97, null, "Expression1"),
-	] ));
+	]
+	));
 	page.items.push(GetSimpleFxButton(index++, 26, "Shimmer", GetMidiXActionsForPostMixGojira(3), null, 
 	[
 		{
@@ -1127,6 +1367,9 @@ function GetPageStomp2(profile) {
 	[
 		new MidiXMessage("FromReaper", 2, "CC", 11, null, "Expression0"),
 		new MidiXMessage("FromReaper", 2, "CC", 12, null, "Expression1"),
+	],
+	[
+		GetSimpleFxButton(101, 109, "Offline", null, "red")
 	] ));	
 	page.items.push(GetSimpleFxButton(index++, 31, "Ring Arp" ));
 	page.items.push(GetSimpleFxButton(index++, 12, "Reverse", GetMidiXActionsForPostMixGuitarRig(3), null, 
@@ -1861,17 +2104,21 @@ function GetPageFX(profile)
 	] ));
 	return page;
 }
-function GetSimpleFxButton(index, cc, name, addRouting, color, addActions, addTriggers)
+function GetSimpleFxButton(index, cc, name, addRouting, color, addActions, addTriggers, addbuttonsInside, midiChannel)
 {
+	if(!midiChannel)
+	{
+		midiChannel = 1;
+	}
 	var actions = 
 	[
-		new MidiXAction(0, name + " On", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", cc, 127)),
-		new MidiXAction(1, name + " Off", "OnRelease", "Midi", new MidiXMessage("Reaper", 1, "CC", cc, 0)),
+		new MidiXAction(0, name + " On", "OnPress", "Midi", new MidiXMessage("Reaper", midiChannel, "CC", cc, 127)),
+		new MidiXAction(1, name + " Off", "OnRelease", "Midi", new MidiXMessage("Reaper", midiChannel, "CC", cc, 0)),
 		GetMidiXActionSetRouting(2)
 	];
 	var triggers = [
-		new MidiXMessage("FromReaper", 1, "CC", cc, 127, "StateOn"),
-		new MidiXMessage("FromReaper", 1, "CC", cc, 0, "StateOff")
+		new MidiXMessage("FromReaper", midiChannel, "CC", cc, 127, "StateOn"),
+		new MidiXMessage("FromReaper", midiChannel, "CC", cc, 0, "StateOff")
 	];
 	if(addRouting != undefined)
 	{
@@ -1897,7 +2144,8 @@ function GetSimpleFxButton(index, cc, name, addRouting, color, addActions, addTr
 		type: "Preset",
 		actions: actions,
 		color: color!=undefined ? color : colors[index++],
-		triggers: triggers
+		triggers: triggers,
+		buttonsInside : addbuttonsInside != undefined ? addbuttonsInside : []
 	};
 }
 function GetPageFX2(profile)
@@ -2124,125 +2372,163 @@ function GetPageRouting(profile)
 		name: "Parallele Gojira",
 		type: "Preset",
 		actions: [
-			new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 42, 127)), //Parallele Gojira
-			new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Reaper", 1, "CC", 42, 0))  //Parallele Gojira
-		],
-
-		color: colors[index],
-		triggers: [
-			new MidiXMessage("FromReaper", 1, "CC", 42, 127, "StateOn"),
-			new MidiXMessage("FromReaper", 1, "CC", 42, 0, "StateOff")
-		]
-	});
-	page.items.push(
-		{
-			id: ++index,
-			name: "Exp1<br/>Volume Gojira<br />To Out 3/4",
-			type: "Preset",
-			actions: [
-				new MidiXAction(0, "Volume Gojira", "OnPress", "EXP", new MidiXMessage("Reaper", 1, "CC", 81), 0) // Out 3/4  
-			],
-			group : "EXP1",
-			color: colors[index],
-			triggers : [new MidiXMessage("FromReaper", 1, "CC", 81, null, "Expression0")]
-		});
-	page.items.push(
-	{
-		id: ++index,
-		name: "Exp1<br/>Volume Gojira<br />Out 1/2<br/>.. Pan Center",
-		type: "Preset",
-		actions: [
-			new MidiXAction(0, "Gojira Out 1/2 ", "OnPress", "EXP", new MidiXMessage("Reaper", 2, "CC", 28), 0), // Out 1/2
-			new MidiXAction(1, "", "DoublePress", "Midi", new MidiXMessage("Reaper", 1, "CC", 69, 64)), 		// PAN Gojira
+			new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 42, 127)), 	//Parallele Gojira
+			new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Reaper", 1, "CC", 42, 0)),  	//Parallele Gojira
 			{
-				id: 2,
+				id: 3,
 				name: "Pan",
 				event: "OnPress",
 				action: "EXP",
-				idExp: 3,
+				idExp: 2,
 				valueExp: 50,
 				message: new MidiXMessage("Reaper", 1, "CC", 69),
 				expMin: 0,
 				expMax: 127
 			}
-		],				
-		group : "EXP1",
+		],
+
 		color: colors[index],
-		triggers : [
-			new MidiXMessage("FromReaper", 2, "CC", 28, null, "Expression0"),
-			new MidiXMessage("FromReaper", 1, "CC", 69, null, "Expression1")
-			]
-	});
-	page.items.push(new MidiXItem(++index, "Volume<br/>EXP 2", "Preset", false, "EXP1", [
-		{
-			id: 0,
-			name: "Volume",
-			event: "OnPress",
-			action: "ExpSetValue",
-			idExp: 0,
-			valueExp: 127,
-			message: new MidiXMessage("Quad Cortex", 1, "CC", 2),
-			expMin: 0,
-			expMax: 127
-		}
-	], colors[index]));
+		triggers: [
+			new MidiXMessage("FromReaper", 1, "CC", 42, 127, "StateOn"),
+			new MidiXMessage("FromReaper", 1, "CC", 42, 0, "StateOff"),
+			new MidiXMessage("FromReaper", 1, "CC", 69, null, "Expression0")
+		],
+		buttonsInside : [
+			GetSimpleFxButton(0, 104, "Online", null, "red"),
+			new MidiXItem(1, "Pan Center", "Momentary", true, "", [new MidiXAction(0, "", "Any", "Midi", new MidiXMessage("Reaper", 1, "CC", 69, 64))], "blue") // PAN Gojira
+		]
+	});	
 	page.items.push(
 	{
 		id: ++index,
 		name: "Parallele Rabea",
 		type: "Preset",
 		actions: [
-			new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 43, 127)), //Parralele Rabae		
-			new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Reaper", 1, "CC", 43, 0))  //Parralele Rabae	
-		],
-
-		color: colors[index],
-		triggers: [
-			new MidiXMessage("FromReaper", 1, "CC", 43, 127, "StateOn"),
-			new MidiXMessage("FromReaper", 1, "CC", 43, 0, "StateOff")
-		]
-	});	
-	
-	page.items.push(
-	{
-		id: ++index,
-		name: "Exp1<br/>Volume Rabae<br />To Out 3/4",
-		type: "Preset",
-		actions: [
-			new MidiXAction(0, "Volume Rabae", "OnPress", "EXP", new MidiXMessage("Reaper", 1, "CC", 80), 0)	//Rabae Out 3/4  
-		],
-		group : "EXP1",
-		color: colors[index],
-		triggers : [new MidiXMessage("FromReaper", 1, "CC", 80, null, "Expression0")]
-	});
-	page.items.push(
-	{
-		id: ++index,
-		name: "Exp1<br/>Volume Rabae<br />To Out 1/2<br/>.. Pan Center",
-		type: "Preset",
-		actions: [
-			new MidiXAction(0, "Rabae Out 1/2", "OnPress", "EXP", new MidiXMessage("Reaper", 2, "CC", 29), 0),	//Rabae Out 1/2  
-			new MidiXAction(1, "", "DoublePress", "Midi", new MidiXMessage("Reaper", 1, "CC", 79, 64)),		//PAN Rabae Center
+			new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 43, 127)), 	//Parralele Rabae		
+			new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Reaper", 1, "CC", 43, 0)),  	//Parralele Rabae
 			{
-				id: 2,
+				id: 3,
 				name: "Pan",
 				event: "OnPress",
 				action: "EXP",
-				idExp: 3,
+				idExp: 2,
 				valueExp: 50,
 				message: new MidiXMessage("Reaper", 1, "CC", 79),
 				expMin: 0,
 				expMax: 127
 			}
 		],
+
+		color: colors[index],
+		triggers: [
+			new MidiXMessage("FromReaper", 1, "CC", 43, 127, "StateOn"),
+			new MidiXMessage("FromReaper", 1, "CC", 43, 0, "StateOff"),
+			new MidiXMessage("FromReaper", 1, "CC", 79, null, "Expression0")
+		],
+		buttonsInside : [
+			GetSimpleFxButton(0, 103, "Online", null, "red"),
+			new MidiXItem(1, "Pan Center", "Momentary", true, "", [new MidiXAction(0, "", "Any", "Midi", new MidiXMessage("Reaper", 1, "CC", 79, 64))], "blue") // PAN Rabae
+
+		]
+	});	
+	page.items.push(
+	{
+		id: ++index,
+		name: "Midi",
+		type: "Preset",
+		actions: [
+			new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Reaper", 2, "CC", 30, 127)), //Active MIDI
+			new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Reaper", 2, "CC", 30, 0)),  //Active MIDI
+		{
+			id: 3,
+			name: "Pan",
+			event: "OnPress",
+			action: "EXP",
+			idExp: 2,
+			valueExp: 50,
+			message: new MidiXMessage("Reaper", 2, "CC", 33),
+			expMin: 0,
+			expMax: 127
+		}
+		],				
+		color: colors[index],
+		triggers: [
+			new MidiXMessage("FromReaper", 2, "CC", 30, 127, "StateOn"),
+			new MidiXMessage("FromReaper", 2, "CC", 30, 0, "StateOff"),
+			new MidiXMessage("FromReaper", 2, "CC", 33, null, "Expression0")
+		],
+		buttonsInside : [
+			GetSimpleFxButton(103, 110, "Online", null, "red"),
+			new MidiXItem(1, "Pan Center", "Momentary", true, "", [new MidiXAction(0, "", "Any", "Midi", new MidiXMessage("Reaper", 2, "CC", 33, 64))], "blue") // PAN MIDI
+
+		]
+	});
+	page.items.push(
+	{
+		id: ++index,
+		name: "Presets",
+		type: "Preset",
+		actions: [
+			{
+				id : 0,
+				name : "Preset Rabae",
+				idPage : 18,
+				action : "GoPage"
+			}
+		],
+		color: colors[index],
+		triggers : [
+		]
+	});	
+	page.items.push(
+	{
+		id: ++index,
+		name: "Exp1<br/>Volume Gojira<br />To Out 3/4",
+		type: "Preset",
+		actions: [
+			new MidiXAction(0, "Volume Gojira 3/4", "OnPress", "EXP", new MidiXMessage("Reaper", 1, "CC", 81), 0), // Out 3/4  
+			new MidiXAction(1, "Gojira Out 1/2 ", "OnPress", "EXP", new MidiXMessage("Reaper", 2, "CC", 28), 3), // Out 1/2
+		],
 		group : "EXP1",
 		color: colors[index],
 		triggers : [
-			new MidiXMessage("FromReaper", 2, "CC", 29, null, "Expression0"),
-			new MidiXMessage("FromReaper", 1, "CC", 79, null, "Expression1")			
+			new MidiXMessage("FromReaper", 1, "CC", 81, null, "Expression0"),
+			new MidiXMessage("FromReaper", 2, "CC", 28, null, "Expression1")
+		]
+	});	
+	page.items.push(
+	{
+		id: ++index,
+		name: "Exp1<br/>Volume Rabae<br />To Out 3/4",
+		type: "Preset",
+		actions: [
+			new MidiXAction(0, "Volume Rabae 3/4", "OnPress", "EXP", new MidiXMessage("Reaper", 1, "CC", 80), 0),	//Rabae Out 3/4  
+			new MidiXAction(1, "Rabae Out 1/2", "OnPress", "EXP", new MidiXMessage("Reaper", 2, "CC", 29), 3),	//Rabae Out 1/2 
+		],
+		group : "EXP1",
+		color: colors[index],
+		triggers : [
+			new MidiXMessage("FromReaper", 1, "CC", 80, null, "Expression0"),
+			new MidiXMessage("FromReaper", 2, "CC", 29, null, "Expression1")
 		]
 	});
-return page;
+	page.items.push(
+	{
+		id: ++index,
+		name: "Exp1<br/>Volume Midi<br />To Out 1/2",
+		type: "Preset",
+		actions: [
+			new MidiXAction(0, "Volume Midi 1/2", "OnPress", "EXP", new MidiXMessage("Reaper", 2, "CC", 31), 0),	//Rabae Out 3/4  
+			new MidiXAction(1, "Volume Midi 3/4", "OnPress", "EXP", new MidiXMessage("Reaper", 2, "CC", 32), 3),	//Rabae Out 1/2 
+		],
+		group : "EXP1",
+		color: colors[index],
+		triggers : [
+			new MidiXMessage("FromReaper", 2, "CC", 31, null, "Expression0"),
+			new MidiXMessage("FromReaper", 2, "CC", 32, null, "Expression1")
+		]
+	});
+	return page;
 }
 function GetPageSceneQC(profile)
 {

@@ -96,8 +96,8 @@ function GetLightProfile()
     profile.ButtonsTrigger.push(new MidiXButton(80, [new MidiXMessage("APC Buttons", 1, "NoteOn", 122)]));
 
 	//profile.Devices.push(new MidiXDevice(0, "Sweetlight", "", "\\\\?\\SWD#MMDEVAPI#MIDII_F507CB26.P_0000#{6dc23320-ab33-4ce4-80d4-bbb3ebbf2814}"));//, "MidiXXXSweetlight", "MidiXXXSweetlight"));
-	profile.Devices.push(new MidiXDevice(0, "Sweetlight", "input-0", "output-1"));//, "MidiXXXSweetlight", "MidiXXXSweetlight"));
-	profile.Devices.push(new MidiXDevice(1, "APC Buttons", "input-1", "output-2"));//, "APC mini mk2 Control", "PC mini mk2 Control"));
+	profile.Devices.push(new MidiXDevice(0, "Sweetlight", "input-2", "output-3"));//, "MidiXXXSweetlight", "MidiXXXSweetlight"));
+	profile.Devices.push(new MidiXDevice(1, "APC Buttons", "input-0", "output-1"));//, "APC mini mk2 Control", "PC mini mk2 Control"));
 	profile.Devices.push(new MidiXDevice(2, "APC Controls", "", "", "APC mini mk2 Notes", "APC mini mk2 Notes"));
 
 	profile.Expressions = [

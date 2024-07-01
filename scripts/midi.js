@@ -542,45 +542,82 @@ function RegisterCustomerTriggerButton()
     {
         page.items.forEach((item) =>
 		{
-			if(!item.triggers) return;
-			item.triggers.forEach((trigger)=>
+			if(item.triggers)
 			{
-				var f = function(value)
-				{					
-					if(trigger.triggerAction == "StateOn")
-					{
-						item.active = true;
-						UpdateButtons(item.id);
-					}
-					else if(trigger.triggerAction == "StateOff")
-					{
-						item.active = false;
-						UpdateButtons(item.id);
-					}
-					else if(trigger.triggerAction == "Expression")
-					{
-						UpdateExpButton(page, item, value)
-					}
-					else if(trigger.triggerAction == "Expression0")
-					{
-						UpdateExpButton(page, item, value, 0)
-					}
-					else if(trigger.triggerAction == "Expression1")
-					{
-						UpdateExpButton(page, item, value, 1)
-					}
-					else
-					{
-						var obj = null;
-						if(page.id == GetCurrentPage().id)
+				item.triggers.forEach((trigger)=>
+				{
+					var f = function(value)
+					{					
+						if(trigger.triggerAction == "StateOn")
 						{
-							obj = $("div-element-" + item.id);
+							item.active = true;
+							UpdateButtons(item.id);
 						}
-						ClickButton(item, obj);
+						else if(trigger.triggerAction == "StateOff")
+						{
+							item.active = false;
+							UpdateButtons(item.id);
+						}
+						else if(trigger.triggerAction == "Expression")
+						{
+							UpdateExpButton(page, item, value)
+						}
+						else if(trigger.triggerAction == "Expression0")
+						{
+							UpdateExpButton(page, item, value, 0)
+						}
+						else if(trigger.triggerAction == "Expression1")
+						{
+							UpdateExpButton(page, item, value, 1)
+						}
+						else
+						{
+							var obj = null;
+							if(page.id == GetCurrentPage().id)
+							{
+								obj = $("div-element-" + item.id);
+							}
+							ClickButton(item, obj);
+						}
+					};
+					RegisterMessageToHandle(trigger, f);
+				});
+			}
+			if(item.buttonsInside)
+			{
+				item.buttonsInside.forEach((buttonInside, index) =>
+				{
+					if(buttonInside.triggers)
+					{
+						buttonInside.triggers.forEach((trigger)=>
+						{
+							var f = function(value)
+							{					
+								if(trigger.triggerAction == "StateOn")
+								{
+									buttonInside.active = true;
+									UpdateButtons(buttonInside.id);
+								}
+								else if(trigger.triggerAction == "StateOff")
+								{
+									buttonInside.active = false;
+									UpdateButtons(buttonInside.id);
+								}
+								else
+								{
+									var obj = null;
+									if(page.id == GetCurrentPage().id)
+									{
+										obj = $("div-element-button-inside-" + buttonInside.id);
+									}
+									ClickButton(item, obj);
+								}
+							};
+							RegisterMessageToHandle(trigger, f);
+						});
 					}
-				};
-				RegisterMessageToHandle(trigger, f);
-			});
+				});
+			}
 		});
     });
 }

@@ -76,7 +76,7 @@ Rabae Delay 		            75
 Rabae Freeze		            76
 Rabae Reverb		            77
 Rabae Amp Type		            78
-PAN Gojira 			            79
+PAN Rabae 			            79
 Volume // Rabae   To Out 3/4    80
 Volume // Gojira  To Out 3/4    81
 Stereo Gojira Delay             82
@@ -155,6 +155,10 @@ Delay Mod Volume                26
 Delay Mod Feedback              27
 Parallele Gojira To Out 1/2     28
 Parallele Rabae  To Out 1/2     29
+Active Midi                     30
+Midi To Out 1/2                 31
+Midi To Out 3/4                 32
+PAN MIDI                        33
 
 =========CHANNEL 3===========
 Preset Rabae 1 - 48
