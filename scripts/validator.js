@@ -89,7 +89,7 @@ function GetValidatorForExpressionsSettingPage()
 }
 function GetValidatorForButton(id)
 {
-    var item = new MidiXItem(id);
+    var item = new MidiXItem( "",id);
     selectType = $("select-item-type");
     if(!CheckNotEmpty(selectType)) return new Validation(false);
 	inputName = $("txt-button-name");

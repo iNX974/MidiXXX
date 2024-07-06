@@ -1,7 +1,17 @@
 // Class 
+class ButtonConfig
+{
+	constructor(identifier, color, index, idPage)
+	{
+		this.identifier = identifier;
+		this.color = color;
+		this.index = index;
+		this.idPage = idPage;
+	}
+}
 class MidiXPage
 {
-	constructor(id, name, active, triggers, actions)
+	constructor(id, name, active, triggers, actions, visible)
 	{
 		this.id = id;
 		this.name = name;			// Nom de la page
@@ -13,14 +23,15 @@ class MidiXPage
 		this.nbButtons = 8;			// Nombre de boutton par page
 		this.nbButtonsByLine = 4;	// Nombre de boutton par ligne
 		this.ExpToHide = [];		// Id des exp à cacher
-		this.visible = true;		// Défini si une page est visible
+		this.visible = visible != undefined ? visible : true;		// Défini si une page est visible
+		this.buttonsConfiguration = []; //Configuration des boutons lors de l'initialisation
 	}
 }
 class MidiXItem
 {
-	constructor(id, name, type, active, group, actions, color, triggers)
+	constructor(identifier, id, name, type, active, group, actions, color, triggers, excludeToLast)
 	{
-		this.identifier = "";					// identification du bouton
+		this.identifier = identifier;			// identification du bouton
 		this.id  = id;							// id du bouton
 		this.name = name;						// Nom du bouton		
 		this.type  = type;						// Type de bouton (Momentary, Preset)
@@ -35,6 +46,7 @@ class MidiXItem
 		this.isPrepareMacro = false;			// use for update ui when prepare a macro
 		this.excludeRegisterInMacro = false;	// permet de ne pas enregistrer une action dans une macro 
 		this.buttonsInside = [];				// [] MidiXItem Bouton à l'interieur
+		this.excludeToLast = excludeToLast != undefined ? excludeToLast : false;				// Permet d'exclure pour les last buttons
 	}
 }
 class MidiXAction

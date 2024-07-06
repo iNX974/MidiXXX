@@ -617,6 +617,81 @@ function ActionClickFinalise(item, obj)
 	}
 	SetInputMidiMessageToHandle();
 	UpdateButtons(item.id);	
+	SetLastButtons(item);
+	SetActiveButtons(item);
+}
+function SetLastButtons(item)
+{
+	if(item.excludeToLast === true) return;
+	var page = AppData.Pages.filter((p) =>{return p.name == "Last";})[0];
+	if(!page)
+	{
+		page = new MidiXPage(AppData.Pages.length, "Last");
+		AppData.Pages.push(page);
+		for(var i = page.items.length; i < 8 ; i++)
+		{
+			page.items.push(new MidiXItem("", i, "", "Preset", false, "", [], "brown", []));
+		}
+	}
+	var exist = page.items.filter((x) => {return x.identifier == item.identifier;})[0];
+	if(exist) return;
+	var newItem = Object.assign({}, item);
+	page.items.push(newItem);
+	if(page.items.length < 8)
+	{
+		for(var i = page.items.length; i < 8 ; i++)
+		{
+			page.items.push(new MidiXItem("", i, "", "Preset", false, "", [], "brown", []));
+		}
+	}
+	if(page.items.length > 8)
+	{
+		var items = [];
+		for(var i = page.items.length - 8; i < page.items.length; i++)
+		{
+			items.push(page.items[i]);
+		}
+		page.items = items;
+	}
+	page.items.forEach((item, index)=>{
+		item.id = index;
+	});
+}
+function SetActiveButtons(item)
+{
+	if(item.excludeToLast === true) return;
+
+	AppData.Pages = AppData.Pages.filter((p) => { return !p.name.startsWith("Active");});	
+	
+	var itemsActive = [];
+	AppData.Pages.forEach((page) =>{
+		if(page.name == "Last") return;
+		page.items.forEach((i) => {
+			if(i.excludeToLast === true) return;
+			if(i.type == "Preset" && i.active === true )
+			{
+				var newItem = Object.assign({}, i);
+				itemsActive.push(newItem);
+			}
+		});
+	});
+	for(var i = 0; i < parseInt(itemsActive.length / 8) + 1 ; i++ )
+	{
+		var page = new MidiXPage(AppData.Pages.length, "Active "+ (i+1));
+		AppData.Pages.push(page);
+		for(var y = 0; y < 8; y++)
+		{
+			var index = y + (i*8);
+			var xItem = itemsActive[index];
+			if(!xItem)
+			{
+				xItem = new MidiXItem("", y, "", "Preset", false, "", [], "brown", []);				
+			}
+			xItem.id = y;
+			page.items.push(xItem);
+		}
+	}
+	
 }
 function SusbcribeToKeyboardEvents()
 {
@@ -1287,7 +1362,6 @@ function AddButtonsInside(item, p)
 	});
 	
 }
-
 var startTouchMidiValue = 0;
 function AddTouchExp(item, p)
 {
@@ -1443,25 +1517,35 @@ function GotoPage(id)
 }
 function NextPage()
 {
-	var currentPage = GetCurrentPage();
-	var nextPage = AppData.Pages.find(function (e) {return e.id == currentPage.id + 1;});
-	if(nextPage)
+	try
 	{
-		GotoPage(nextPage.id);
-		if(nextPage.visible != undefined && nextPage.visible === false)
-		{
-			NextPage();
-		}
-	}
-	else
-	{
-		GotoPage(0);
 		var currentPage = GetCurrentPage();
-		if(currentPage.visible != undefined && currentPage.visible === false)
+		
+		var nextPage = AppData.Pages.find(function (e) {return e.id == currentPage.id + 1;});
+		if(nextPage)
 		{
-			NextPage();
+			GotoPage(nextPage.id);
+			if(nextPage.visible != undefined && nextPage.visible === false)
+			{
+				NextPage();
+			}
+		}
+		else
+		{
+			GotoPage(0);
+			var currentPage = GetCurrentPage();
+			if(currentPage.visible != undefined && currentPage.visible === false)
+			{
+				NextPage();
+			}
 		}
 	}
+	catch(e)
+	{
+		
+		GotoPage(0);
+	}
+
 	
 }
 function PreviousPage()
@@ -1640,7 +1724,7 @@ function GetNewProfile(id, name)
 	var page = new MidiXPage(0, "Default", true, [], []);
 	for(var i=0;i<page.nbButtons;i++)
 	{
-		page.items.push(new MidiXItem(i, i, "Preset", false, null, [], null, []));
+		page.items.push(new MidiXItem( "",i, i, "Preset", false, null, [], null, []));
 	}
 	profile.Pages.push(page);
 	profile.DoublePressTime = 300;
@@ -2375,7 +2459,7 @@ function SetPageButtons(page)
 	{
 		if(!page.items[i])
 		{
-			page.items.push(new MidiXItem(i, "", "Preset", false, "", [], "blue", []));
+			page.items.push(new MidiXItem( "",i, "", "Preset", false, "", [], "blue", []));
 		}
 	}
 	page.items.length = page.nbButtons;

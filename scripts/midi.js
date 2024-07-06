@@ -364,10 +364,6 @@ function RegisterExpUi()
 }
 function UpdateExpUi(value, exp, isFromTrigger)
 {
-	/*console.log("Update Exp UI");
-	console.log(value);
-	console.log(exp);
-	console.log(isFromTrigger);*/
 	var divExp = $("exp" + exp.id);
 	if(!divExp) return;
 	var divLevel = divExp.firstChild;			
@@ -511,14 +507,14 @@ function RegisterGlobalTriggerButton()
 				var fOn = function()
 				{
 					console.log("on");
-					HandleAction(new MidiXItem(0, item.name, "Preset", true, "", item.actions), $("div-element-"+ button.id), item.actions[0], 0);
+					HandleAction(new MidiXItem( "",0, item.name, "Preset", true, "", item.actions), $("div-element-"+ button.id), item.actions[0], 0);
 				};
 				RegisterMessageToHandle(trigger, fOn);
 				var fOff = function()
 				{
 										console.log("off");
 
-					HandleAction(new MidiXItem(0, item.name, "Preset", false, "", item.actions), $("div-element-"+ button.id), item.actions[0], 0);
+					HandleAction(new MidiXItem( "",0, item.name, "Preset", false, "", item.actions), $("div-element-"+ button.id), item.actions[0], 0);
 				};
 				var triggerNoteOff = new MidiXMessage(trigger.device, trigger.channel, "NoteOff", trigger.value);
 				RegisterMessageToHandle(triggerNoteOff, fOff);
