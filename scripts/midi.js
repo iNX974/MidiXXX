@@ -265,7 +265,7 @@ function SubscribeToMidiEvents()
 				}
 				if(tapToResync > 0)
 				{
-					ClickButton(AppData.Pages[2].items[3]);
+					ClickButton(AppData.Pages[0].items[28]);
 					tapToResync--;
 				}
 				lastTimestamp = timestamp;

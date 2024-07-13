@@ -49,8 +49,8 @@ function ConsolePrivate(value, value0)
 }
 function LogError(value, value0)
 {
-	//console.log(value);
 	AddLogs(value);
+	//console.trace();
 	if(value0)
 	{
 		LogError(value0);

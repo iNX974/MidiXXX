@@ -97,7 +97,7 @@ function InitButtonConfiguration()
 	AddButtonConfiguration(page, "Portal"					,++index , colors[index]);
 	AddButtonConfiguration(page, "RingArp"					,++index , colors[index]);	
 	AddButtonConfiguration(page, "Reverse"					,++index , colors[index]);
-	AddButtonConfiguration(page, "Samples64-128"			,++index , colors[index]);
+	AddButtonConfiguration(page, "Empty"					,++index , colors[index]);
 	AddButtonConfiguration(page, "FuzzGojira"				,++index , colors[index]);
 	AddButtonConfiguration(page, "RatGojira"				,++index , colors[index]);
 	AddButtonConfiguration(page, "Tremolo"					,++index , colors[index]);
@@ -487,8 +487,8 @@ function GetPageButtonConfiguration(configPage)
 				page.triggers[page.triggers.length] = configPage.triggers[i];
 			}
 		}
-		configPage.buttonsConfiguration.forEach((b, index) =>{
-			AddButtonToPage(page, index, b.identifier, b.color);
+		configPage.buttonsConfiguration.forEach((b) =>{
+			AddButtonToPage(page, b.index, b.identifier, b.color);
 		})
 		return page;
 	}
@@ -512,7 +512,7 @@ function InitAllButtons()
 			}
 		], colors[index++]));
 	
-	AllButtons.push(GetSimpleFxButton("TremoloSoft", index++, 21, "Tremolo Soft<br/>.. Exp", null, null, 
+	AllButtons.push(GetSimpleFxButton("TremoloSoft", index++, 21, "Tremolo Soft<br/>.. Exp<div class='info-mix'>Full</div>", null, null, 
 		[
 			{id:3, event : "DoublePress", action : "GoPage", idPage : 13},
 			{
@@ -711,7 +711,7 @@ function InitAllButtons()
 		new MidiXMessage("FromReaper", 2, "CC", 8, null, "Expression0"),
 		new MidiXMessage("FromReaper", 1, "CC", 13, null, "Expression1"),
 		] ));
-	AllButtons.push(GetSimpleFxButton("Portal", index++, 3, "Portal<br/>..Presets", null, null, [
+	AllButtons.push(GetSimpleFxButton("Portal", index++, 3, "Portal<br/>..Presets<div class='info-mix'>Mix</div>", null, null, [
 		{id:3, event : "DoublePress", action : "GoPage", idPage : 25},
 		{
 			id: 4,
@@ -743,8 +743,8 @@ function InitAllButtons()
 	[
 		GetSimpleFxButton("", 101, 109, "Offline", null, "red")
 	] ));	
-	AllButtons.push(GetSimpleFxButton("RingArp", index++, 31, "Ring Arp" ));
-	AllButtons.push(GetSimpleFxButton("Reverse", index++, 12, "Reverse", GetMidiXActionsForPostMixGuitarRig(3), null, 
+	AllButtons.push(GetSimpleFxButton("RingArp", index++, 31, "Ring Arp<div class='info-mix'>Full</div>" ));
+	AllButtons.push(GetSimpleFxButton("Reverse", index++, 12, "Reverse<div class='info-mix'>Mix</div>", GetMidiXActionsForPostMixGuitarRig(3), null, 
 	[
 		{
 			id: 4,
@@ -783,7 +783,7 @@ function InitAllButtons()
 		});
 	AllButtons.push(GetSimpleFxButton("FuzzGojira", index++, 24, "Fuzz" ));	
 	AllButtons.push(GetSimpleFxButton("RatGojira", index++, 25, "Rat" ));	
-	AllButtons.push(GetSimpleFxButton("Tremolo", index++, 22, "Tremolo<br/>.. Exp", null, null, 
+	AllButtons.push(GetSimpleFxButton("Tremolo", index++, 22, "Tremolo<br/>.. Exp<div class='info-mix'>Full</div>", null, null, 
 	[
 		{id:3, event : "DoublePress", action : "GoPage", idPage : 13},
 		{
@@ -813,7 +813,7 @@ function InitAllButtons()
 		new MidiXMessage("FromReaper", 1, "CC", 98, null, "Expression0"),
 		new MidiXMessage("FromReaper", 1, "CC", 96, null, "Expression1"),
 	] ));
-	AllButtons.push(GetSimpleFxButton("Filter", index++, 39, "Filter", null, null, 
+	AllButtons.push(GetSimpleFxButton("Filter", index++, 39, "Filter<div class='info-mix'>Full</div>", null, null, 
 	[
 		{
 			id: 2,
@@ -1309,10 +1309,13 @@ function InitAllButtons()
 	AllButtons.push({ identifier : "Empty", 
 		id: ++index, 
 		type: "Preset", 
-		actions: [], 
+		active : false,
+		actions: [],
+		triggers : [],
 		group: "", 
 		color: colors[index], 
-		name: " " });
+		name: "-",
+		excludeToLast:excludeToLast });
 	AllButtons.push(new MidiXItem("Exp1VolumePostGuitarRig", ++index, "Exp Volume Post Guitar Rig", "Preset", false, "EXP1", [
 		{
 			id: 0,
@@ -1365,11 +1368,11 @@ function InitAllButtons()
 			expMax: 127
 		}
 	], colors[index], [new MidiXMessage("FromReaper", 1, "CC", 89, null, "Expression")]));
-	AllButtons.push(GetSimpleFxButton("ChipFlair", ++index, 33, "Chip Flair", GetMidiXActionsForPostMixGuitarRig(3)));
-	AllButtons.push(GetSimpleFxButton("DrumPad", ++index, 34, "Drum Pad"));
-	AllButtons.push(GetSimpleFxButton("Glisten", ++index, 35, "Glisten"));
-	AllButtons.push(GetSimpleFxButton("ShinyRoads", ++index, 36, "Shiny Roads"));
-	AllButtons.push(GetSimpleFxButton("GrainDelay", ++index, 37, "Grain Delay", GetMidiXActionsForPostMixGuitarRig(3), null, 
+	AllButtons.push(GetSimpleFxButton("ChipFlair", ++index, 33, "Chip Flair<div class='info-mix'>Mix</div>", GetMidiXActionsForPostMixGuitarRig(3)));
+	AllButtons.push(GetSimpleFxButton("DrumPad", ++index, 34, "Drum Pad<div class='info-mix'>Full</div>"));
+	AllButtons.push(GetSimpleFxButton("Glisten", ++index, 35, "Glisten<div class='info-mix'>Full</div>"));
+	AllButtons.push(GetSimpleFxButton("ShinyRoads", ++index, 36, "Shiny Roads<div class='info-mix'>Full</div>"));
+	AllButtons.push(GetSimpleFxButton("GrainDelay", ++index, 37, "Grain Delay<div class='info-mix'>Mix</div>", GetMidiXActionsForPostMixGuitarRig(3), null, 
 	[
 		{
 			id: 4,
@@ -1387,9 +1390,9 @@ function InitAllButtons()
 		new MidiXMessage("FromReaper", 2, "CC", 17, null, "Expression0")
 	]
 	));
-	AllButtons.push(GetSimpleFxButton("Gramophone", ++index, 38, "Gramophone"));
+	AllButtons.push(GetSimpleFxButton("Gramophone", ++index, 38, "Gramophone<div class='info-mix'>Full</div>"));
 	AllButtons.push(GetSimpleFxButton("SynthPre", ++index, 54, "Synth Pre"));
-	AllButtons.push(GetSimpleFxButton("Love", ++index, 92, "Love<br/>.. Presets", null, null, [
+	AllButtons.push(GetSimpleFxButton("Love", ++index, 92, "Love<br/>.. Presets<div class='info-mix'>Full</div>", null, null, [
 		{id:3, event : "DoublePress", action : "GoPage", idPage : 27},
 		{
 			id: 4,
@@ -1418,8 +1421,8 @@ function InitAllButtons()
 		new MidiXMessage("FromReaper", 2, "CC", 3, null, "Expression0"),
 		new MidiXMessage("FromReaper", 2, "CC", 5, null, "Expression1")
 	] ));
-	AllButtons.push(GetSimpleFxButton("Fracture", ++index, 56, "Fracture"));
-	AllButtons.push(GetSimpleFxButton("WuwChaCha", ++index, 57, "Wuw Cha Cha", null, null, 
+	AllButtons.push(GetSimpleFxButton("Fracture", ++index, 56, "Fracture<div class='info-mix'>Full</div>"));
+	AllButtons.push(GetSimpleFxButton("WuwChaCha", ++index, 57, "Wuw Cha Cha<div class='info-mix'>Full</div>", null, null, 
 	[
 		{
 			id: 3,
@@ -1436,7 +1439,7 @@ function InitAllButtons()
 	[
 		new MidiXMessage("FromReaper", 2, "CC", 25, null, "Expression0")
 	]));
-	AllButtons.push(GetSimpleFxButton("Vinyl", ++index, 58, "Vinyl", null, null, 
+	AllButtons.push(GetSimpleFxButton("Vinyl", ++index, 58, "Vinyl<div class='info-mix'>Full</div>", null, null, 
 	[
 		new MidiXAction(3, "", "OnRelease", "LinkButton", null, null, null, GetMidiXLinkButtonByIdentifier("VinylSpindown", "Off")),
 		{
@@ -1467,7 +1470,7 @@ function InitAllButtons()
 		new MidiXMessage("FromReaper", 2, "CC", 24, null, "Expression1")
 	]));
 	AllButtons.push(GetSimpleFxButton("VinylSpindown", ++index, 59, "Vinyl Spindown", false));
-	AllButtons.push(GetSimpleFxButton("Guillotine", ++index, 55, "Guillotine"));
+	AllButtons.push(GetSimpleFxButton("Guillotine", ++index, 55, "Guillotine<div class='info-mix'>Full</div>"));
 	AllButtons.push(GetSimpleFxButton("DelayMod", ++index, 40, "Delay Mod", null, null, 
 	[
 		{
@@ -1502,7 +1505,7 @@ function InitAllButtons()
 	AllButtons.push({identifier : "RoutingQuadCortex",
 		id: ++index,
 		active : true,
-		name: "Quad Cortex",
+		name: "Quad<br/>Cortex",
 		type: "Preset",
 		actions: [
 			new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 44, 127)), //USB 5 Input QC
@@ -1520,7 +1523,7 @@ function InitAllButtons()
 	});	
 	AllButtons.push({identifier : "RoutingGojira",
 		id: ++index,
-		name: "Parallele Gojira",
+		name: "Parallele</br>Gojira",
 		type: "Preset",
 		actions: [
 			new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 42, 127)), 	//Parallele Gojira
@@ -1551,7 +1554,7 @@ function InitAllButtons()
 	});	
 	AllButtons.push({identifier : "RoutingRabae",
 		id: ++index,
-		name: "Parallele Rabea",
+		name: "Parallele</br>Rabea",
 		type: "Preset",
 		actions: [
 			new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Reaper", 1, "CC", 43, 127)), 	//Parralele Rabae		
@@ -1615,7 +1618,7 @@ function InitAllButtons()
 	AllButtons.push({identifier : "GoPagePresetRabae",
 		id: ++index,
 		name: "Presets",
-		type: "Preset",
+		type: "Momentary",
 		actions: [
 			{
 				id : 0,
@@ -2264,11 +2267,11 @@ function InitAllButtons()
 }
 function GetButtonByIdentifier(identifier, id)
 {
-	var button = AllButtons.filter((item)=> {return item.identifier == identifier;});
+	var button = AllButtons.find((item)=> {return item.identifier == identifier;});
 	if(button)
 	{
-		var b = button[0];
-		if(id){
+		var b = Object.assign({}, button);
+		if(id != undefined ){
 			b.id = id;
 		}
 		return b;
@@ -2313,7 +2316,7 @@ function GetPageTool(profile) {
 		//actions
 		[
 			new MidiXAction(0, "", "OnLoad", "LinkButton", null, null, null, GetMidiXLinkButtonByIdentifier("Resync", "Toggle")) // Resync
-		], true);
+		], false);
     page.nbButtonsByLine = 6;
 	//page.visible = false;
 	//0
@@ -2813,6 +2816,7 @@ function GetPageTool(profile) {
 			],
 			excludeToLast : true
 		});
+	page.items.push(GetButtonByIdentifier("Tap", index++));
 	page.nbButtons = index;
 	return page;
 }
@@ -3023,11 +3027,11 @@ function GetMidiMessageForColorAPC(note, color, action)
 	else if(color == "orange"){ velocity = 96;}
 	return new MidiXMessage("APC Buttons",channel, "NoteOn", note, velocity);
 }
-function AddButtonToPage(page, index, identifier, color)
-{
-	var button = GetButtonByIdentifier(identifier);
-	button.id = index;
+function AddButtonToPage(page, id, identifier, color)
+{	
+	var button = GetButtonByIdentifier(identifier, id);	
 	button.color = color;
+	button.id = id;
 	page.items.push(button);
 }
 function GetSimpleFxButton(identifier, index, cc, name, addRouting, color, addActions, addTriggers, addbuttonsInside, midiChannel)
@@ -3080,7 +3084,7 @@ function GetMineProfile() {
 	var profile = new Profile(0, "Mine");
 	profile.Pages.push(GetPageTool(profile));	
 
-	pagesConfigurations.forEach((page, index) =>{
+	pagesConfigurations.forEach((page) =>{
 		profile.Pages.push(GetPageButtonConfiguration(page));
 	});
 

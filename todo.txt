@@ -1,11 +1,7 @@
 Bug 
     send feedback on exp 1 on volume rabae/gojira
     Rec Macro déclenche le resync au changement de page
+    bug envoi midi bouton inside 2
 
-Feature :
-    Replicate button
-    Recent Active button
-
- spot couleur changement il faut garder le mouvement
-
- bug envoi midi bouton inside 2
+TODO 
+    Double touch exp min max

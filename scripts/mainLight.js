@@ -260,6 +260,11 @@ function GetPageLightAPC1(profile) {
 				//new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 0),			null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "Off", "MustBe")]),
 				new MidiXAction(2, "", "OnPress", 	"Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 127),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")]),
 				//new MidiXAction(3, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 0),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")])
+				{
+					id:4,
+					event :"OnPress",
+					conditionnalScript : "HandleSpot();return true;"
+				}
 			]
 		});indexNoteMidi++;indexNoteMidiSpotSlow++;
 	page.items.push(
@@ -274,6 +279,11 @@ function GetPageLightAPC1(profile) {
 				//new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 0),			null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "Off", "MustBe")]),
 				new MidiXAction(2, "", "OnPress", 	"Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 127),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")]),
 				//new MidiXAction(3, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 0),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")])
+				{
+					id:4,
+					event :"OnPress",
+					conditionnalScript : "HandleSpot();return true;"
+				}
 			]
 		});indexNoteMidi++;indexNoteMidiSpotSlow++;
 	page.items.push(
@@ -288,6 +298,11 @@ function GetPageLightAPC1(profile) {
 				//new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 0),			null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "Off", "MustBe")]),
 				new MidiXAction(2, "", "OnPress", 	"Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 127),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")]),
 				//new MidiXAction(3, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 0),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")])
+				{
+					id:4,
+					event :"OnPress",
+					conditionnalScript : "HandleSpot();return true;"
+				}
 			]
 		});indexNoteMidi++;indexNoteMidiSpotSlow++;
 	page.items.push(
@@ -302,6 +317,11 @@ function GetPageLightAPC1(profile) {
 				//new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 0),			null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "Off", "MustBe")]),
 				new MidiXAction(2, "", "OnPress", 	"Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 127),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")]),
 				//new MidiXAction(3, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 0),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")])
+				{
+					id:4,
+					event :"OnPress",
+					conditionnalScript : "HandleSpot();return true;"
+				}
 			]
 		});indexNoteMidi++;indexNoteMidiSpotSlow++;
 	page.items.push(
@@ -316,6 +336,11 @@ function GetPageLightAPC1(profile) {
 				//new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 0),			null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "Off", "MustBe")]),
 				new MidiXAction(2, "", "OnPress", 	"Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 127),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")]),
 				//new MidiXAction(3, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 0),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")])
+				{
+					id:4,
+					event :"OnPress",
+					conditionnalScript : "HandleSpot();return true;"
+				}
 			]
 		});indexNoteMidi++;indexNoteMidiSpotSlow++;
 	page.items.push(
@@ -330,6 +355,11 @@ function GetPageLightAPC1(profile) {
 				//new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 0),			null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "Off", "MustBe")]),
 				new MidiXAction(2, "", "OnPress", 	"Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 127),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")]),
 				//new MidiXAction(3, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 0),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")])
+				{
+					id:4,
+					event :"OnPress",
+					conditionnalScript : "HandleSpot();return true;"
+				}
 			]
 		});indexNoteMidi++;indexNoteMidiSpotSlow++;
 	page.items.push(
@@ -344,6 +374,11 @@ function GetPageLightAPC1(profile) {
 				//new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 0),			null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "Off", "MustBe")]),
 				new MidiXAction(2, "", "OnPress", 	"Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 127),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")]),
 				//new MidiXAction(3, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidiSpotSlow, 0),	null, null, null, null, null, null, null, null, null, [new MidiXLinkButton(0, buttonSpotSlow, null, "On", "MustBe")])
+				{
+					id:4,
+					event :"OnPress",
+					conditionnalScript : "HandleSpot();return true;"
+				}
 			]
 		});indexNoteMidi++;indexNoteMidiSpotSlow++;
 	
@@ -380,7 +415,7 @@ function GetPageLightAPC1(profile) {
 			id: ++index,
 			name: "Hard/Smooth",
 			type: "Preset",
-			group: "",
+			group: "SpotMouvement",
 			color: "white",
 			actions: [
 				new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
@@ -4212,4 +4247,15 @@ function HandleHybridRVB()
 	{
 		ClickButton(button);
 	}
+}
+function HandleSpot()
+{
+	var mouvement = AppData.Pages[0].items.find((x)=> {return x.group == "SpotMouvement" && x.active === true;});
+	if(mouvement)
+	{
+		var message = mouvement.actions[1].message;
+		SendMidi(message);
+		var message = mouvement.actions[0].message;
+		SendMidi(message);
+	}	
 }

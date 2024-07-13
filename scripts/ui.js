@@ -1308,7 +1308,13 @@ function AddButtonToLigne(ligne, item, page, idInsideButton, indexInsideButton)
 	label.innerHTML = item.name;
 	
 	label.className = "label-button";
-	if(item.name.length>20)
+	var lengthName = item.name.length;
+	var startInfoMix = item.name.indexOf("<div class='info-mix'>");
+	if(startInfoMix > -1)
+	{
+		lengthName = startInfoMix;
+	}
+	if(lengthName > 20)
 	{
 		label.className += " small-font-size";	
 	}
