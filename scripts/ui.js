@@ -622,11 +622,13 @@ function ActionClickFinalise(item, obj)
 }
 function SetLastButtons(item)
 {
-	if(item.excludeToLast === true) return;
+	var currentPage = GetCurrentPage();
+	if(currentPage.name == "Last") return;
+	if(item.excludeToLast === true) return;	
 	var page = AppData.Pages.filter((p) =>{return p.name == "Last";})[0];
 	if(!page)
 	{
-		page = new MidiXPage(AppData.Pages.length, "Last");
+		page = new MidiXPage(AppData.Pages.length, "Last", false);
 		AppData.Pages.push(page);
 		for(var i = page.items.length; i < 8 ; i++)
 		{
@@ -659,6 +661,9 @@ function SetLastButtons(item)
 }
 function SetActiveButtons(item)
 {
+	var currentPage = GetCurrentPage();
+	if(currentPage.name.startsWith("Active")) return;
+
 	if(item.excludeToLast === true) return;
 
 	AppData.Pages = AppData.Pages.filter((p) => { return !p.name.startsWith("Active");});	

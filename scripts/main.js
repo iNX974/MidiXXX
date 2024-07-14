@@ -97,7 +97,7 @@ function InitButtonConfiguration()
 	AddButtonConfiguration(page, "Portal"					,++index , colors[index]);
 	AddButtonConfiguration(page, "RingArp"					,++index , colors[index]);	
 	AddButtonConfiguration(page, "Reverse"					,++index , colors[index]);
-	AddButtonConfiguration(page, "Empty"					,++index , colors[index]);
+	AddButtonConfiguration(page, "Samples64-128"					,++index , colors[index]);
 	AddButtonConfiguration(page, "FuzzGojira"				,++index , colors[index]);
 	AddButtonConfiguration(page, "RatGojira"				,++index , colors[index]);
 	AddButtonConfiguration(page, "Tremolo"					,++index , colors[index]);
@@ -1700,18 +1700,18 @@ function InitAllButtons()
 	AllButtons.push(new MidiXItem("QCSceneF", ++index, "Scene F", "Preset", false, "SceneQC", [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "CC", 43, 5))], colors[index]));
 	AllButtons.push(new MidiXItem("QCSceneG", ++index, "Scene G", "Preset", false, "SceneQC", [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "CC", 43, 6))], colors[index]));
 	AllButtons.push(new MidiXItem("QCSceneH", ++index, "Scene H", "Preset", false, "SceneQC", [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Quad Cortex", 1, "CC", 43, 7))], colors[index]));
-	AllButtons.push(GetSimpleFxButton("OfflinePreGuitarRig", ++index, 100, "Offline<br/>Pre Guitar Rig"));
-	AllButtons.push(GetSimpleFxButton("OfflinePreGojira", ++index, 101, "Offline<br/>Pre Gojira"));
-	AllButtons.push(GetSimpleFxButton("OfflinePreRabae", ++index, 102, "Offline<br/>Pre Rabae"));
-	AllButtons.push(GetSimpleFxButton("Offline//Rabae", ++index, 103, "Offline<br/>// Rabae"));
-	AllButtons.push(GetSimpleFxButton("Offline//Gojira", ++index, 104, "Offline<br/>// Gojira"));
-	AllButtons.push(GetSimpleFxButton("OfflineFullGuitarRig", ++index, 105, "Offline<br/>Full Guitar Rig"));
-	AllButtons.push(GetSimpleFxButton("OfflineMixGuitarRig", ++index, 106, "Offline<br/>Mix Guitar Rig"));
-	AllButtons.push(GetSimpleFxButton("OfflineMixGojira", ++index, 107, "Offline<br/>Mix Gojira"));
-	AllButtons.push(GetSimpleFxButton("OfflineMixRabae", index++, 108, "Offline<br/>Mix Rabae"));
-	AllButtons.push(GetSimpleFxButton("OfflineMixPortal", index++, 109, "Offline<br/>Mix Portal"));
-	AllButtons.push(GetSimpleFxButton("OfflineMaschine", index++, 110, "Offline<br/>Maschine"));
-	AllButtons.push(GetSimpleFxButton("OfflineCab", index++, 111, "Offline<br/>Cab"));
+	AllButtons.push(GetSimpleFxButton("OfflinePreGuitarRig", ++index, 100, "Offline<br/>Pre Guitar Rig", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("OfflinePreGojira", ++index, 101, "Offline<br/>Pre Gojira", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("OfflinePreRabae", ++index, 102, "Offline<br/>Pre Rabae", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("Offline//Rabae", ++index, 103, "Offline<br/>// Rabae", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("Offline//Gojira", ++index, 104, "Offline<br/>// Gojira", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("OfflineFullGuitarRig", ++index, 105, "Offline<br/>Full Guitar Rig", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("OfflineMixGuitarRig", ++index, 106, "Offline<br/>Mix Guitar Rig", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("OfflineMixGojira", ++index, 107, "Offline<br/>Mix Gojira", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("OfflineMixRabae", index++, 108, "Offline<br/>Mix Rabae", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("OfflineMixPortal", index++, 109, "Offline<br/>Mix Portal", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("OfflineMaschine", index++, 110, "Offline<br/>Maschine", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("OfflineCab", index++, 111, "Offline<br/>Cab", null, null, null, null, null, null, true));
 	AllButtons.push({ identifier : "StrereoAll",
 		id: ++index,
 		name: "Stereo All",
@@ -1727,11 +1727,12 @@ function InitAllButtons()
 		],
 		color: colors[index],
 		triggers: [
-		]
+		], 
+		excludeToLast : true
 	});	
-	AllButtons.push(GetSimpleFxButton("StereoGojiraDelay", index++, 82, "Stereo Gojira Delay"));
-	AllButtons.push(GetSimpleFxButton("StereoTremoloSoft", index++, 83, "Stereo Tremolo Soft"));
-	AllButtons.push(GetSimpleFxButton("StereoReverse", index++, 84, "Stereo Reverse"));
+	AllButtons.push(GetSimpleFxButton("StereoGojiraDelay", index++, 82, "Stereo Gojira Delay", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("StereoTremoloSoft", index++, 83, "Stereo Tremolo Soft", null, null, null, null, null, null, true));
+	AllButtons.push(GetSimpleFxButton("StereoReverse", index++, 84, "Stereo Reverse", null, null, null, null, null, null, true));
 	AllButtons.push({identifier : "RabaePreset1", id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Reaper", 3, "CC", 1, 127))], group: "PresetRabea", color: colors[index], name: "80's Dream Transition - no cab" });
 	AllButtons.push({identifier : "RabaePreset2", id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Reaper", 3, "CC", 2, 127))], group: "PresetRabea", color: colors[index], name: "aMUSEd - no cab" });
 	AllButtons.push({identifier : "RabaePreset3", id: ++index, type: "Preset", actions: [new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Reaper", 3, "CC", 3, 127))], group: "PresetRabea", color: colors[index], name: "Astroboy" });
@@ -3034,7 +3035,7 @@ function AddButtonToPage(page, id, identifier, color)
 	button.id = id;
 	page.items.push(button);
 }
-function GetSimpleFxButton(identifier, index, cc, name, addRouting, color, addActions, addTriggers, addbuttonsInside, midiChannel)
+function GetSimpleFxButton(identifier, index, cc, name, addRouting, color, addActions, addTriggers, addbuttonsInside, midiChannel, excludeToLastParam)
 {
 	if(!midiChannel)
 	{
@@ -3076,7 +3077,8 @@ function GetSimpleFxButton(identifier, index, cc, name, addRouting, color, addAc
 		actions: actions,
 		color: color!=undefined ? color : colors[index++],
 		triggers: triggers,
-		buttonsInside : addbuttonsInside != undefined ? addbuttonsInside : []
+		buttonsInside : addbuttonsInside != undefined ? addbuttonsInside : [],
+		excludeToLast : excludeToLastParam != undefined ? excludeToLastParam : false
 	};
 }
 function GetMineProfile() {
