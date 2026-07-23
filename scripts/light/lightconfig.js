@@ -7858,5 +7858,61 @@ function GetPageMidiToSweetlight(profile) {
         ]
     });
 
+    page.items.push(
+        {
+            id: index++,
+            name: "Hybrid RVB - Starfield Blanc",
+            type: "Momentary",
+            group: "LiveHybridRVB",
+            color: "red",
+            actions: [
+                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 15, 127))
+            ]
+        });
+    page.items.push(
+        {
+            id: index++,
+            name: "Hybrid RVB - Starfield Bleu",
+            type: "Momentary",
+            group: "LiveHybridRVB",
+            color: "red",
+            actions: [
+                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 16, 127))
+            ]
+        });
+    page.items.push(
+        {
+            id: index++,
+            name: "Hybrid RVB - Starfield Cyan",
+            type: "Momentary",
+            group: "LiveHybridRVB",
+            color: "red",
+            actions: [
+                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 17, 127))
+            ]
+        });
+    page.items.push(
+        {
+            id: index++,
+            name: "Hybrid RVB - Starfield Mauve",
+            type: "Momentary",
+            group: "LiveHybridRVB",
+            color: "red",
+            actions: [
+                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 18, 127))
+            ]
+        });
+    page.items.push(
+        {
+            id: index++,
+            name: "Hybrid RVB - Starfield Rouge",
+            type: "Momentary",
+            group: "LiveHybridRVB",
+            color: "red",
+            actions: [
+                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 19, 127))
+            ]
+        });
+
     return page;
 }

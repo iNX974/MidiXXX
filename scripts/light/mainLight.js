@@ -744,15 +744,19 @@ function GetPageLightAPC1(profile) {
 		page.items.push(
 			{
 				id: ++index,
-				name: "-",
+				name: "Starfield",
 				type: "Preset",
 				group: "HybridRVBMouvement",
-				color: "",
+				color: "white",
 				actions: [
-					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
-					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
-				]
-			});
+					{
+						id: 0,
+						event: "OnPress",
+						conditionnalScript: "HandleHybridRVB();return true;"
+					}
+				],
+				description: "Starfield"
+			}); indexNoteMidi++;
 		page.items.push(
 			{
 				id: ++index,
@@ -849,11 +853,7 @@ function GetPageLightAPC1(profile) {
 				group: "HybridBeamMouvement",
 				color: "black",
 				actions: [
-					{
-						id:0,
-						event :"OnPress",
-						conditionnalScript : "HandleHybridBeam();return true;"
-					}
+					
 				],
 				description : ""
 			});indexNoteMidi++;
@@ -865,27 +865,20 @@ function GetPageLightAPC1(profile) {
 				group: "HybridBeamMouvement",
 				color: "black",
 				actions: [
-					{
-						id:0,
-						event :"OnPress",
-						conditionnalScript : "HandleHybridBeam();return true;"
-					}
+					
 				],
 				description : ""
 			});indexNoteMidi++;
 		page.items.push(
 			{
 				id: ++index,
-				name: "-",
+				name: "Starfield",
 				type: "Preset",
 				group: "HybridBeamMouvement",
-				color: "black",
+				color: "white",
 				actions: [
-					{
-						id:0,
-						event :"OnPress",
-						conditionnalScript : "HandleHybridBeam();return true;"
-					}
+					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
+					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 0))
 				],
 				description : ""
 			});indexNoteMidi++;
@@ -1210,7 +1203,7 @@ function GetPageLightAPC1(profile) {
 				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(18, "yellow", 			"pulse")),
 				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(19, "black", 			"pulse")),
 				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(20, "black", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(21, "black", 			"pulse")),
+				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(21, "yellow", 			"pulse")),
 				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(22, "yellow", 			"blink")),
 				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(23, "yellow", 			"blink")),
 				//ligne 5
@@ -4250,6 +4243,10 @@ function HandleHybridRVB()
 	if(mouvement == "Full")
 	{
 		name = `Hybrid RVB - Full - ${color}`;
+	}
+	if (mouvement == "Starfield")
+	{
+		name = `Hybrid RVB - Starfield ${color}`;
 	}
 	
 	var button = AppData.Pages[2].items.filter((x) => {return x.name == name;})[0];
