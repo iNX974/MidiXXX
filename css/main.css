@@ -115,11 +115,11 @@ html, body {
 }
 .element-button-inside-0
 {
-  bottom: 0;
+  top:0;
 }
 .element-button-inside-1
 {
-  top:0;
+  bottom: 0;  
 }
 .element-button-inside > div > div
 {
@@ -894,4 +894,21 @@ button,
   margin-left: auto; 
   margin-right: auto; 
   width: 100px;
+}
+.touch-exp-value
+{
+  position: absolute;
+  color : #01581d;
+  font-size: 14px;
+  letter-spacing: -1px;  
+}
+.touch-exp-value-0
+{
+  bottom: 2;
+  left: 1;
+}
+.touch-exp-value-1
+{
+  bottom: 2;
+  right: 1;
 }

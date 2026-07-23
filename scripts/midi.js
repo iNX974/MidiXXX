@@ -46,6 +46,11 @@ function MatchDevice()
 function SendMidi(message, action)
 {
 	if(isLearnMidi) return;
+	/*if(isPeerClient)
+	{
+		SendMidiPeer(message);
+		return;
+	}*/
 	try
 	{
 		if(action)
@@ -258,7 +263,7 @@ function SubscribeToMidiEvents()
 				var timestamp = e.timestamp;
 				var delta = lastTimestamp - timestamp;
 
-				var hasTempoChange = Math.abs(delta - tapLastDelta) > 2;
+				var hasTempoChange = Math.abs(delta - tapLastDelta) > 4;
 				if(hasTempoChange)
 				{					
 					tapToResync = 8;
@@ -447,7 +452,7 @@ function RegisterExpMidiInput()
 						var message = action.message;
 						if(!action.expMin) action.expMin = 0;
 						if(!action.expMax) action.expMax = 127;
-						message.ccValue = Map(value, 0, 127, action.expMin, action.expMax);
+						message.ccValue = MapValue(value, 0, 127, action.expMin, action.expMax);
 						SendMidi(message);
 					};
 					RegisterMessageToHandle(exp.trigger, f);					
@@ -507,14 +512,14 @@ function RegisterGlobalTriggerButton()
 				var fOn = function()
 				{
 					console.log("on");
-					HandleAction(new MidiXItem( "",0, item.name, "Preset", true, "", item.actions), $("div-element-"+ button.id), item.actions[0], 0);
+					HandleAction(new MidiXItem("",0, item.name, "Preset", true, "", item.actions), $("div-element-"+ button.id), item.actions[0], 0);
 				};
 				RegisterMessageToHandle(trigger, fOn);
 				var fOff = function()
 				{
 										console.log("off");
 
-					HandleAction(new MidiXItem( "",0, item.name, "Preset", false, "", item.actions), $("div-element-"+ button.id), item.actions[0], 0);
+					HandleAction(new MidiXItem("",0, item.name, "Preset", false, "", item.actions), $("div-element-"+ button.id), item.actions[0], 0);
 				};
 				var triggerNoteOff = new MidiXMessage(trigger.device, trigger.channel, "NoteOff", trigger.value);
 				RegisterMessageToHandle(triggerNoteOff, fOff);
@@ -523,7 +528,6 @@ function RegisterGlobalTriggerButton()
 			{
 				var f = function()
 				{				
-				console.log(item);
 					ClickButton(GetCurrentPage().items[button.id], $("div-element-"+ button.id));
 				};
 				RegisterMessageToHandle(trigger, f);

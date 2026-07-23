@@ -3,5 +3,5 @@ Bug
     Rec Macro déclenche le resync au changement de page
     bug envoi midi bouton inside 2
 
-TODO 
-    Double touch exp min max
+TODO : 
+    Offline sur chaque plug, si offline alors d'abord faire le online

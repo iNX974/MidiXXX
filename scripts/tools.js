@@ -6,6 +6,11 @@ function MapMidiValueTo100(value)
 {
 	return value * 100 / 127;
 }
+function FormatValueToDecimal1(value)
+{
+	if(value == 10) return "10";
+	return value.toFixed(1);
+}
 function GetDomIndex (target) {
 	return [].slice.call(target.parentNode.children).indexOf(target)
 }
@@ -16,7 +21,7 @@ function MapValueLFOToMidi(value)
 {
 	return parseInt(((value + 100) / 2 ) * 127 / 100);
 }
-function Map(valeur, minEntree, maxEntree, minSortie, maxSortie) {
+function MapValue(valeur, minEntree, maxEntree, minSortie, maxSortie) {
 	var sub = (maxEntree - minEntree);
 	if(sub == 0 )return 0;
 	return (valeur - minEntree) * (maxSortie - minSortie) / sub + minSortie;
@@ -50,6 +55,7 @@ function ConsolePrivate(value, value0)
 function LogError(value, value0)
 {
 	AddLogs(value);
+	console.log(value);
 	//console.trace();
 	if(value0)
 	{
@@ -143,3 +149,28 @@ navigator.getBattery().then((battery) => {
 	  console.log(`Battery discharging time: ${battery.dischargingTime} seconds`);
 	}
   });
+
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var fullElem = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (fullElem.requestFullscreen) {
+    fullElem.requestFullscreen();
+  } else if (fullElem.webkitRequestFullscreen) { /* Safari */
+    fullElem.webkitRequestFullscreen();
+  } else if (fullElem.msRequestFullscreen) { /* IE11 */
+    fullElem.msRequestFullscreen();
+  }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}

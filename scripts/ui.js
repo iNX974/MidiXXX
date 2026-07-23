@@ -579,6 +579,11 @@ function ClickButton(item, obj)
 		obj.firstChild.className = "element-inside bg-rainbow-" + item.color;
 		obj.classList.add("animateOnce");
 	}
+	if(isPeerClient)
+	{
+		SendPeerMessage(new MidiXActionPeer("ClickButton", {idPage : GetCurrentPage().id, idButton : item.id}));
+		return;
+	}
 	if(isEditButtons)
 	{
 		OpenEditButtonPage(item);
@@ -617,8 +622,8 @@ function ActionClickFinalise(item, obj)
 	}
 	SetInputMidiMessageToHandle();
 	UpdateButtons(item.id);	
-	SetLastButtons(item);
-	SetActiveButtons(item);
+	//SetLastButtons(item);
+	//SetActiveButtons(item);
 }
 function SetLastButtons(item)
 {
@@ -1377,14 +1382,14 @@ var startTouchMidiValue = 0;
 function AddTouchExp(item, p)
 {
 	var expActions = item.actions.filter(function(e){return e.action=="EXP";});
-	var expAction = expActions[0];
-	if(expAction)
-	{
-		
-		var divTouchExpButton = CreateElement("div", expActions.length>1 ? "touch-exp0" : "touch-exp");
-		var divLabel = CreateElement("div", "touch-exp-label0");
+	expActions.forEach((expAction, index) => {
+		var divTouchExpButton = CreateElement("div", expActions.length>1 ? "touch-exp" + index : "touch-exp");
+		var divLabel = CreateElement("div", "touch-exp-label" + index);
+		var divExpValue = CreateElement("div", "touch-exp-value touch-exp-value-" + index);
 		divLabel.innerText = expAction.name;
 		p.append(divLabel);
+		p.append(divExpValue);
+		divExpValue.innerText = FormatValueToDecimal1(MapMidiValueTo100(expAction.valueExp) / 10);
 		
 		divTouchExpButton.addEventListener('touchstart', function (e) {
 			const touch = e.touches[0]; // Obtenez le premier touch (il peut y en avoir plusieurs)
@@ -1397,7 +1402,7 @@ function AddTouchExp(item, p)
 			var totalHeight = parseInt(divTouchExpButton.offsetHeight) * 2;
 			var startY = parseInt(item.startY);
 			var diff = startY - currentY;
-			var valueDiffMidi = parseInt(Map(Math.abs(diff), 0, totalHeight, 0, 127));
+			var valueDiffMidi = parseInt(MapValue(Math.abs(diff), 0, totalHeight, 0, 127));
 			var newValueMidi = startTouchMidiValue + ((diff < 0 ? -1 : 1)* valueDiffMidi);
 			if(newValueMidi > 127) newValueMidi = 127;
 			if(newValueMidi < 0) newValueMidi = 0;
@@ -1410,54 +1415,13 @@ function AddTouchExp(item, p)
 			//console.log(`newValueMidi 		: ${newValueMidi}`);
 			var newMessage = new MidiXMessage(expAction.message.device, expAction.message.channel, expAction.message.midiType, expAction.message.value, newValueMidi);
 			SendMidi(newMessage);
-			UpdateExpButton(GetCurrentPage(), item, newValueMidi, 0);
-			
+			UpdateExpButton(GetCurrentPage(), item, newValueMidi, index);			
 		});
 		divTouchExpButton.addEventListener('touchend', function (e) {
 			//ClickButton(AppData.Pages[0].items[1]);
 		});
 		p.append(divTouchExpButton);
-	}
-	var expAction1 = expActions[1];
-	if(expAction1)
-	{
-		var divTouchExpButton = CreateElement("div", expActions.length>1 ? "touch-exp1" : "touch-exp");
-		var divLabel = CreateElement("div", "touch-exp-label1");
-		divLabel.innerText = expAction1.name;
-		p.append(divLabel);
-
-		divTouchExpButton.addEventListener('touchstart', function (e) {
-			const touch = e.touches[0]; // Obtenez le premier touch (il peut y en avoir plusieurs)
-			item.startY = touch.clientY; // Stockez la coordonnée X de départ
-			startTouchMidiValue = expAction1.valueExp;
-		});
-		divTouchExpButton.addEventListener('touchmove', function (e) {
-			const touch = e.touches[0]; 
-			var currentY = parseInt(touch.clientY); 
-			var totalHeight = parseInt(divTouchExpButton.offsetHeight) * 2;
-			var startY = parseInt(item.startY);
-			var diff = startY - currentY;
-			var valueDiffMidi = parseInt(Map(Math.abs(diff), 0, totalHeight, 0, 127));
-			var newValueMidi = startTouchMidiValue + ((diff < 0 ? -1 : 1)* valueDiffMidi);
-			if(newValueMidi > 127) newValueMidi = 127;
-			if(newValueMidi < 0) newValueMidi = 0;
-			//console.log("-----------------------------");
-			//console.log(`start 				: ${startY}`);
-			//console.log(`totalHeight 		: ${totalHeight}`);
-			//console.log(`currentY 			: ${currentY}`);
-			//console.log(`diff 				: ${diff}`);
-			//console.log(`valueDiffMidi 		: ${valueDiffMidi}`);
-			//console.log(`newValueMidi 		: ${newValueMidi}`);
-			var newMessage = new MidiXMessage(expAction1.message.device, expAction1.message.channel, expAction1.message.midiType, expAction1.message.value, newValueMidi);
-			SendMidi(newMessage);
-			UpdateExpButton(GetCurrentPage(), item, newValueMidi, 1);
-			
-		});
-		divTouchExpButton.addEventListener('touchend', function (e) {
-			//ClickButton(AppData.Pages[0].items[1]);
-		});
-		p.append(divTouchExpButton);
-	}
+	});
 }
 function AddTouchButton(item, p)
 {
@@ -1995,6 +1959,16 @@ function UpdateExpButton(page, item, value, index)
 		var div = $("div-element-"+item.id);
 		var valueTo100 = MapMidiValueTo100(value);
 		div.querySelector(".div-element-inside-exp" + actionExp.idExp).style.height = valueTo100 + "%";
+		var divExpValue = $("touch-exp-value-"+index);
+		if(divExpValue)
+		{
+			divExpValue.innerHTML = FormatValueToDecimal1(valueTo100 / 10);
+		}
+		else
+		{
+			//console.log(page);
+			//console.log(item);
+		}
 	}
 	actionExp.valueExp = value;
 	var exp = AppData.Expressions[actionExp.idExp];	

@@ -190,6 +190,13 @@ class Validation
 		this.obj = obj;
 	}
 }
+class MidiXActionPeer{
+	constructor(type, value)
+	{
+		this.type = type;
+		this.value = value;
+	}
+}
 class Profile
 {
 	constructor(id, name)
