@@ -414,21 +414,47 @@ function UpdateExpUi(value, exp, isFromTrigger)
 		ShowElement(divLevelNotSync);
 		divLevelNotSync.style.height = valueTo100 + "%";
 	}
-	if(exp.isSync && exp.currentButton)
+	// Une expression peut être utilisée par plusieurs boutons (par exemple les
+	// faders du profil lumière). Ne pas limiter le rafraîchissement à
+	// exp.currentButton : ce pointeur désigne uniquement le dernier bouton
+	// sélectionné et peut ne pas être défini lors d'une réception MIDI externe.
+	var page = GetCurrentPage();
+	if(page)
 	{
-		var page = GetCurrentPage();
-		if(page.id == exp.currentButton.idPage)
+		page.items.forEach(function(item)
 		{
-			var divElement = $("div-element-" + exp.currentButton.idButton);
-			if(divElement)
+			if(!item.actions) return;
+
+			var expressionActions = item.actions.filter(function(action)
 			{
-				var divExpInside = divElement.querySelector(".div-element-inside-exp" + exp.id);
-				if(divExpInside)
-				{
-					divExpInside.style.height = valueTo100 + "%";
-				}
+				return (action.action == "EXP" || action.action == "ExpSetValue") && action.idExp == exp.id;
+			});
+			if(expressionActions.length == 0) return;
+
+			var divElement = $("div-element-" + item.id);
+			if(!divElement) return;
+
+			var divExpInside = divElement.querySelector(".div-element-inside-exp" + exp.id);
+			if(divExpInside)
+			{
+				divExpInside.style.height = valueTo100 + "%";
 			}
-		}
+
+			// Le texte de valeur est créé par AddTouchExp dans l'ordre des
+			// actions EXP du bouton.
+			item.actions.filter(function(action)
+			{
+				return action.action == "EXP";
+			}).forEach(function(action, index)
+			{
+				if(action.idExp != exp.id) return;
+				var valueElement = divElement.querySelector(".touch-exp-value-" + index);
+				if(valueElement)
+				{
+					valueElement.innerHTML = FormatValueToDecimal1(valueTo100 / 10);
+				}
+			});
+		});
 	}
 	
 }
