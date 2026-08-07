@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Scene>
+  <Fixtures>
+    <Fixture id="1000000007" name="Lyre #1" model="MyLyre" />
+    <Fixture id="1000000008" name="Lyre #2" model="MyLyre" />
+    <Fixture id="1000000009" name="Lyre #3" model="MyLyre" />
+    <Fixture id="1000000010" name="Lyre #4" model="MyLyre" />
+    <Fixture id="1000000045" name="Hybrid RVB #1" model="Hybrid RVB" />
+    <Fixture id="1000000051" name="Hybrid RVB #7" model="Hybrid RVB" />
+    <Fixture id="1000000001" name="1" model="MyWash" />
+    <Fixture id="1000000002" name="2" model="MyWash" />
+  </Fixtures>
+  <Steps>
+    <Step length="1800">
+      <Fixture id="1000000007">
+        <Channel index="0" name="pan" value="145" />
+        <Channel index="2" name="tilt" value="120" />
+      </Fixture>
+      <Fixture id="1000000008">
+        <Channel index="0" name="pan" value="150" />
+        <Channel index="2" name="tilt" value="115" />
+      </Fixture>
+      <Fixture id="1000000009">
+        <Channel index="0" name="pan" value="160" />
+        <Channel index="2" name="tilt" value="115" />
+      </Fixture>
+      <Fixture id="1000000010">
+        <Channel index="0" name="pan" value="165" />
+        <Channel index="2" name="tilt" value="120" />
+      </Fixture>
+      <Fixture id="1000000045">
+        <Channel index="0" name="red" value="40" />
+        <Channel index="1" name="green" value="0" />
+        <Channel index="2" name="blue" value="100" />
+      </Fixture>
+      <Fixture id="1000000051">
+        <Channel index="0" name="red" value="40" />
+        <Channel index="1" name="green" value="0" />
+        <Channel index="2" name="blue" value="100" />
+      </Fixture>
+      <Fixture id="1000000001">
+        <Channel index="0" name="dimmer" value="80" />
+        <Channel index="1" name="red" value="80" />
+        <Channel index="2" name="green" value="0" />
+        <Channel index="3" name="blue" value="180" />
+      </Fixture>
+      <Fixture id="1000000002">
+        <Channel index="0" name="dimmer" value="80" />
+        <Channel index="1" name="red" value="80" />
+        <Channel index="2" name="green" value="0" />
+        <Channel index="3" name="blue" value="180" />
+      </Fixture>
+    </Step>
+  </Steps>
+</Scene>
+

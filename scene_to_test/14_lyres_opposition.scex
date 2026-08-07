@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Scene>
+  <Fixtures>
+    <Fixture id="1000000007" name="Lyre #1" model="MyLyre" />
+    <Fixture id="1000000008" name="Lyre #2" model="MyLyre" />
+    <Fixture id="1000000009" name="Lyre #3" model="MyLyre" />
+    <Fixture id="1000000010" name="Lyre #4" model="MyLyre" />
+  </Fixtures>
+  <Steps>
+    <Step length="700">
+      <Fixture id="1000000007">
+        <Channel index="0" name="pan" value="90" />
+        <Channel index="2" name="tilt" value="80" />
+      </Fixture>
+      <Fixture id="1000000008">
+        <Channel index="0" name="pan" value="200" />
+        <Channel index="2" name="tilt" value="140" />
+      </Fixture>
+      <Fixture id="1000000009">
+        <Channel index="0" name="pan" value="90" />
+        <Channel index="2" name="tilt" value="140" />
+      </Fixture>
+      <Fixture id="1000000010">
+        <Channel index="0" name="pan" value="200" />
+        <Channel index="2" name="tilt" value="80" />
+      </Fixture>
+    </Step>
+    <Step length="700">
+      <Fixture id="1000000007">
+        <Channel index="0" name="pan" value="200" />
+        <Channel index="2" name="tilt" value="140" />
+      </Fixture>
+      <Fixture id="1000000008">
+        <Channel index="0" name="pan" value="90" />
+        <Channel index="2" name="tilt" value="80" />
+      </Fixture>
+      <Fixture id="1000000009">
+        <Channel index="0" name="pan" value="200" />
+        <Channel index="2" name="tilt" value="80" />
+      </Fixture>
+      <Fixture id="1000000010">
+        <Channel index="0" name="pan" value="90" />
+        <Channel index="2" name="tilt" value="140" />
+      </Fixture>
+    </Step>
+  </Steps>
+</Scene>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Scene>
+  <Fixtures>
+    <Fixture id="1000000007" name="Lyre #1" model="MyLyre" />
+    <Fixture id="1000000008" name="Lyre #2" model="MyLyre" />
+    <Fixture id="1000000009" name="Lyre #3" model="MyLyre" />
+    <Fixture id="1000000010" name="Lyre #4" model="MyLyre" />
+  </Fixtures>
+  <Steps>
+    <Step length="500">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="90" /><Channel index="2" name="tilt" value="100" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="125" /><Channel index="2" name="tilt" value="100" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="170" /><Channel index="2" name="tilt" value="100" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="205" /><Channel index="2" name="tilt" value="100" /></Fixture>
+    </Step>
+    <Step length="900">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="155" /><Channel index="2" name="tilt" value="150" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="155" /><Channel index="2" name="tilt" value="120" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="155" /><Channel index="2" name="tilt" value="90" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="155" /><Channel index="2" name="tilt" value="60" /></Fixture>
+    </Step>
+    <Step length="500">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="205" /><Channel index="2" name="tilt" value="100" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="170" /><Channel index="2" name="tilt" value="100" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="125" /><Channel index="2" name="tilt" value="100" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="90" /><Channel index="2" name="tilt" value="100" /></Fixture>
+    </Step>
+  </Steps>
+</Scene>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Scene>
+  <Fixtures>
+    <Fixture id="1000000011" name="Blinder #1" model="MyBlinder" />
+    <Fixture id="1000000020" name="Blinder #10" model="MyBlinder" />
+    <Fixture id="1000000021" name="Blinder #11" model="MyBlinder" />
+    <Fixture id="1000000030" name="Blinder #20" model="MyBlinder" />
+  </Fixtures>
+  <Steps>
+    <Step length="100">
+      <Fixture id="1000000011">
+        <Channel index="0" name="dimmer" value="255" />
+      </Fixture>
+      <Fixture id="1000000020">
+        <Channel index="0" name="dimmer" value="0" />
+      </Fixture>
+      <Fixture id="1000000021">
+        <Channel index="0" name="dimmer" value="0" />
+      </Fixture>
+      <Fixture id="1000000030">
+        <Channel index="0" name="dimmer" value="255" />
+      </Fixture>
+    </Step>
+    <Step length="100">
+      <Fixture id="1000000011">
+        <Channel index="0" name="dimmer" value="0" />
+      </Fixture>
+      <Fixture id="1000000020">
+        <Channel index="0" name="dimmer" value="255" />
+      </Fixture>
+      <Fixture id="1000000021">
+        <Channel index="0" name="dimmer" value="255" />
+      </Fixture>
+      <Fixture id="1000000030">
+        <Channel index="0" name="dimmer" value="0" />
+      </Fixture>
+    </Step>
+  </Steps>
+</Scene>
+

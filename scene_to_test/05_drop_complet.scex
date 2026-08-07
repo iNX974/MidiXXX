@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Scene>
+  <Fixtures>
+    <Fixture id="1000000007" name="Lyre #1" model="MyLyre" />
+    <Fixture id="1000000008" name="Lyre #2" model="MyLyre" />
+    <Fixture id="1000000009" name="Lyre #3" model="MyLyre" />
+    <Fixture id="1000000010" name="Lyre #4" model="MyLyre" />
+    <Fixture id="1000000011" name="Blinder #1" model="MyBlinder" />
+    <Fixture id="1000000030" name="Blinder #20" model="MyBlinder" />
+    <Fixture id="1000000031" name="Hybrid Beam #1" model="Hybrid Beam" />
+    <Fixture id="1000000045" name="Hybrid RVB #1" model="Hybrid RVB" />
+    <Fixture id="1000000058" name="Hybrid RVB #14" model="Hybrid RVB" />
+  </Fixtures>
+  <Steps>
+    <Step length="120">
+      <Fixture id="1000000011"><Channel index="0" name="dimmer" value="255" /></Fixture>
+      <Fixture id="1000000030"><Channel index="0" name="dimmer" value="255" /></Fixture>
+      <Fixture id="1000000031"><Channel index="0" name="dimmer" value="255" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="255" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000045"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000058"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="100" /><Channel index="2" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="130" /><Channel index="2" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="180" /><Channel index="2" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="210" /><Channel index="2" name="tilt" value="110" /></Fixture>
+    </Step>
+  </Steps>
+</Scene>
