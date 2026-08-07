@@ -225,6 +225,22 @@ input[type="checkbox"].radio-element-custom:checked + label {
   color:#000;
 }
 
+.button-clear-logs
+{
+  width: auto;
+  height: auto;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #FFF;
+  border-radius: 0;
+  background: transparent;
+  color: #FFF;
+}
+.button-clear-logs:hover
+{
+  background: #FFF;
+  color: #000;
+}
+
 input[type="radio"].radio-element-color-picker {
   display: none;
 }
