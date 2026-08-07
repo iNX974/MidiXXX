@@ -80,6 +80,13 @@ function AddLogs(value)
 	$("logs-count").innerHTML = nbLogs;
 	ShowElement($("logs-count"));
 }
+function ClearLogs()
+{
+	$("logs").innerHTML = "";
+	nbLogs = 0;
+	$("logs-count").innerHTML = "";
+	HideElement($("logs-count"));
+}
 function CreateElement(type, className)
 {
 	var e = document.createElement(type);
