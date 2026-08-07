@@ -499,6 +499,11 @@ li
 {
   right: 0;
 }
+.div-element-inside-exp-single
+{
+  left: 0;
+  right: auto;
+}
 
 
 .form {

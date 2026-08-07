@@ -1302,13 +1302,20 @@ function AddButtonToLigne(ligne, item, page, idInsideButton, indexInsideButton)
 	let p = document.createElement("div");
 	if(AppData.Expressions)
 	{
+		var itemExpressions = AppData.Expressions.filter(function(expression)
+		{
+			return item.actions && item.actions.some(function(action)
+			{
+				return (action.action == "EXP" || action.action == "ExpSetValue") && action.idExp == expression.id;
+			});
+		});
 		AppData.Expressions.forEach((expression)=>{
 			if(!item.actions) return;
 			var actionExp = item.actions.filter(function(e){return (e.action=="EXP" || e.action == "ExpSetValue") && e.idExp == expression.id;})[0];
-			if(actionExp && expression.id % 2 == 0)//(expression.id == 0 || expression.id==2))
+			if(actionExp && (itemExpressions.length == 1 || expression.id % 2 == 0))//(expression.id == 0 || expression.id==2))
 			{
 				let divExp = document.createElement("div");
-				divExp.className = "div-element-inside-exp div-element-inside-exp" + expression.id;
+				divExp.className = "div-element-inside-exp div-element-inside-exp" + expression.id + (itemExpressions.length == 1 ? " div-element-inside-exp-single" : "");
 				p.appendChild(divExp);
 			}
 		});
@@ -1340,13 +1347,20 @@ function AddButtonToLigne(ligne, item, page, idInsideButton, indexInsideButton)
 	p.append(divInfoMacro);
 	if(AppData.Expressions)
 	{
+		var itemExpressions = AppData.Expressions.filter(function(expression)
+		{
+			return item.actions && item.actions.some(function(action)
+			{
+				return (action.action == "EXP" || action.action == "ExpSetValue") && action.idExp == expression.id;
+			});
+		});
 		AppData.Expressions.forEach((expression)=>{
 			if(!item.actions) return;
 			var actionExp = item.actions.filter(function(e){return (e.action=="EXP" || e.action == "ExpSetValue") && e.idExp == expression.id;})[0];
 			if(actionExp && expression.id % 2 == 1)//&&  (expression.id == 1 || expression.id==3))
 			{
 				let divExp = document.createElement("div");
-				divExp.className = "div-element-inside-exp div-element-inside-exp" + expression.id;
+				divExp.className = "div-element-inside-exp div-element-inside-exp" + expression.id + (itemExpressions.length == 1 ? " div-element-inside-exp-single" : "");
 				p.appendChild(divExp);
 			}
 		});
