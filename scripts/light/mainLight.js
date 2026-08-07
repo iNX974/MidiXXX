@@ -838,7 +838,7 @@ function GetPageLightAPC1(profile) {
 				name: "Starfield",
 				type: "Preset",
 				group: "HybridBeamMouvement",
-				color: "white",
+				color: "lightorange",
 				actions: [
 					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
 					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 0))
@@ -851,7 +851,7 @@ function GetPageLightAPC1(profile) {
 				name: "Swipe",
 				type: "Preset",
 				group: "HybridBeamMouvement",
-				color: "white",
+				color: "lightorange",
 				actions: [
 					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
 					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 0))
@@ -864,7 +864,7 @@ function GetPageLightAPC1(profile) {
 				name: "Swipe Ping Pong",
 				type: "Preset",
 				group: "HybridBeamMouvement",
-				color: "white",
+				color: "lightorange",
 				actions: [
 					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
 					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 0))
@@ -898,7 +898,7 @@ function GetPageLightAPC1(profile) {
 						name: "Time",
 						event: "OnPress",
 						action: "EXP",
-						idExp: 2,
+						idExp: 9,
 						valueExp: 50,
 						message: new MidiXMessage("Sweetlight", 16, "CC", 65),
 						expMin: 60,
