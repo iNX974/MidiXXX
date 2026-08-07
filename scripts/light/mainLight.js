@@ -123,10 +123,9 @@ function GetPageLightAPC1(profile) {
 		[],
 		//actions
 		[
-			new MidiXAction(0, "", "OnLoad", "LinkButton", null, null, null, new MidiXLinkButton(idPage, 74, "Toggle"))
+			new MidiXAction(0, "", "OnLoad", "LinkButton", null, null, null, new MidiXLinkButton(idPage, 71, "Toggle"))
 		]);
-	page.nbButtonsByLine = 9;
-	
+	page.nbButtonsByLine = 9;	
 	
 	var index = -1;
 	// Ligne 1 Blinder
@@ -492,29 +491,17 @@ function GetPageLightAPC1(profile) {
 				new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
 				new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
 			]
-		});	
-	
+		});		
 	page.items.push(
 		{
 			id: ++index,
-			name: "Strob Hybrid Beam",
+			name: "-",
 			type: "Momentary",
 			group: "",
-			color: "white",
+			color: "",
 			actions: [
 				new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
-				new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0)),
-				{
-					id: 2,
-					name: "Time",
-					event: "OnPress",
-					action: "EXP",
-					idExp: 2,
-					valueExp: 50,
-					message: new MidiXMessage("Sweetlight", 16, "CC", 65),
-					expMin: 60,
-					expMax: 127
-				}
+				new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
 			]
 		});
 	page.items.push(
@@ -716,31 +703,7 @@ function GetPageLightAPC1(profile) {
 					}
 				],
 				description : "Vertical Ping Pong"
-			});indexNoteMidi++;
-		page.items.push(
-			{
-				id: ++index,
-				name: "-",
-				type: "Preset",
-				group: "HybridRVBMouvement",
-				color: "",
-				actions: [
-					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
-					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
-				]
-			});
-		page.items.push(
-			{
-				id: ++index,
-				name: "-",
-				type: "Preset",
-				group: "HybridRVBMouvement",
-				color: "",
-				actions: [
-					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
-					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
-				]
-			});
+			});indexNoteMidi++;		
 		page.items.push(
 			{
 				id: ++index,
@@ -776,6 +739,30 @@ function GetPageLightAPC1(profile) {
 				type: "Preset",
 				group: "HybridRVBMouvement",
 				color: "white",
+				actions: [
+					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
+					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
+				]
+			});
+		page.items.push(
+			{
+				id: ++index,
+				name: "-",
+				type: "Preset",
+				group: "HybridRVBMouvement",
+				color: "",
+				actions: [
+					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
+					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
+				]
+			});
+		page.items.push(
+			{
+				id: ++index,
+				name: "-",
+				type: "Preset",
+				group: "HybridRVBMouvement",
+				color: "",
 				actions: [
 					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
 					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
@@ -844,31 +831,7 @@ function GetPageLightAPC1(profile) {
 					}
 				],
 				description : "Vertical Ping Pong"
-			});indexNoteMidi++;
-		page.items.push(
-			{
-				id: ++index,
-				name: "-",
-				type: "Preset",
-				group: "HybridBeamMouvement",
-				color: "black",
-				actions: [
-					
-				],
-				description : ""
-			});indexNoteMidi++;
-		page.items.push(
-			{
-				id: ++index,
-				name: "-",
-				type: "Preset",
-				group: "HybridBeamMouvement",
-				color: "black",
-				actions: [
-					
-				],
-				description : ""
-			});indexNoteMidi++;
+			});indexNoteMidi++;		
 		page.items.push(
 			{
 				id: ++index,
@@ -907,7 +870,42 @@ function GetPageLightAPC1(profile) {
 					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 0))
 				],
 				description : ""
-			});indexNoteMidi++;
+			}); indexNoteMidi++;
+		page.items.push(
+			{
+				id: ++index,
+				name: "-",
+				type: "Preset",
+				group: "HybridBeamMouvement",
+				color: "",
+				actions: [
+
+				],
+				description: ""
+			}); indexNoteMidi++;
+		page.items.push(
+			{
+				id: ++index,
+				name: "Strob Hybrid Beam",
+				type: "Momentary",
+				group: "",
+				color: "white",
+				actions: [
+					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
+					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0)),
+					{
+						id: 2,
+						name: "Time",
+						event: "OnPress",
+						action: "EXP",
+						idExp: 2,
+						valueExp: 50,
+						message: new MidiXMessage("Sweetlight", 16, "CC", 65),
+						expMin: 60,
+						expMax: 127
+					}
+				]
+			});
 		page.items.push(
 			{
 				id: ++index,
@@ -1132,153 +1130,167 @@ function GetPageLightAPC1(profile) {
 				new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
 			]
 		});
-	page.items.push(
-		{
-			id: ++index,
-			name: "Freeze",
-			type: "Momentary",
-			group: "",
-			color: "black",
-			actions: [
-				new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
-				new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
-			]
-		});
+        var indexAction = 0;
+		page.items.push(
+			{
+				id: ++index,
+				name: "Init color",
+				type: "Preset",
+				group: "",
+				color: "",
+				excludeRegisterInMacro: true,
+				actions: [
+					//ligne 8
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(0, "white", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(1, "white", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(2, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(3, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(4, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(5, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(6, "cyan", "blink")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(7, "cyan", "pulse")),
+					//ligne 7
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(8, "white", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(9, "red", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(10, "violet", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(11, "blue", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(12, "black", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(13, "black", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(14, "black", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(15, "white", "blinkfast")),
+					//ligne 6
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(16, "yellow", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(17, "yellow", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(18, "yellow", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(19, "yellow", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(20, "yellow", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(21, "yellow", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(22, "black", "blink")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(23, "yellow", "blinkfast")),
+					//ligne 5
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(24, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(25, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(26, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(27, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(28, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(29, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(30, "black", "blink")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(31, "black", "blink")),
+					//ligne 4
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(32, "white", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(33, "red", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(34, "violet", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(35, "cyan", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(36, "blue", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(37, "black", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(38, "cyan", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(39, "white", "blinkfast")),
+					//ligne 3
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(40, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(41, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(42, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(43, "white", "blink")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(44, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(45, "white", "blink")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(46, "white", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(47, "black", "blinkfast")),
+					//ligne 2
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(48, "white", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(49, "red", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(50, "violet", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(51, "cyan", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(52, "blue", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(53, "yellow", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(54, "green", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(55, "white", "blinkfast")),
+					//ligne 1
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(56, "yellow", "blink")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(57, "yellow", "pulse")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(58, "yellow", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(59, "yellow", "pulsefast")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(60, "yellow", "pulsefast")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(61, "black", "full")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(62, "yellow", "blink")),
+					new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(63, "yellow", "blink")),
+					//ligne horizontal
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 100, 1)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 101, 1)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 102, 1)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 103, 1)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 104, 1)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 105, 2)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 106, 1)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 107, 1)),
+					//ligne vertical
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 112, 127)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 113, 127)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 114, 0)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 115, 127)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 116, 0)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 117, 127)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 118, 127)),
+					new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons", 1, "NoteOn", 119, 0))
+
+				]
+			}); indexNoteMidi++;
 	}
 	// Ligne 9 Functions
 	{
 	page.items.push(
 		{
 			id: ++index,
-			name: "Rec",
+			name: "Mute Blinder",
 			type: "Momentary",
 			group: "",
-			color: "red",
+			color: "White",
 			actions: [
-				new MidiXAction(0, "", "OnPress", "PrepareMacro")
+				new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
+				new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
 			]
-		});indexNoteMidi++;
+		});
 	page.items.push(
 		{
 			id: ++index,
-			name: "Play",
+			name: "Mute Spot",
 			type: "Momentary",
 			group: "",
-			color: "green",
+			color: "White",
 			actions: [
-				new MidiXAction(0, "", "OnPress", "PlayMacro")
+				new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
+				new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
 			]
-		});indexNoteMidi++;
-		var indexAction = 0;
+		});
 	page.items.push(
 		{
 			id: ++index,
-			name: "Init color",
-			type: "Preset",
+			name: "Mute Hybrid RVB",
+			type: "Momentary",
 			group: "",
-			color: "",
-			excludeRegisterInMacro : true,
+			color: "White",
 			actions: [
-				//ligne 8
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(0 , "white", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(1 , "white", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(2 , "white", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(3 , "white", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(4 , "white", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(5 , "white", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(6 , "cyan", 			"blink")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(7 , "cyan", 			"pulse")),
-				//ligne 7
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(8 , "white",  			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(9 , "red", 	 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(10, "violet", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(11, "blue",  			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(12, "black",  			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(13, "black", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(14, "black",  			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(15, "white",  			"blinkfast")),
-				//ligne 6
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(16, "yellow", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(17, "yellow", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(18, "yellow", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(19, "black", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(20, "black", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(21, "yellow", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(22, "yellow", 			"blink")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(23, "yellow", 			"blink")),
-				//ligne 5
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(24, "white", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(25, "white", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(26, "white", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(27, "black", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(28, "black", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(29, "black", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(30, "white", 			"blink")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(31, "white", 			"blink")),
-				//ligne 4
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(32, "white",  			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(33, "red", 	 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(34, "violet", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(35, "cyan",  			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(36, "blue",  			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(37, "black", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(38, "cyan",  			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(39, "white",  			"blinkfast")),
-				//ligne 3
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(40, "white", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(41, "white", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(42, "white", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(43, "white", 			"blink")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(44, "white", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(45, "white", 			"blink")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(46, "white", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(47, "white", 			"blinkfast")),
-				//ligne 2
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(48, "white", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(49, "red", 				"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(50, "violet", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(51, "cyan", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(52, "blue", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(53, "yellow", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(54, "green", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(55, "white", 			"blinkfast")),
-				//ligne 1
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(56, "yellow", 			"blink")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(57, "yellow", 			"pulse")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(58, "yellow", 			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(59, "yellow", 			"pulsefast")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(60, "yellow", 			"pulsefast")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(61, "black",			"full")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(62, "yellow", 			"blink")),
-				new MidiXAction(indexAction++, "", "Any", "Midi", GetMidiMessageForColorAPC(63, "yellow", 			"blink")),
-
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 100, 3)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 101, 3)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 102, 0)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 103, 0)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 104, 3)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 105, 0)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 106, 3)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 107, 3)),
-
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 112, 127)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 113, 127)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 114, 0)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 115, 127)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 116, 0)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 117, 127)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 118, 127)),
-				new MidiXAction(indexAction++, "", "Any", "Midi", new MidiXMessage("APC Buttons",1, "NoteOn", 119, 127))
-
+				new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
+				new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
 			]
-		});indexNoteMidi++;
+		});
 	page.items.push(
 		{
 			id: ++index,
-			name: "-",
-			type: "Preset",
+			name: "Mute Hybrid Beam",
+			type: "Momentary",
 			group: "",
-			color: "",
+			color: "White",
+			actions: [
+				new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
+				new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
+			]
+		});
+	page.items.push(
+		{
+			id: ++index,
+			name: "Mute Lyre",
+			type: "Momentary",
+			group: "",
+			color: "White",
 			actions: [
 				new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
 				new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
@@ -1296,18 +1308,7 @@ function GetPageLightAPC1(profile) {
 				new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
 			]
 		});
-	page.items.push(
-		{
-			id: ++index,
-			name: "-",
-			type: "Preset",
-			group: "",
-			color: "",
-			actions: [
-				new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
-				new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
-			]
-		});
+	
 	page.items.push(
 		{
 			id: ++index,

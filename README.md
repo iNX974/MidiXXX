@@ -1,3 +1,4 @@
+V.2026.08.07
 # MidiXXX
 
 MidiXXX est une interface web de contrôle MIDI destinée à piloter un environnement audio et lumière depuis un navigateur. Elle transforme des boutons, pages, expressions et macros en messages MIDI, avec notamment des configurations pour Quad Cortex, Reaper, APC et Sweetlight.
