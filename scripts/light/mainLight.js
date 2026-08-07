@@ -109,7 +109,7 @@ function GetLightProfile()
 		new MidiXExpression(5, "EXP 6", new MidiXMessage("APC Buttons", 1, "CC", 53)),
 		new MidiXExpression(6, "EXP 7", new MidiXMessage("APC Buttons", 1, "CC", 54)),
 		new MidiXExpression(7, "EXP 8", new MidiXMessage("APC Buttons", 1, "CC", 55)),
-		new MidiXExpression(8, "EXP 9", new MidiXMessage("APC Buttons", 1, "CC", 56))
+		new MidiXExpression(9, "EXP 10", new MidiXMessage("APC Buttons", 1, "CC", 57), true)
 
 	];
 
