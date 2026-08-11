@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Scene>
   <Fixtures>
     <Fixture id="1000000001" name="1" model="MyWash" />
@@ -9,82 +9,61 @@
     <Fixture id="1000000006" name="6" model="MyWash" />
   </Fixtures>
   <Steps>
-    <Step length="900">
-      <Fixture id="1000000001">
-        <Channel index="0" name="dimmer" value="200" />
-        <Channel index="1" name="red" value="255" />
-        <Channel index="2" name="green" value="0" />
-        <Channel index="3" name="blue" value="0" />
-      </Fixture>
-      <Fixture id="1000000002">
-        <Channel index="0" name="dimmer" value="200" />
-        <Channel index="1" name="red" value="255" />
-        <Channel index="2" name="green" value="0" />
-        <Channel index="3" name="blue" value="0" />
-      </Fixture>
-      <Fixture id="1000000003">
-        <Channel index="0" name="dimmer" value="200" />
-        <Channel index="1" name="red" value="255" />
-        <Channel index="2" name="green" value="0" />
-        <Channel index="3" name="blue" value="0" />
-      </Fixture>
-      <Fixture id="1000000004">
-        <Channel index="0" name="dimmer" value="200" />
-        <Channel index="1" name="red" value="0" />
-        <Channel index="2" name="green" value="255" />
-        <Channel index="3" name="blue" value="255" />
-      </Fixture>
-      <Fixture id="1000000005">
-        <Channel index="0" name="dimmer" value="200" />
-        <Channel index="1" name="red" value="0" />
-        <Channel index="2" name="green" value="255" />
-        <Channel index="3" name="blue" value="255" />
-      </Fixture>
-      <Fixture id="1000000006">
-        <Channel index="0" name="dimmer" value="200" />
-        <Channel index="1" name="red" value="0" />
-        <Channel index="2" name="green" value="255" />
-        <Channel index="3" name="blue" value="255" />
-      </Fixture>
+    <Step name="Step 1" length="3">
+      <Fixture id="1000000001"><Channel index="0" name="dimmer" value="255" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000002"><Channel index="0" name="dimmer" value="0" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000003"><Channel index="0" name="dimmer" value="255" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000004"><Channel index="0" name="dimmer" value="0" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000005"><Channel index="0" name="dimmer" value="255" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000006"><Channel index="0" name="dimmer" value="0" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
     </Step>
-    <Step length="900">
-      <Fixture id="1000000001">
-        <Channel index="0" name="dimmer" value="200" />
-        <Channel index="1" name="red" value="0" />
-        <Channel index="2" name="green" value="255" />
-        <Channel index="3" name="blue" value="255" />
-      </Fixture>
-      <Fixture id="1000000002">
-        <Channel index="0" name="dimmer" value="200" />
-        <Channel index="1" name="red" value="0" />
-        <Channel index="2" name="green" value="255" />
-        <Channel index="3" name="blue" value="255" />
-      </Fixture>
-      <Fixture id="1000000003">
-        <Channel index="0" name="dimmer" value="200" />
-        <Channel index="1" name="red" value="0" />
-        <Channel index="2" name="green" value="255" />
-        <Channel index="3" name="blue" value="255" />
-      </Fixture>
-      <Fixture id="1000000004">
-        <Channel index="0" name="dimmer" value="200" />
-        <Channel index="1" name="red" value="255" />
-        <Channel index="2" name="green" value="0" />
-        <Channel index="3" name="blue" value="0" />
-      </Fixture>
-      <Fixture id="1000000005">
-        <Channel index="0" name="dimmer" value="200" />
-        <Channel index="1" name="red" value="255" />
-        <Channel index="2" name="green" value="0" />
-        <Channel index="3" name="blue" value="0" />
-      </Fixture>
-      <Fixture id="1000000006">
-        <Channel index="0" name="dimmer" value="200" />
-        <Channel index="1" name="red" value="255" />
-        <Channel index="2" name="green" value="0" />
-        <Channel index="3" name="blue" value="0" />
-      </Fixture>
+    <Step name="Step 2" length="3">
+      <Fixture id="1000000001"><Channel index="0" name="dimmer" value="213" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="43" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000002"><Channel index="0" name="dimmer" value="43" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000003"><Channel index="0" name="dimmer" value="213" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="43" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000004"><Channel index="0" name="dimmer" value="43" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000005"><Channel index="0" name="dimmer" value="213" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="43" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000006"><Channel index="0" name="dimmer" value="43" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+    </Step>
+    <Step name="Step 3" length="3">
+      <Fixture id="1000000001"><Channel index="0" name="dimmer" value="170" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="85" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000002"><Channel index="0" name="dimmer" value="85" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000003"><Channel index="0" name="dimmer" value="170" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="85" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000004"><Channel index="0" name="dimmer" value="85" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000005"><Channel index="0" name="dimmer" value="170" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="85" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000006"><Channel index="0" name="dimmer" value="85" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+    </Step>
+    <Step name="Step 4" length="3">
+      <Fixture id="1000000001"><Channel index="0" name="dimmer" value="128" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="128" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000002"><Channel index="0" name="dimmer" value="128" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000003"><Channel index="0" name="dimmer" value="128" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="128" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000004"><Channel index="0" name="dimmer" value="128" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000005"><Channel index="0" name="dimmer" value="128" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="128" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000006"><Channel index="0" name="dimmer" value="128" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+    </Step>
+    <Step name="Step 5" length="3">
+      <Fixture id="1000000001"><Channel index="0" name="dimmer" value="85" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="170" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000002"><Channel index="0" name="dimmer" value="170" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000003"><Channel index="0" name="dimmer" value="85" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="170" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000004"><Channel index="0" name="dimmer" value="170" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000005"><Channel index="0" name="dimmer" value="85" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="170" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000006"><Channel index="0" name="dimmer" value="170" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+    </Step>
+    <Step name="Step 6" length="3">
+      <Fixture id="1000000001"><Channel index="0" name="dimmer" value="43" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="213" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000002"><Channel index="0" name="dimmer" value="213" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000003"><Channel index="0" name="dimmer" value="43" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="213" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000004"><Channel index="0" name="dimmer" value="213" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000005"><Channel index="0" name="dimmer" value="43" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="213" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000006"><Channel index="0" name="dimmer" value="213" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+    </Step>
+    <Step name="Step 7" length="15">
+      <Fixture id="1000000001"><Channel index="0" name="dimmer" value="0" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="255" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000002"><Channel index="0" name="dimmer" value="255" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000003"><Channel index="0" name="dimmer" value="0" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="255" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000004"><Channel index="0" name="dimmer" value="255" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000005"><Channel index="0" name="dimmer" value="0" /><Channel index="1" name="red" value="0" /><Channel index="2" name="green" value="255" /><Channel index="3" name="blue" value="255" /></Fixture>
+      <Fixture id="1000000006"><Channel index="0" name="dimmer" value="255" /><Channel index="1" name="red" value="255" /><Channel index="2" name="green" value="0" /><Channel index="3" name="blue" value="255" /></Fixture>
     </Step>
   </Steps>
 </Scene>
-

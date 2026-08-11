@@ -1,35 +1,29 @@
 # Scènes Sweetlight à tester
 
-Ces fichiers `.scex` sont des propositions de scènes de test basées sur la
-configuration présente dans `C:\Downloads\Full - Prod`.
+Les 29 fichiers `.scex` sont générés pour la configuration réellement présente dans `C:\Downloads\Full - Prod`. Chaque scène contient uniquement les fixtures qui ont au moins une valeur active dans un step ; les fixtures jamais utilisés sont exclus.
 
-Importez-les dans une copie du projet Sweetlight avant de les utiliser en
-production. Les scènes utilisent les identifiants de fixtures existants :
+## Cartographie utilisée
 
-- Spots : `1000000001` à `1000000006`
-- Lyres : `1000000007` à `1000000010`
-- Blinders : `1000000011` à `1000000030`
-- Hybrids RVB : `1000000045` à `1000000058` pour un premier bloc de 14
-- Hybrids Beam : `1000000031` à `1000000044` pour un premier bloc de 14
+- Spots `1` à `6` (`1000000001`–`1000000006`) : `1–3` devant la scène, `4–6` derrière ; canaux dimmer/RGB.
+- Lyres `1` à `4` (`1000000007`–`1000000010`) : mouvements pan/tilt.
+- Blinders `1` à `20` (`1000000011`–`1000000030`) : deux barres de 10, une par côté ; canal dimmer.
+- Hybrid Beam `1` à `56` (`1000000031`–`1000000128`) : quatre barres de 14 verticales ; canal white.
+- Hybrid RVB `1` à `56` (`1000000045`–`1000000142`) : quatre barres de 14 verticales ; canaux RGB.
 
-Scènes incluses :
+Les scènes utilisent plusieurs steps interpolés pour chaque transition. Les scènes de barres parcourent les pixels dans l’ordre de chaque barre de 14, et les scènes de blinders distinguent les deux groupes de 10.
 
-- `01_hybrid_centre_exterieur.scex` : propagation verticale du centre vers les extrémités
-- `02_lyres_fan.scex` : ouverture et fermeture en éventail des quatre lyres
-- `03_avant_chaud_arriere_froid.scex` : contraste spots avant / hybrids arrière
-- `04_blinder_double_impact.scex` : montée halogène puis double impact
-- `05_drop_complet.scex` : combinaison lyres, hybrids, spots et blinders
+## Catalogue
 
-Les valeurs sont volontairement modérées pour faciliter le premier test.
+01–05 : effets principaux (propagation RVB, éventail lyres, contraste avant/arrière, double impact blinder, drop complet).
 
-## Catalogue complet
+06–11 : effets Hybrid RVB/Beam (wave verticale, miroir, chase couleur + beam, respiration, pixel rain, groupes alternés).
 
-Les scènes 06 à 11 couvrent les effets des Hybrid RVB/Beam : wave verticale, miroir, chase couleur avec beam, respiration, pixel rain et alternance par groupes.
+12–17 : mouvements de lyres (convergence, balayage public, opposition, huit, battement, miroir).
 
-Les scènes 12 à 17 couvrent les lyres : convergence, balayage public, opposition, figure en huit, battement et mouvement miroir.
+18–21 : effets des spots (crossfade avant/arrière, couleurs complémentaires, dégradé, silhouette).
 
-Les scènes 18 à 21 couvrent les spots : crossfade avant/arrière, couleurs complémentaires, dégradé gauche-droite et silhouette.
+22–25 : effets blinders (centre/extérieur, gauche/droite, montée, accent avec beams).
 
-Les scènes 22 à 25 couvrent les blinders : centre vers extérieur, gauche/droite, montée halogène et accent blinder suivi par les beams.
+26–29 : ambiances complètes (intro, build-up, break calme, finale).
 
-Les scènes 26 à 29 couvrent les ambiances complètes : intro, build-up, break calme et finale. Les scènes 02, 04 et 05 couvrent respectivement le fan, le double impact et le drop.
+Importer les scènes dans une copie du projet Sweetlight avant le test en production.

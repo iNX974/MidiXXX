@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Scene>
   <Fixtures>
     <Fixture id="1000000007" name="Lyre #1" model="MyLyre" />
@@ -7,23 +7,119 @@
     <Fixture id="1000000010" name="Lyre #4" model="MyLyre" />
   </Fixtures>
   <Steps>
-    <Step length="500">
-      <Fixture id="1000000007"><Channel index="0" name="pan" value="90" /><Channel index="2" name="tilt" value="100" /></Fixture>
-      <Fixture id="1000000008"><Channel index="0" name="pan" value="125" /><Channel index="2" name="tilt" value="100" /></Fixture>
-      <Fixture id="1000000009"><Channel index="0" name="pan" value="170" /><Channel index="2" name="tilt" value="100" /></Fixture>
-      <Fixture id="1000000010"><Channel index="0" name="pan" value="205" /><Channel index="2" name="tilt" value="100" /></Fixture>
+    <Step name="Step 1" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="35" /><Channel index="1" name="tilt" value="90" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="35" /><Channel index="1" name="tilt" value="100" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="220" /><Channel index="1" name="tilt" value="90" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="220" /><Channel index="1" name="tilt" value="100" /></Fixture>
     </Step>
-    <Step length="900">
-      <Fixture id="1000000007"><Channel index="0" name="pan" value="155" /><Channel index="2" name="tilt" value="150" /></Fixture>
-      <Fixture id="1000000008"><Channel index="0" name="pan" value="155" /><Channel index="2" name="tilt" value="120" /></Fixture>
-      <Fixture id="1000000009"><Channel index="0" name="pan" value="155" /><Channel index="2" name="tilt" value="90" /></Fixture>
-      <Fixture id="1000000010"><Channel index="0" name="pan" value="155" /><Channel index="2" name="tilt" value="60" /></Fixture>
+    <Step name="Step 2" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="44" /><Channel index="1" name="tilt" value="93" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="44" /><Channel index="1" name="tilt" value="103" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="211" /><Channel index="1" name="tilt" value="93" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="211" /><Channel index="1" name="tilt" value="103" /></Fixture>
     </Step>
-    <Step length="500">
-      <Fixture id="1000000007"><Channel index="0" name="pan" value="205" /><Channel index="2" name="tilt" value="100" /></Fixture>
-      <Fixture id="1000000008"><Channel index="0" name="pan" value="170" /><Channel index="2" name="tilt" value="100" /></Fixture>
-      <Fixture id="1000000009"><Channel index="0" name="pan" value="125" /><Channel index="2" name="tilt" value="100" /></Fixture>
-      <Fixture id="1000000010"><Channel index="0" name="pan" value="90" /><Channel index="2" name="tilt" value="100" /></Fixture>
+    <Step name="Step 3" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="53" /><Channel index="1" name="tilt" value="97" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="53" /><Channel index="1" name="tilt" value="107" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="202" /><Channel index="1" name="tilt" value="97" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="202" /><Channel index="1" name="tilt" value="107" /></Fixture>
+    </Step>
+    <Step name="Step 4" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="63" /><Channel index="1" name="tilt" value="100" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="63" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="193" /><Channel index="1" name="tilt" value="100" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="193" /><Channel index="1" name="tilt" value="110" /></Fixture>
+    </Step>
+    <Step name="Step 5" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="72" /><Channel index="1" name="tilt" value="103" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="72" /><Channel index="1" name="tilt" value="113" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="183" /><Channel index="1" name="tilt" value="103" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="183" /><Channel index="1" name="tilt" value="113" /></Fixture>
+    </Step>
+    <Step name="Step 6" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="81" /><Channel index="1" name="tilt" value="107" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="81" /><Channel index="1" name="tilt" value="117" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="174" /><Channel index="1" name="tilt" value="107" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="174" /><Channel index="1" name="tilt" value="117" /></Fixture>
+    </Step>
+    <Step name="Step 7" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="90" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="90" /><Channel index="1" name="tilt" value="120" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="165" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="165" /><Channel index="1" name="tilt" value="120" /></Fixture>
+    </Step>
+    <Step name="Step 8" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="103" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="103" /><Channel index="1" name="tilt" value="120" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="153" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="153" /><Channel index="1" name="tilt" value="120" /></Fixture>
+    </Step>
+    <Step name="Step 9" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="115" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="115" /><Channel index="1" name="tilt" value="120" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="140" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="140" /><Channel index="1" name="tilt" value="120" /></Fixture>
+    </Step>
+    <Step name="Step 10" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="128" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="128" /><Channel index="1" name="tilt" value="120" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="128" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="128" /><Channel index="1" name="tilt" value="120" /></Fixture>
+    </Step>
+    <Step name="Step 11" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="140" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="140" /><Channel index="1" name="tilt" value="120" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="115" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="115" /><Channel index="1" name="tilt" value="120" /></Fixture>
+    </Step>
+    <Step name="Step 12" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="153" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="153" /><Channel index="1" name="tilt" value="120" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="103" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="103" /><Channel index="1" name="tilt" value="120" /></Fixture>
+    </Step>
+    <Step name="Step 13" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="165" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="165" /><Channel index="1" name="tilt" value="120" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="90" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="90" /><Channel index="1" name="tilt" value="120" /></Fixture>
+    </Step>
+    <Step name="Step 14" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="174" /><Channel index="1" name="tilt" value="107" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="174" /><Channel index="1" name="tilt" value="117" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="81" /><Channel index="1" name="tilt" value="107" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="81" /><Channel index="1" name="tilt" value="117" /></Fixture>
+    </Step>
+    <Step name="Step 15" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="183" /><Channel index="1" name="tilt" value="103" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="183" /><Channel index="1" name="tilt" value="113" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="72" /><Channel index="1" name="tilt" value="103" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="72" /><Channel index="1" name="tilt" value="113" /></Fixture>
+    </Step>
+    <Step name="Step 16" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="193" /><Channel index="1" name="tilt" value="100" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="193" /><Channel index="1" name="tilt" value="110" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="63" /><Channel index="1" name="tilt" value="100" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="63" /><Channel index="1" name="tilt" value="110" /></Fixture>
+    </Step>
+    <Step name="Step 17" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="202" /><Channel index="1" name="tilt" value="97" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="202" /><Channel index="1" name="tilt" value="107" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="53" /><Channel index="1" name="tilt" value="97" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="53" /><Channel index="1" name="tilt" value="107" /></Fixture>
+    </Step>
+    <Step name="Step 18" length="3">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="211" /><Channel index="1" name="tilt" value="93" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="211" /><Channel index="1" name="tilt" value="103" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="44" /><Channel index="1" name="tilt" value="93" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="44" /><Channel index="1" name="tilt" value="103" /></Fixture>
+    </Step>
+    <Step name="Step 19" length="20">
+      <Fixture id="1000000007"><Channel index="0" name="pan" value="220" /><Channel index="1" name="tilt" value="90" /></Fixture>
+      <Fixture id="1000000008"><Channel index="0" name="pan" value="220" /><Channel index="1" name="tilt" value="100" /></Fixture>
+      <Fixture id="1000000009"><Channel index="0" name="pan" value="35" /><Channel index="1" name="tilt" value="90" /></Fixture>
+      <Fixture id="1000000010"><Channel index="0" name="pan" value="35" /><Channel index="1" name="tilt" value="100" /></Fixture>
     </Step>
   </Steps>
 </Scene>
