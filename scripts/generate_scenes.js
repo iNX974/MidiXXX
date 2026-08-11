@@ -38,3 +38,37 @@ make('19_spots_complementaires.scex',[spots],[[15,{...wash(spots.filter((_,i)=>i
 make('20_spots_degrade_gauche_droite.scex',[spots],[[20,Object.fromEntries(spots.map((n,i)=>[n,[255,220-i*35,40,20]]))],[20,Object.fromEntries(spots.map((n,i)=>[n,[255,40+i*35,40,20]]))]]); make('21_spots_silhouette.scex',[spots],[[30,zero(spots)],[30,{...zero(spots.slice(0,3)),...wash(spots.slice(3),[100,100,100,100])}]]);
 make('22_blinder_centre_exterieur.scex',[blinders],[[8,Object.fromEntries(blinders.map(n=>[n,[9,10].includes((n-11)%10)?255:0]))],[8,Object.fromEntries(blinders.map(n=>[n,[0,1,8,9].includes((n-11)%10)?255:0]))],[8,zero(blinders)]]); make('23_blinder_gauche_droite.scex',[blinders],[[10,Object.fromEntries(blinders.map(n=>[n,n<=20?255:0]))],[10,Object.fromEntries(blinders.map(n=>[n,n<=20?0:255]))],[10,zero(blinders)]]); make('24_blinder_montee_halogene.scex',[blinders],[[30,zero(blinders,40)],[30,zero(blinders,120)],[30,zero(blinders,255)],[20,zero(blinders)]]); make('25_blinder_beam.scex',[blinders,beams],[[8,{...zero(blinders,255),...zero(beams)}],[8,{...zero(blinders),...zero(beams,255)}],[8,{...zero(blinders,255),...zero(beams,255)}],[8,{}]]);
 make('26_intro.scex',[spots,beams,rvbs],[[30,{}],[30,{...wash(spots,[40,0,0,80]),...zero(beams,20),...rvb(rvbs,[0,0,80])}]]); make('27_buildup.scex',[spots,blinders,beams,rvbs],[[15,{...wash(spots,[80,0,80,160]),...zero(blinders,50),...zero(beams,80),...rvb(rvbs,[80,0,160])}],[10,{...wash(spots,[180,0,180,255]),...zero(blinders,140),...zero(beams,180),...rvb(rvbs,[180,0,255])}],[5,{...wash(spots,[255,255,255,255]),...zero(blinders,255),...zero(beams,255),...rvb(rvbs,[255,255,255])}]]); make('28_break_calme.scex',[spots,beams,rvbs],[[40,{...wash(spots,[30,0,0,70]),...zero(beams,20),...rvb(rvbs,[0,0,40])}],[40,{...wash(spots,[10,0,0,40]),...zero(beams),...rvb(rvbs,[0,0,10])}]]); make('29_finale.scex',[spots,lyres,blinders,beams,rvbs],[[8,{...wash(spots,[255,255,255,255]),...lyre(lyres,[127,90]),...zero(blinders,255),...zero(beams,255),...rvb(rvbs,[255,255,255])}],[8,{}],[8,{...wash(spots,[255,0,0,255]),...lyre(lyres,[80,110]),...zero(blinders,255),...zero(beams,255),...rvb(rvbs,[255,0,0])}],[8,{}]]);
+
+// New paired effects: the same choreography is emitted for RVB and Beam fixtures.
+const bars = [0,1,2,3].map(i => (i < 2 ? rvbs : beams).slice(i % 2 * 14, i % 2 * 14 + 14));
+const rvbColor = (i, mode) => mode === 0 ? [255,20,0] : mode === 1 ? [0,100,255] : [180,0,255];
+function paired(number, namePart, rvbSteps, beamSteps){
+  make(`${number}_hybrid_rvb_${namePart}.scex`, [rvbs], rvbSteps);
+  make(`${number}_hybrid_beam_${namePart}.scex`, [beams], beamSteps);
+}
+function sweepValues(group, pos, value, tail){
+  const v = {};
+  group.forEach((n,i)=>{ const d = Math.abs(i-pos); v[n] = tail ? Math.max(0, value-d*55) : (d===0 ? value : 0); });
+  return v;
+}
+// Explicit bar-aware patterns keep the physical order of every 14-pixel vertical bar.
+function verticalSweep(group, color, beamMode=false){
+  return Array.from({length:14},(_,pos)=>[5,Object.fromEntries(group.map((n,i)=>[n,beamMode?(i%14===pos?255:0):(i%14===pos?color:[0,0,0])]))]);
+}
+function mirrorIn(group, color, beamMode=false){
+  return Array.from({length:7},(_,pos)=>[7,Object.fromEntries(group.map((n,i)=>[n,beamMode?([pos,13-pos].includes(i%14)?255:0):([pos,13-pos].includes(i%14)?color:[0,0,0])]))]);
+}
+function barChase(group, color, beamMode=false){
+  return Array.from({length:8},(_,step)=>[8,Object.fromEntries(group.map((n,i)=>[n,Math.floor(i/14)%4===step%4?(beamMode?255:color): (beamMode?0:[0,0,0])]))]);
+}
+function meteor(group, color, beamMode=false){
+  return Array.from({length:14},(_,pos)=>[5,Object.fromEntries(group.map((n,i)=>{const d=(i%14)-pos; const level=d===0?255:d===-1?170:d===-2?80:0; return [n,beamMode?level:(level?color:[0,0,0])]}))]);
+}
+function sparkle(group, color, beamMode=false){
+  return Array.from({length:12},(_,step)=>[4,Object.fromEntries(group.map((n,i)=>{const on=((i*7+step*5)%17)<3; return [n,beamMode?(on?255:0):(on?color:[0,0,0])]}))]);
+}
+paired(30,'balayage_vertical',verticalSweep(rvbs,[0,180,255]),verticalSweep(beams,255,true));
+paired(31,'miroir_exterieur_centre',mirrorIn(rvbs,[255,0,80]),mirrorIn(beams,255,true));
+paired(32,'chase_barres_alterne',barChase(rvbs,[0,255,80]),barChase(beams,255,true));
+paired(33,'meteore_traine',meteor(rvbs,[255,40,0]),meteor(beams,255,true));
+paired(34,'scintillement_diamant',sparkle(rvbs,[180,0,255]),sparkle(beams,255,true));

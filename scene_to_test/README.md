@@ -1,6 +1,6 @@
 # Scènes Sweetlight à tester
 
-Les 29 fichiers `.scex` sont générés pour la configuration réellement présente dans `C:\Downloads\Full - Prod`. Chaque scène contient uniquement les fixtures qui ont au moins une valeur active dans un step ; les fixtures jamais utilisés sont exclus.
+Les 39 fichiers `.scex` sont générés pour la configuration réellement présente dans `C:\Downloads\Full - Prod`. Chaque scène contient uniquement les fixtures qui ont au moins une valeur active dans un step ; les fixtures jamais utilisés sont exclus.
 
 ## Cartographie utilisée
 
@@ -25,5 +25,7 @@ Les scènes utilisent plusieurs steps interpolés pour chaque transition. Les sc
 22–25 : effets blinders (centre/extérieur, gauche/droite, montée, accent avec beams).
 
 26–29 : ambiances complètes (intro, build-up, break calme, finale).
+
+30–34 : nouveaux effets appariés, avec une version Hybrid RVB et la même chorégraphie en Hybrid Beam : balayage vertical, miroir extérieur vers centre, chase par barres alternées, météore avec traîne et scintillement diamant. Ces nouvelles scènes utilisent de nombreux steps interpolés pour obtenir des mouvements continus.
 
 Importer les scènes dans une copie du projet Sweetlight avant le test en production.
