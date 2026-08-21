@@ -199,10 +199,10 @@ function mirroredChase(base) {
   return [[100, {}], ...steps, [100, {}], ...steps.slice().reverse()];
 }
 function mirroredRvb(colour) {
-  return mirroredChase(barChase(rvbs, colour));
+  return mirroredChase(barChase(rvbs, colour).slice(0, 4));
 }
 function mirroredBeam() {
-  return mirroredChase(barChase(beams, 255, true));
+  return mirroredChase(barChase(beams, 255, true).slice(0, 4));
 }
 Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
   make(`Hybrid RVB - Ping Pong ${colour}.scex`, [rvbs], mirroredRvb(rgb), true);
