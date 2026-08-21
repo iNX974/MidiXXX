@@ -192,7 +192,17 @@ function pingPongBeam() {
     beams.map((n, i) => [n, bar !== null && Math.floor(i / 14) === bar ? 255 : 0])
   )]);
 }
+function mirroredChase(base) {
+  const steps = dense(base).map(([_, values]) => [10, values]);
+  return [[100, {}], ...steps, [100, {}], ...steps.slice().reverse()];
+}
+function mirroredRvb(colour) {
+  return mirroredChase(barChase(rvbs, colour));
+}
+function mirroredBeam() {
+  return mirroredChase(barChase(beams, 255, true));
+}
 Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
-  make(`Hybrid RVB - Ping Pong ${colour}.scex`, [rvbs], pingPongRvb(rgb), true);
+  make(`Hybrid RVB - Ping Pong ${colour}.scex`, [rvbs], mirroredRvb(rgb), true);
 });
-make('Hybrid Beam - Ping Pong.scex', [beams], pingPongBeam(), true);
+make('Hybrid Beam - Ping Pong.scex', [beams], mirroredBeam(), true);
