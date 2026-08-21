@@ -208,3 +208,21 @@ Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
   make(`Hybrid RVB - Ping Pong ${colour}.scex`, [rvbs], mirroredRvb(rgb), true);
 });
 make('Hybrid Beam - Ping Pong.scex', [beams], mirroredBeam(), true);
+
+// Deterministic random chase based on model 32: the bar order is shuffled
+// while keeping the original timing and one active bar at a time.
+const randomBarOrder = [2, 0, 3, 1, 3, 2, 0, 1];
+function randomChaseRvb(colour) {
+  return randomBarOrder.map(bar => [8, Object.fromEntries(
+    rvbs.map((n, i) => [n, Math.floor(i / 14) === bar ? colour : [0,0,0]])
+  )]);
+}
+function randomChaseBeam() {
+  return randomBarOrder.map(bar => [8, Object.fromEntries(
+    beams.map((n, i) => [n, Math.floor(i / 14) === bar ? 255 : 0])
+  )]);
+}
+Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
+  make(`Hybrid RVB - Random Chase ${colour}.scex`, [rvbs], randomChaseRvb(rgb));
+});
+make('Hybrid Beam - Random Chase.scex', [beams], randomChaseBeam());
