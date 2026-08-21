@@ -10,7 +10,7 @@ const universe = [...spots, ...lyres, ...blinders, ...beams, ...rvbs];
 function kind(n){return spots.includes(n)?'wash':lyres.includes(n)?'lyre':blinders.includes(n)?'blinder':beams.includes(n)?'beam':'rvb'}
 function name(n){const k=kind(n); return k==='wash'?String(n):k==='lyre'?`Lyre #${n-6}`:k==='blinder'?`Blinder #${n-10}`:`Hybrid ${k==='beam'?'Beam':'RVB'} #${(k==='beam'?beams:rvbs).indexOf(n)+1}`}
 function model(n){const k=kind(n);return k==='wash'?'MyWash':k==='lyre'?'MyLyre':k==='blinder'?'MyBlinder':`Hybrid ${k==='beam'?'Beam':'RVB'}`}
-function ch(n,v){const k=kind(n); if(k==='wash') return [['dimmer',v?.[0]??0],['red',v?.[1]??0],['green',v?.[2]??0],['blue',v?.[3]??0]]; if(k==='rvb') return [['red',v?.[0]??0],['green',v?.[1]??0],['blue',v?.[2]??0]]; if(k==='lyre') return [['pan',v?.[0]??127],['tilt',v?.[1]??90]]; return [[k==='beam'?'white':'dimmer',v??0]]}
+function ch(n,v){const k=kind(n); if(k==='wash') return [['dimmer',v?.[0]??0],['red',v?.[1]??0],['green',v?.[2]??0],['blue',v?.[3]??0]]; if(k==='rvb'){const rgb=Array.isArray(v)?v:[v??0,v??0,v??0]; return [['red',rgb[0]??0],['green',rgb[1]??0],['blue',rgb[2]??0]];} if(k==='lyre') return [['pan',v?.[0]??127],['tilt',v?.[1]??90]]; return [[k==='beam'?'white':'dimmer',v??0]]}
 function all(groups){return [...new Set(groups.flat())]}
 function base(n){const k=kind(n); return k==='wash'?[0,0,0,0]:k==='rvb'?[0,0,0]:k==='lyre'?[127,90]:0}
 function blend(a,b,t){if(Array.isArray(a)) return a.map((x,i)=>Math.round(x+(b[i]-x)*t)); return Math.round(a+(b-a)*t)}

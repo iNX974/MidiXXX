@@ -60,7 +60,7 @@
   </Fixtures>
   <Steps>
     <Step name="Step 1" length="10">
-      <Fixture id="1000000045"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000045"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000046"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000047"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -70,7 +70,7 @@
       <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000055"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -80,10 +80,10 @@
       <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000079"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000082"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -93,7 +93,7 @@
       <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000106"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -103,10 +103,10 @@
       <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000130"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000133"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -120,10 +120,10 @@
     <Step name="Step 2" length="10">
       <Fixture id="1000000045"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000046"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000047"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000047"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000050"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -133,7 +133,7 @@
       <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000074"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -143,10 +143,10 @@
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000084"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000101"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -156,7 +156,7 @@
       <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000111"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -166,10 +166,10 @@
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000135"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000138"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000141"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -183,10 +183,10 @@
       <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000052"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000055"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -196,7 +196,7 @@
       <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000079"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -206,10 +206,10 @@
       <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000103"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000106"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -219,7 +219,7 @@
       <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000130"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -229,14 +229,14 @@
       <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000140"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000141"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000142"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
     </Step>
     <Step name="Step 4" length="10">
       <Fixture id="1000000045"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000046"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000047"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000047"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -246,10 +246,10 @@
       <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000057"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000074"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -259,7 +259,7 @@
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000084"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -269,10 +269,10 @@
       <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000108"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000111"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -282,7 +282,7 @@
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000135"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -299,7 +299,7 @@
       <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000052"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -309,10 +309,10 @@
       <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000076"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000079"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -322,7 +322,7 @@
       <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000103"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -332,10 +332,10 @@
       <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000113"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000130"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -345,14 +345,14 @@
       <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000140"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000141"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000142"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
     </Step>
     <Step name="Step 6" length="10">
       <Fixture id="1000000045"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000046"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000047"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000047"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -362,7 +362,7 @@
       <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000057"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -372,10 +372,10 @@
       <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000081"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000084"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -385,7 +385,7 @@
       <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000108"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -395,10 +395,10 @@
       <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000132"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000135"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -412,10 +412,10 @@
       <Fixture id="1000000046"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000047"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000049"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000052"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -425,7 +425,7 @@
       <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000076"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -435,10 +435,10 @@
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000086"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000103"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -448,7 +448,7 @@
       <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000113"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -458,10 +458,10 @@
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000137"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000140"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000141"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000142"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
     </Step>
@@ -475,10 +475,10 @@
       <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000054"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000057"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -488,7 +488,7 @@
       <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000081"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -498,10 +498,10 @@
       <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000105"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000108"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -511,7 +511,7 @@
       <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000132"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -521,14 +521,14 @@
       <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000141"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000142"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000142"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
     </Step>
     <Step name="Step 9" length="10">
       <Fixture id="1000000045"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000046"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000047"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000049"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -538,10 +538,10 @@
       <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000073"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000076"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -551,7 +551,7 @@
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000086"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -561,10 +561,10 @@
       <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000110"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000113"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -574,7 +574,7 @@
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000137"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -591,7 +591,7 @@
       <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000054"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -601,10 +601,10 @@
       <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000078"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000081"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -614,7 +614,7 @@
       <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000105"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -624,10 +624,10 @@
       <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000129"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000132"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -637,14 +637,14 @@
       <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000141"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000142"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000142"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
     </Step>
     <Step name="Step 11" length="10">
       <Fixture id="1000000045"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000046"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000046"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000047"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000049"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -654,7 +654,7 @@
       <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000073"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -664,10 +664,10 @@
       <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000083"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000086"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -677,7 +677,7 @@
       <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000110"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -687,10 +687,10 @@
       <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000134"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000137"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -704,10 +704,10 @@
       <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000051"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000054"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -717,7 +717,7 @@
       <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000078"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -727,10 +727,10 @@
       <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000102"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000105"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -740,7 +740,7 @@
       <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000129"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -750,14 +750,14 @@
       <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000139"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000141"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000142"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000142"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
     </Step>
     <Step name="Step 13" length="10">
       <Fixture id="1000000045"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000046"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000046"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000047"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -767,10 +767,10 @@
       <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000056"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000073"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -780,7 +780,7 @@
       <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000083"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -790,10 +790,10 @@
       <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000107"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000110"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -803,7 +803,7 @@
       <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000134"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -820,7 +820,7 @@
       <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000051"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -830,10 +830,10 @@
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000075"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000078"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -843,7 +843,7 @@
       <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000102"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -853,10 +853,10 @@
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000112"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000129"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -866,14 +866,14 @@
       <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000139"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000141"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000142"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
     </Step>
     <Step name="Step 15" length="10">
       <Fixture id="1000000045"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000046"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000046"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000047"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -883,7 +883,7 @@
       <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000056"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -893,10 +893,10 @@
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000080"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000083"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -906,7 +906,7 @@
       <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000107"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -916,10 +916,10 @@
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000131"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000134"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -933,10 +933,10 @@
       <Fixture id="1000000045"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000046"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000047"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000048"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000051"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -946,7 +946,7 @@
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000075"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -956,10 +956,10 @@
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000085"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000102"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -969,7 +969,7 @@
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000112"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -979,10 +979,10 @@
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000136"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000139"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000141"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000142"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -996,10 +996,10 @@
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000053"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000056"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1009,7 +1009,7 @@
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000080"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1019,10 +1019,10 @@
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000104"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000107"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1032,7 +1032,7 @@
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000131"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1042,14 +1042,14 @@
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000141"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000141"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000142"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
     </Step>
     <Step name="Step 18" length="10">
       <Fixture id="1000000045"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000046"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000047"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000048"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1059,10 +1059,10 @@
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000058"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000075"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1072,7 +1072,7 @@
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000085"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1082,10 +1082,10 @@
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000109"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000112"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1095,7 +1095,7 @@
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000136"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1112,7 +1112,7 @@
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000052"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000053"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000053"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000054"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1122,10 +1122,10 @@
       <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000076"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000077"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000077"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000078"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000080"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1135,7 +1135,7 @@
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000103"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000104"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000104"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000105"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1145,10 +1145,10 @@
       <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000113"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000114"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000114"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000129"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000131"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1158,14 +1158,14 @@
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000140"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000141"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000141"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000142"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
     </Step>
     <Step name="Step 20" length="10">
-      <Fixture id="1000000045"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000045"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000046"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000047"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000048"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000048"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000049"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000050"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000051"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1175,7 +1175,7 @@
       <Fixture id="1000000055"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000056"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000057"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000058"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000058"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000073"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000074"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000075"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1185,10 +1185,10 @@
       <Fixture id="1000000079"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000080"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000081"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000082"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000082"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000083"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000084"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000085"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000085"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000086"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000101"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000102"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1198,7 +1198,7 @@
       <Fixture id="1000000106"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000107"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000108"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000109"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000109"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000110"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000111"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000112"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
@@ -1208,10 +1208,10 @@
       <Fixture id="1000000130"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000131"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000132"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000133"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000133"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000134"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000135"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
-      <Fixture id="1000000136"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
+      <Fixture id="1000000136"><Channel index="0" name="red" value="255" /><Channel index="1" name="green" value="255" /><Channel index="2" name="blue" value="255" /></Fixture>
       <Fixture id="1000000137"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000138"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
       <Fixture id="1000000139"><Channel index="0" name="red" value="0" /><Channel index="1" name="green" value="0" /><Channel index="2" name="blue" value="0" /></Fixture>
