@@ -193,7 +193,9 @@ function pingPongBeam() {
   )]);
 }
 function mirroredChase(base) {
-  const steps = dense(base).map(([_, values]) => [10, values]);
+  const steps = dense(base)
+    .filter((_, index) => index % 4 === 0)
+    .map(([_, values]) => [10, values]);
   return [[100, {}], ...steps, [100, {}], ...steps.slice().reverse()];
 }
 function mirroredRvb(colour) {
