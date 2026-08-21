@@ -180,7 +180,7 @@ const pingPongBars = [
   [null, 100],
   [0, 10], [1, 10], [2, 10], [3, 10],
   [null, 100],
-  [2, 10], [1, 10]
+  [2, 10], [1, 10], [0, 10]
 ];
 function pingPongRvb(colour) {
   return pingPongBars.map(([bar, length]) => [length, Object.fromEntries(
