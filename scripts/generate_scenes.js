@@ -135,3 +135,16 @@ function beamDeploySteps() {
   make(`Hybrid Beam - Deploy ${colour}.scex`, [beams], beamDeploySteps());
 });
 make('Hybrid Beam - Deploy.scex', [beams], beamDeploySteps());
+
+// Colour versions of model 30's vertical-down movement, using the
+// Full - Prod HybridRVB Size1 / Offset0 naming convention.
+const deployRgbColours = {
+  'Blanc': [255,255,255],
+  'Bleu': [0,0,255],
+  'Rouge': [255,0,0],
+  'Cyan': [0,255,255],
+  'Mauve': [180,0,255]
+};
+Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
+  make(`HybridRVB - Vertical Down ${colour} - Size1 Offset0.scex`, [rvbs], verticalSweep(rvbs, rgb));
+});
