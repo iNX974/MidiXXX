@@ -226,3 +226,25 @@ Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
   make(`Hybrid RVB - Random Chase ${colour}.scex`, [rvbs], randomChaseRvb(rgb));
 });
 make('Hybrid Beam - Random Chase.scex', [beams], randomChaseBeam());
+
+const randomVariants = {
+  Double: [[2,0], [3,1], [0,3], [1,2], [3,0], [2,1], [0,1], [3,2]],
+  Pause: [[2], [0], [], [3], [1], [], [3], [2]],
+  Burst: [[2,0], [2,0], [3,1], [3,1], [0,3], [0,3], [1,2], [1,2]]
+};
+function variantRvb(variant, colour) {
+  return randomVariants[variant].map(bars => [8, Object.fromEntries(
+    rvbs.map((n, i) => [n, bars.includes(Math.floor(i / 14)) ? colour : [0,0,0]])
+  )]);
+}
+function variantBeam(variant) {
+  return randomVariants[variant].map(bars => [8, Object.fromEntries(
+    beams.map((n, i) => [n, bars.includes(Math.floor(i / 14)) ? 255 : 0])
+  )]);
+}
+Object.keys(randomVariants).forEach(variant => {
+  Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
+    make(`Hybrid RVB - Random Chase ${variant} ${colour}.scex`, [rvbs], variantRvb(variant, rgb));
+  });
+  make(`Hybrid Beam - Random Chase ${variant}.scex`, [beams], variantBeam(variant));
+});
