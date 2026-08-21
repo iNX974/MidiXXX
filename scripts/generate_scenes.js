@@ -296,3 +296,57 @@ Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
 make('Hybrid Beam - Pixel Chase.scex', [beams], pixelChaseBeam(), true);
 make('Hybrid Beam - Pixel Mirror.scex', [beams], pixelMirrorBeam(), true);
 make('Hybrid Beam - Pixel Scatter.scex', [beams], pixelScatterBeam(), true);
+
+// White-only effect sampler for quick visual comparison.
+function whiteSweep(group) {
+  return Array.from({length:14}, (_, p) => [10, pixelValues(group,
+    group.map((_, i) => i % 14 === p ? i : -1), 255)]);
+}
+function whiteAlternate(group) {
+  return Array.from({length:8}, (_, step) => [10, pixelValues(group,
+    group.map((_, i) => (i + step) % 2 === 0 ? i : -1), 255)]);
+}
+function whiteInOut(group) {
+  return Array.from({length:14}, (_, step) => {
+    const p = step < 7 ? 6 - step : step - 7;
+    return [10, pixelValues(group,
+      group.map((_, i) => i % 14 === p || i % 14 === 13 - p ? i : -1), 255)];
+  });
+}
+function whiteComet(group) {
+  return Array.from({length:14}, (_, p) => [10, pixelValues(group,
+    group.map((_, i) => {
+      const d = (i % 14) - p;
+      return d >= 0 && d <= 3 ? i : -1;
+    }), 255)]);
+}
+function whiteDoubleChase(group) {
+  return Array.from({length:14}, (_, p) => [10, pixelValues(group,
+    group.map((_, i) => i % 14 === p || i % 14 === (p + 7) % 14 ? i : -1), 255)]);
+}
+function whiteBarCross(group) {
+  return Array.from({length:14}, (_, p) => [10, pixelValues(group,
+    group.map((_, i) => i % 14 === (p + Math.floor(i / 14) * 3) % 14 ? i : -1), 255)]);
+}
+function whiteBurst(group) {
+  return Array.from({length:12}, (_, step) => [10, pixelValues(group,
+    group.map((_, i) => ((i * 13 + step * 17) % 29) < 5 ? i : -1), 255)]);
+}
+function whiteTwinkle(group) {
+  return Array.from({length:20}, (_, step) => [10, pixelValues(group,
+    group.map((_, i) => ((i * 7 + step * 11) % 23) < 3 ? i : -1), 255)]);
+}
+const whiteEffects = {
+  'Pixel Sweep': whiteSweep,
+  'Pixel Alternate': whiteAlternate,
+  'Pixel In Out': whiteInOut,
+  'Pixel Comet': whiteComet,
+  'Pixel Double Chase': whiteDoubleChase,
+  'Pixel Bar Cross': whiteBarCross,
+  'Pixel Burst': whiteBurst,
+  'Pixel Twinkle': whiteTwinkle
+};
+Object.entries(whiteEffects).forEach(([effect, builder]) => {
+  make(`Hybrid RVB - ${effect} Blanc.scex`, [rvbs], builder(rvbs), true);
+  make(`Hybrid Beam - ${effect}.scex`, [beams], builder(beams), true);
+});
