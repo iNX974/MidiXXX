@@ -120,3 +120,18 @@ function deploySteps(palette) {
 Object.entries(deployPalettes).forEach(([colour, palette]) => {
   make(`Hybrid RVB - Deploy ${colour}.scex`, [rvbs], deploySteps(palette));
 });
+
+// Hybrid Beam has a single white channel; keep the requested colour label
+// in the scene name while applying the same centre/exterieur movement.
+function beamDeploySteps() {
+  return [
+    [8, beam(beams, 0)],
+    [8, Object.fromEntries(beams.map((n, i) => [n, i % 14 >= 6 && i % 14 <= 7 ? 255 : 0]))],
+    [8, beam(beams, 255)],
+    [8, beam(beams, 0)]
+  ];
+}
+['Blanc', 'Bleu', 'Rouge', 'Cyan', 'Mauve'].forEach(colour => {
+  make(`Hybrid Beam - Deploy ${colour}.scex`, [beams], beamDeploySteps());
+});
+make('Hybrid Beam - Deploy.scex', [beams], beamDeploySteps());
