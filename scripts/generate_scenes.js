@@ -16,7 +16,7 @@ function base(n){const k=kind(n); return k==='wash'?[0,0,0,0]:k==='rvb'?[0,0,0]:
 function blend(a,b,t){if(Array.isArray(a)) return a.map((x,i)=>Math.round(x+(b[i]-x)*t)); return Math.round(a+(b-a)*t)}
 function dense(steps){const result=[],divisions=6; for(let i=0;i<steps.length-1;i++){const [length,a]=steps[i],b=steps[i+1][1]; for(let j=0;j<divisions;j++){const t=j/divisions,values={}; for(const n of universe) values[n]=blend(a[n]===undefined?base(n):a[n],b[n]===undefined?base(n):b[n],t); result.push([Math.max(1,Math.round(length/divisions)),values])}} result.push(steps[steps.length-1]); return result}
 function active(v){if(v===undefined||v===null) return false; return Array.isArray(v)?v.some(x=>x!==0):v!==0}
-function make(file, groups, steps){const fixtures=universe.filter(n=>steps.some(s=>active(s[1][n]))), fixture=fixtures.map(n=>`    <Fixture id="${ids(n)}" name="${name(n)}" model="${model(n)}" />`).join('\n'); const body=dense(steps).map((s,si)=>`    <Step name="Step ${si+1}" length="${s[0]}">\n${fixtures.map(n=>`      <Fixture id="${ids(n)}">${ch(n,s[1][n]).map((x,i)=>`<Channel index="${i}" name="${x[0]}" value="${x[1]}" />`).join('')}</Fixture>`).join('\n')}\n    </Step>`).join('\n'); const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<Scene>\n  <Fixtures>\n${fixture}\n  </Fixtures>\n  <Steps>\n${body}\n  </Steps>\n</Scene>\n`; require('fs').writeFileSync(path.join(out,file),xml,'utf8')}
+function make(file, groups, steps, exact=false){const fixtures=universe.filter(n=>steps.some(s=>active(s[1][n]))), fixture=fixtures.map(n=>`    <Fixture id="${ids(n)}" name="${name(n)}" model="${model(n)}" />`).join('\n'); const rendered=exact?steps:dense(steps); const body=rendered.map((s,si)=>`    <Step name="Step ${si+1}" length="${s[0]}">\n${fixtures.map(n=>`      <Fixture id="${ids(n)}">${ch(n,s[1][n]).map((x,i)=>`<Channel index="${i}" name="${x[0]}" value="${x[1]}" />`).join('')}</Fixture>`).join('\n')}\n    </Step>`).join('\n'); const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<Scene>\n  <Fixtures>\n${fixture}\n  </Fixtures>\n  <Steps>\n${body}\n  </Steps>\n</Scene>\n`; require('fs').writeFileSync(path.join(out,file),xml,'utf8')}
 const zero=(g,v=0)=>Object.fromEntries(g.map(n=>[n,v]));
 const wash=(g,v)=>zero(g,v); const rvb=(g,v)=>zero(g,v); const beam=(g,v)=>zero(g,v); const lyre=(g,v)=>zero(g,v);
 make('01_hybrid_centre_exterieur.scex',[rvbs],[[8,rvb(rvbs,[0,0,0])],[8,Object.fromEntries(rvbs.map(n=>[n,rvbs.indexOf(n)%14>=6&&rvbs.indexOf(n)%14<=7?[0,180,255]:[0,0,0]]))],[8,Object.fromEntries(rvbs.map(n=>[n,[0,180,255].map(x=>x)]))],[8,rvb(rvbs,[0,0,0])]]);
@@ -193,6 +193,6 @@ function pingPongBeam() {
   )]);
 }
 Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
-  make(`Hybrid RVB - Ping Pong ${colour}.scex`, [rvbs], pingPongRvb(rgb));
+  make(`Hybrid RVB - Ping Pong ${colour}.scex`, [rvbs], pingPongRvb(rgb), true);
 });
-make('Hybrid Beam - Ping Pong.scex', [beams], pingPongBeam());
+make('Hybrid Beam - Ping Pong.scex', [beams], pingPongBeam(), true);
