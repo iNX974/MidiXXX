@@ -174,3 +174,20 @@ function beamExpandFromCentre() {
   ]);
 }
 make('Hybrid Beam - Expand.scex', [beams], beamExpandFromCentre());
+
+// Model 32 in ping-pong order across the four 14-pixel bars.
+const pingPongBars = [0, 1, 2, 3, 2, 1];
+function pingPongRvb(colour) {
+  return pingPongBars.map(bar => [8, Object.fromEntries(
+    rvbs.map((n, i) => [n, Math.floor(i / 14) === bar ? colour : [0,0,0]])
+  )]);
+}
+function pingPongBeam() {
+  return pingPongBars.map(bar => [8, Object.fromEntries(
+    beams.map((n, i) => [n, Math.floor(i / 14) === bar ? 255 : 0])
+  )]);
+}
+Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
+  make(`Hybrid RVB - Ping Pong ${colour}.scex`, [rvbs], pingPongRvb(rgb));
+});
+make('Hybrid Beam - Ping Pong.scex', [beams], pingPongBeam());
