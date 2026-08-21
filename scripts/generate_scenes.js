@@ -176,14 +176,19 @@ function beamExpandFromCentre() {
 make('Hybrid Beam - Expand.scex', [beams], beamExpandFromCentre());
 
 // Model 32 in ping-pong order across the four 14-pixel bars.
-const pingPongBars = [0, 1, 2, 3, null, 2, 1];
+const pingPongBars = [
+  [null, 100],
+  [0, 10], [1, 10], [2, 10], [3, 10],
+  [null, 100],
+  [2, 10], [1, 10]
+];
 function pingPongRvb(colour) {
-  return pingPongBars.map(bar => [8, Object.fromEntries(
+  return pingPongBars.map(([bar, length]) => [length, Object.fromEntries(
     rvbs.map((n, i) => [n, bar !== null && Math.floor(i / 14) === bar ? colour : [0,0,0]])
   )]);
 }
 function pingPongBeam() {
-  return pingPongBars.map(bar => [8, Object.fromEntries(
+  return pingPongBars.map(([bar, length]) => [length, Object.fromEntries(
     beams.map((n, i) => [n, bar !== null && Math.floor(i / 14) === bar ? 255 : 0])
   )]);
 }
