@@ -72,3 +72,51 @@ paired(31,'miroir_exterieur_centre',mirrorIn(rvbs,[255,0,80]),mirrorIn(beams,255
 paired(32,'chase_barres_alterne',barChase(rvbs,[0,255,80]),barChase(beams,255,true));
 paired(33,'meteore_traine',meteor(rvbs,[255,40,0]),meteor(beams,255,true));
 paired(34,'scintillement_diamant',sparkle(rvbs,[180,0,255]),sparkle(beams,255,true));
+
+// Deploy variants of the centre/exterieur choreography, using the colour
+// families configured in Full - Prod's Hybrid RVB generator projects.
+const deployPalettes = {
+  'Blanc': [[255,255,255], [255,255,255]],
+  'Bleu': [[0,80,255], [0,0,255]],
+  'Rouge': [[255,0,0], [180,0,0]],
+  'Cyan': [[0,220,255], [0,180,255]],
+  'Mauve': [[180,0,255], [255,0,180]],
+  'Blue Red': [[0,0,255], [255,0,0]],
+  'Cyan Violet': [[0,220,255], [180,0,255]],
+  'Rainbow': 'rainbow',
+  'Red Violet': [[255,0,0], [180,0,255]],
+  'Smooth Pink Turquoise': [[255,0,180], [0,220,180]],
+  'Smooth Red Blue': [[255,0,0], [0,80,255]]
+};
+const rainbow = i => {
+  const hue = (i % 14) / 14 * 360;
+  const c = 255, x = Math.round(c * (1 - Math.abs((hue / 60) % 2 - 1)));
+  if (hue < 60) return [c,x,0];
+  if (hue < 120) return [x,c,0];
+  if (hue < 180) return [0,c,x];
+  if (hue < 240) return [0,x,c];
+  if (hue < 300) return [x,0,c];
+  return [c,0,x];
+};
+function deploySteps(palette) {
+  if (palette === 'rainbow') {
+    const colours = Object.fromEntries(rvbs.map((n, i) => [n, rainbow(i)]));
+    const shifted = Object.fromEntries(rvbs.map((n, i) => [n, rainbow(i + 4)]));
+    return [
+      [8, rvb(rvbs, [0,0,0])],
+      [8, Object.fromEntries(rvbs.map((n, i) => [n, i % 14 >= 6 && i % 14 <= 7 ? colours[n] : [0,0,0]]))],
+      [8, shifted],
+      [8, rvb(rvbs, [0,0,0])]
+    ];
+  }
+  const [first, second] = palette;
+  return [
+    [8, rvb(rvbs, [0,0,0])],
+    [8, Object.fromEntries(rvbs.map((n, i) => [n, i % 14 >= 6 && i % 14 <= 7 ? first : [0,0,0]]))],
+    [8, rvb(rvbs, second)],
+    [8, rvb(rvbs, [0,0,0])]
+  ];
+}
+Object.entries(deployPalettes).forEach(([colour, palette]) => {
+  make(`Hybrid RVB - Deploy ${colour}.scex`, [rvbs], deploySteps(palette));
+});
