@@ -248,3 +248,51 @@ Object.keys(randomVariants).forEach(variant => {
   });
   make(`Hybrid Beam - Random Chase ${variant}.scex`, [beams], variantBeam(variant));
 });
+
+const pixelOrder = Array.from({length:56}, (_, i) => (i * 37) % 56);
+function pixelValues(group, activeIndexes, value) {
+  const active = new Set(activeIndexes);
+  return Object.fromEntries(group.map((n, i) => [n, active.has(i) ? value : (Array.isArray(value) ? [0,0,0] : 0)]));
+}
+function pixelChaseRvb(colour) {
+  return pixelOrder.map(index => [10, pixelValues(rvbs, [index], colour)]);
+}
+function pixelChaseBeam() {
+  return pixelOrder.map(index => [10, pixelValues(beams, [index], 255)]);
+}
+function pixelMirrorRvb(colour) {
+  return Array.from({length:7}, (_, position) => [10, pixelValues(
+    rvbs,
+    rvbs.map((_, i) => i % 14 === position || i % 14 === 13 - position ? i : -1),
+    colour
+  )]);
+}
+function pixelMirrorBeam() {
+  return Array.from({length:7}, (_, position) => [10, pixelValues(
+    beams,
+    beams.map((_, i) => i % 14 === position || i % 14 === 13 - position ? i : -1),
+    255
+  )]);
+}
+function pixelScatterRvb(colour) {
+  return Array.from({length:16}, (_, step) => [10, pixelValues(
+    rvbs,
+    [((step * 11) + 2) % 56, ((step * 17) + 19) % 56, ((step * 23) + 41) % 56],
+    colour
+  )]);
+}
+function pixelScatterBeam() {
+  return Array.from({length:16}, (_, step) => [10, pixelValues(
+    beams,
+    [((step * 11) + 2) % 56, ((step * 17) + 19) % 56, ((step * 23) + 41) % 56],
+    255
+  )]);
+}
+Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
+  make(`Hybrid RVB - Pixel Chase ${colour}.scex`, [rvbs], pixelChaseRvb(rgb), true);
+  make(`Hybrid RVB - Pixel Mirror ${colour}.scex`, [rvbs], pixelMirrorRvb(rgb), true);
+  make(`Hybrid RVB - Pixel Scatter ${colour}.scex`, [rvbs], pixelScatterRvb(rgb), true);
+});
+make('Hybrid Beam - Pixel Chase.scex', [beams], pixelChaseBeam(), true);
+make('Hybrid Beam - Pixel Mirror.scex', [beams], pixelMirrorBeam(), true);
+make('Hybrid Beam - Pixel Scatter.scex', [beams], pixelScatterBeam(), true);
