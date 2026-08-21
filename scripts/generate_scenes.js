@@ -148,3 +148,29 @@ const deployRgbColours = {
 Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
   make(`HybridRVB - Vertical Down ${colour} - Size1 Offset0.scex`, [rvbs], verticalSweep(rvbs, rgb));
 });
+
+// Inverse of model 31: expand from the centre pair toward the outside.
+function expandFromCentre(group, colour) {
+  return Array.from({length:7}, (_, step) => [
+    7,
+    Object.fromEntries(group.map((n, i) => {
+      const position = i % 14;
+      const active = [6 - step, 7 + step].includes(position);
+      return [n, active ? colour : [0,0,0]];
+    }))
+  ]);
+}
+Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
+  make(`Hybrid RVB - Expand ${colour}.scex`, [rvbs], expandFromCentre(rvbs, rgb));
+});
+
+function beamExpandFromCentre() {
+  return Array.from({length:7}, (_, step) => [
+    7,
+    Object.fromEntries(beams.map((n, i) => {
+      const position = i % 14;
+      return [n, [6 - step, 7 + step].includes(position) ? 255 : 0];
+    }))
+  ]);
+}
+make('Hybrid Beam - Expand.scex', [beams], beamExpandFromCentre());
