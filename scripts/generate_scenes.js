@@ -76,39 +76,9 @@ paired(34,'scintillement_diamant',sparkle(rvbs,[180,0,255]),sparkle(beams,255,tr
 // Deploy variants of the centre/exterieur choreography, using the colour
 // families configured in Full - Prod's Hybrid RVB generator projects.
 const deployPalettes = {
-  'Blanc': [[255,255,255], [255,255,255]],
-  'Bleu': [[0,80,255], [0,0,255]],
-  'Rouge': [[255,0,0], [180,0,0]],
-  'Cyan': [[0,220,255], [0,180,255]],
-  'Mauve': [[180,0,255], [255,0,180]],
-  'Blue Red': [[0,0,255], [255,0,0]],
-  'Cyan Violet': [[0,220,255], [180,0,255]],
-  'Rainbow': 'rainbow',
-  'Red Violet': [[255,0,0], [180,0,255]],
-  'Smooth Pink Turquoise': [[255,0,180], [0,220,180]],
-  'Smooth Red Blue': [[255,0,0], [0,80,255]]
-};
-const rainbow = i => {
-  const hue = (i % 14) / 14 * 360;
-  const c = 255, x = Math.round(c * (1 - Math.abs((hue / 60) % 2 - 1)));
-  if (hue < 60) return [c,x,0];
-  if (hue < 120) return [x,c,0];
-  if (hue < 180) return [0,c,x];
-  if (hue < 240) return [0,x,c];
-  if (hue < 300) return [x,0,c];
-  return [c,0,x];
+  'Blanc': [[255,255,255], [255,255,255]]
 };
 function deploySteps(palette) {
-  if (palette === 'rainbow') {
-    const colours = Object.fromEntries(rvbs.map((n, i) => [n, rainbow(i)]));
-    const shifted = Object.fromEntries(rvbs.map((n, i) => [n, rainbow(i + 4)]));
-    return [
-      [8, rvb(rvbs, [0,0,0])],
-      [8, Object.fromEntries(rvbs.map((n, i) => [n, i % 14 >= 6 && i % 14 <= 7 ? colours[n] : [0,0,0]]))],
-      [8, shifted],
-      [8, rvb(rvbs, [0,0,0])]
-    ];
-  }
   const [first, second] = palette;
   return [
     [8, rvb(rvbs, [0,0,0])],
@@ -131,7 +101,7 @@ function beamDeploySteps() {
     [8, beam(beams, 0)]
   ];
 }
-['Blanc', 'Bleu', 'Rouge', 'Cyan', 'Mauve'].forEach(colour => {
+['Blanc'].forEach(colour => {
   make(`Hybrid Beam - Deploy ${colour}.scex`, [beams], beamDeploySteps());
 });
 make('Hybrid Beam - Deploy.scex', [beams], beamDeploySteps());
@@ -139,11 +109,7 @@ make('Hybrid Beam - Deploy.scex', [beams], beamDeploySteps());
 // Colour versions of model 30's vertical-down movement, using the
 // Full - Prod HybridRVB Size1 / Offset0 naming convention.
 const deployRgbColours = {
-  'Blanc': [255,255,255],
-  'Bleu': [0,0,255],
-  'Rouge': [255,0,0],
-  'Cyan': [0,255,255],
-  'Mauve': [180,0,255]
+  'Blanc': [255,255,255]
 };
 Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
   make(`HybridRVB - Vertical Down ${colour} - Size1 Offset0.scex`, [rvbs], verticalSweep(rvbs, rgb));
