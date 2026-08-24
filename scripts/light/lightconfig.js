@@ -16,59 +16,16 @@ function GetPageMidiToSweetlight(profile) {
         ]
     });
 
-    page.items.push(
-    {
-        id: index++,
-        name: "Hybrid RVB - Full - Rouge",
-        type: "Momentary",
-        color : "red",
-        actions: [
-            new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 2, "NoteOn", 1, 127))
-        ]
-    });
-
-    page.items.push(
-    {
-        id: index++,
-        name: "Hybrid RVB - Full - Bleu",
-        type: "Momentary",
-        color : "red",
-        actions: [
-            new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 2, "NoteOn", 2, 127))
-        ]
-    });
-
-    page.items.push(
-    {
-        id: index++,
-        name: "Hybrid RVB - Full - Blanc",
-        type: "Momentary",
-        color : "red",
-        actions: [
-            new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 2, "NoteOn", 3, 127))
-        ]
-    });
-
-    page.items.push(
-    {
-        id: index++,
-        name: "Hybrid RVB - Full - Cyan",
-        type: "Momentary",
-        color : "red",
-        actions: [
-            new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 2, "NoteOn", 4, 127))
-        ]
-    });
-
-    page.items.push(
-    {
-        id: index++,
-        name: "Hybrid RVB - Full - Mauve",
-        type: "Momentary",
-        color : "red",
-        actions: [
-            new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 2, "NoteOn", 5, 127))
-        ]
+    ["Rouge", "Bleu", "Blanc", "Cyan", "Mauve"].forEach((color, offset) => {
+        page.items.push({
+            id: index++,
+            name: `Hybrid RVB - Full - ${color}`,
+            type: "Momentary",
+            color: "red",
+            actions: [
+                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 2, "NoteOn", 1 + offset, 127))
+            ]
+        });
     });
 
     page.items.push(
@@ -7858,61 +7815,32 @@ function GetPageMidiToSweetlight(profile) {
         ]
     });
 
-    page.items.push(
-        {
+    ["Blanc", "Bleu", "Cyan", "Mauve", "Rouge"].forEach((color, offset) => {
+        page.items.push({
             id: index++,
-            name: "Hybrid RVB - Starfield Blanc",
+            name: `Hybrid RVB - Starfield ${color}`,
             type: "Momentary",
             group: "LiveHybridRVB",
             color: "red",
             actions: [
-                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 15, 127))
+                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 15 + offset, 127))
             ]
         });
-    page.items.push(
-        {
-            id: index++,
-            name: "Hybrid RVB - Starfield Bleu",
-            type: "Momentary",
-            group: "LiveHybridRVB",
-            color: "red",
-            actions: [
-                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 16, 127))
-            ]
-        });
-    page.items.push(
-        {
-            id: index++,
-            name: "Hybrid RVB - Starfield Cyan",
-            type: "Momentary",
-            group: "LiveHybridRVB",
-            color: "red",
-            actions: [
-                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 17, 127))
-            ]
-        });
-    page.items.push(
-        {
-            id: index++,
-            name: "Hybrid RVB - Starfield Mauve",
-            type: "Momentary",
-            group: "LiveHybridRVB",
-            color: "red",
-            actions: [
-                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 18, 127))
-            ]
-        });
-    page.items.push(
-        {
-            id: index++,
-            name: "Hybrid RVB - Starfield Rouge",
-            type: "Momentary",
-            group: "LiveHybridRVB",
-            color: "red",
-            actions: [
-                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 19, 127))
-            ]
-        });
+    });
+
+    ["Blanc", "Bleu", "Cyan", "Mauve", "Rouge"].forEach((color, offset) => {
+        page.items.push(
+            {
+                id: index++,
+                name: `Hybrid RVB - Deploy ${color}`,
+                type: "Momentary",
+                group: "LiveHybridRVB",
+                color: "red",
+                actions: [
+                    new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 20 + offset, 127))
+                ]
+            });
+    });
 
     return page;
 }

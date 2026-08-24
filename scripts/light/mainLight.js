@@ -109,6 +109,7 @@ function GetLightProfile()
 		new MidiXExpression(5, "EXP 6", new MidiXMessage("APC Buttons", 1, "CC", 53)),
 		new MidiXExpression(6, "EXP 7", new MidiXMessage("APC Buttons", 1, "CC", 54)),
 		new MidiXExpression(7, "EXP 8", new MidiXMessage("APC Buttons", 1, "CC", 55)),
+		new MidiXExpression(8, "EXP 9", new MidiXMessage("APC Buttons", 1, "CC", 56)),
 		new MidiXExpression(9, "EXP 10", new MidiXMessage("APC Buttons", 1, "CC", 57), true)
 
 	];
@@ -747,15 +748,19 @@ function GetPageLightAPC1(profile) {
 		page.items.push(
 			{
 				id: ++index,
-				name: "-",
+				name: "Deploy",
 				type: "Preset",
 				group: "HybridRVBMouvement",
-				color: "",
+				color: "white",
 				actions: [
-					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
-					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
-				]
-			});
+					{
+						id: 0,
+						event: "OnPress",
+						conditionnalScript: "HandleHybridRVB();return true;"
+					}
+				],
+				description: "Deploy"
+			}); indexNoteMidi++;
 		page.items.push(
 			{
 				id: ++index,
@@ -4248,6 +4253,10 @@ function HandleHybridRVB()
 	if (mouvement == "Starfield")
 	{
 		name = `Hybrid RVB - Starfield ${color}`;
+	}
+	if (mouvement == "Deploy")
+	{
+		name = `Hybrid RVB - Deploy ${color}`;
 	}
 	
 	var button = AppData.Pages[2].items.filter((x) => {return x.name == name;})[0];
