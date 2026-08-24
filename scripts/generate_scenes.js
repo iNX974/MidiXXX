@@ -19,6 +19,16 @@ function active(v){if(v===undefined||v===null) return false; return Array.isArra
 function make(file, groups, steps, exact=false){const fixtures=universe.filter(n=>steps.some(s=>active(s[1][n]))), fixture=fixtures.map(n=>`    <Fixture id="${ids(n)}" name="${name(n)}" model="${model(n)}" />`).join('\n'); const rendered=exact?steps:dense(steps); const body=rendered.map((s,si)=>`    <Step name="Step ${si+1}" length="${s[0]}">\n${fixtures.map(n=>`      <Fixture id="${ids(n)}">${ch(n,s[1][n]).map((x,i)=>`<Channel index="${i}" name="${x[0]}" value="${x[1]}" />`).join('')}</Fixture>`).join('\n')}\n    </Step>`).join('\n'); const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<Scene>\n  <Fixtures>\n${fixture}\n  </Fixtures>\n  <Steps>\n${body}\n  </Steps>\n</Scene>\n`; require('fs').writeFileSync(path.join(out,file),xml,'utf8')}
 const zero=(g,v=0)=>Object.fromEntries(g.map(n=>[n,v]));
 const wash=(g,v)=>zero(g,v); const rvb=(g,v)=>zero(g,v); const beam=(g,v)=>zero(g,v); const lyre=(g,v)=>zero(g,v);
+
+// Diagnostic scene: identify the physical order of the four 14-pixel bars,
+// then identify every Hybrid RVB fixture in the logical order used here.
+const positioningSteps = [
+  [20, Object.fromEntries(rvbs.map((n, i) => [
+    n, [[255, 0, 0], [0, 255, 0], [0, 0, 255], [255, 255, 255]][Math.floor(i / 14)]
+  ]))]
+];
+make('00_hybrid_rvb_positionnement.scex', [rvbs], positioningSteps, true);
+
 make('01_hybrid_centre_exterieur.scex',[rvbs],[[8,rvb(rvbs,[0,0,0])],[8,Object.fromEntries(rvbs.map(n=>[n,rvbs.indexOf(n)%14>=6&&rvbs.indexOf(n)%14<=7?[0,180,255]:[0,0,0]]))],[8,Object.fromEntries(rvbs.map(n=>[n,[0,180,255].map(x=>x)]))],[8,rvb(rvbs,[0,0,0])]]);
 const lstep = (pan, tilt) => Object.fromEntries(lyres.map((n,i)=>[n,[i<2?pan:255-pan, tilt + (i%2)*10]]));
 make('02_lyres_fan.scex',[lyres],[[20,lstep(35,90)],[20,lstep(90,110)],[20,lstep(165,110)],[20,lstep(220,90)]]);
@@ -220,12 +230,6 @@ function pixelValues(group, activeIndexes, value) {
   const active = new Set(activeIndexes);
   return Object.fromEntries(group.map((n, i) => [n, active.has(i) ? value : (Array.isArray(value) ? [0,0,0] : 0)]));
 }
-function pixelChaseRvb(colour) {
-  return pixelOrder.map(index => [10, pixelValues(rvbs, [index], colour)]);
-}
-function pixelChaseBeam() {
-  return pixelOrder.map(index => [10, pixelValues(beams, [index], 255)]);
-}
 function pixelMirrorRvb(colour) {
   return Array.from({length:7}, (_, position) => [10, pixelValues(
     rvbs,
@@ -255,11 +259,9 @@ function pixelScatterBeam() {
   )]);
 }
 Object.entries(deployRgbColours).forEach(([colour, rgb]) => {
-  make(`Hybrid RVB - Pixel Chase ${colour}.scex`, [rvbs], pixelChaseRvb(rgb), true);
   make(`Hybrid RVB - Pixel Mirror ${colour}.scex`, [rvbs], pixelMirrorRvb(rgb), true);
   make(`Hybrid RVB - Pixel Scatter ${colour}.scex`, [rvbs], pixelScatterRvb(rgb), true);
 });
-make('Hybrid Beam - Pixel Chase.scex', [beams], pixelChaseBeam(), true);
 make('Hybrid Beam - Pixel Mirror.scex', [beams], pixelMirrorBeam(), true);
 make('Hybrid Beam - Pixel Scatter.scex', [beams], pixelScatterBeam(), true);
 
