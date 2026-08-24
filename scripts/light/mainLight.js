@@ -747,15 +747,19 @@ function GetPageLightAPC1(profile) {
 		page.items.push(
 			{
 				id: ++index,
-				name: "-",
+				name: "Deploy",
 				type: "Preset",
 				group: "HybridRVBMouvement",
-				color: "",
+				color: "white",
 				actions: [
-					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
-					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
-				]
-			});
+					{
+						id: 0,
+						event: "OnPress",
+						conditionnalScript: "HandleHybridRVB();return true;"
+					}
+				],
+				description: "Deploy"
+			}); indexNoteMidi++;
 		page.items.push(
 			{
 				id: ++index,
@@ -767,7 +771,7 @@ function GetPageLightAPC1(profile) {
 					new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi, 127)),
 					new MidiXAction(1, "", "OnRelease", "Midi", new MidiXMessage("Sweetlight", 10, "NoteOn", indexNoteMidi++, 0))
 				]
-			});
+			});		
 		page.items.push(
 			{
 				id: ++index,
@@ -4248,6 +4252,10 @@ function HandleHybridRVB()
 	if (mouvement == "Starfield")
 	{
 		name = `Hybrid RVB - Starfield ${color}`;
+	}
+	if (mouvement == "Deploy")
+	{
+		name = `Hybrid RVB - Deploy ${color}`;
 	}
 	
 	var button = AppData.Pages[2].items.filter((x) => {return x.name == name;})[0];

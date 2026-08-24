@@ -7914,5 +7914,61 @@ function GetPageMidiToSweetlight(profile) {
             ]
         });
 
+    page.items.push(
+        {
+            id: index++,
+            name: "Hybrid RVB - Deploy Blanc",
+            type: "Momentary",
+            group: "LiveHybridRVB",
+            color: "red",
+            actions: [
+                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 20, 127))
+            ]
+        });
+    page.items.push(
+        {
+            id: index++,
+            name: "Hybrid RVB - Deploy Bleu",
+            type: "Momentary",
+            group: "LiveHybridRVB",
+            color: "red",
+            actions: [
+                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 21, 127))
+            ]
+        });
+    page.items.push(
+        {
+            id: index++,
+            name: "Hybrid RVB - Deploy Cyan",
+            type: "Momentary",
+            group: "LiveHybridRVB",
+            color: "red",
+            actions: [
+                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 22, 127))
+            ]
+        });
+    page.items.push(
+        {
+            id: index++,
+            name: "Hybrid RVB - Deploy Mauve",
+            type: "Momentary",
+            group: "LiveHybridRVB",
+            color: "red",
+            actions: [
+                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 23, 127))
+            ]
+        });
+    page.items.push(
+        {
+            id: index++,
+            name: "Hybrid RVB - Deploy Rouge",
+            type: "Momentary",
+            group: "LiveHybridRVB",
+            color: "red",
+            actions: [
+                new MidiXAction(0, "", "OnPress", "Midi", new MidiXMessage("Sweetlight", 7, "NoteOn", 24, 127))
+            ]
+        });
+
     return page;
 }
