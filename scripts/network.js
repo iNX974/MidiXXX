@@ -2,9 +2,19 @@ var isPeerClient = false;
 var networkSocket = null;
 var networkConnected = false;
 
-function IsNetworkMirror() {
+function GetNetworkRole() {
 	var params = new URLSearchParams(window.location.search);
-	return params.get("role") === "mirror" || params.get("mirror") === "true" || params.get("client") === "true";
+	if (params.get("role") === "mirror" || params.get("mirror") === "true" || params.get("client") === "true") {
+		return "mirror";
+	}
+	if (params.get("role") === "master") {
+		return "master";
+	}
+	return null;
+}
+
+function IsNetworkMirror() {
+	return GetNetworkRole() === "mirror";
 }
 
 function SwitchToMirror() {
@@ -15,9 +25,21 @@ function SwitchToMirror() {
 	window.location.href = url.toString();
 }
 
+function SwitchToMaster() {
+	var url = new URL(window.location.href);
+	url.searchParams.set("role", "master");
+	url.searchParams.delete("mirror");
+	url.searchParams.delete("client");
+	window.location.href = url.toString();
+}
+
 function InitializeNetwork() {
-	isPeerClient = IsNetworkMirror();
-	var role = isPeerClient ? "mirror" : "master";
+	var role = GetNetworkRole();
+	isPeerClient = role === "mirror";
+	if (!role) {
+		console.log("MidiXXX network disabled; local mode");
+		return;
+	}
 	var host = window.location.hostname || "localhost";
 
 	try {

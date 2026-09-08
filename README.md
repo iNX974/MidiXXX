@@ -12,7 +12,7 @@ MidiXXX est une interface web de contrôle MIDI destinée à piloter un environn
 - expressions, LFO, macros, boutons liés et conditions ;
 - profils de configuration et export manuel en `MidiXXX_Save.json` ;
 - mode lumière pour piloter Sweetlight ;
-- synchronisation d’une instance cliente avec une instance principale via PeerJS ;
+- synchronisation maître/miroir sur le réseau local via WebSocket ;
 - bouton « Panic » pour envoyer un arrêt des notes MIDI.
 
 ## Prérequis
@@ -30,10 +30,10 @@ Le dépôt ne contient ni `package.json`, ni étape de compilation. Il peut donc
 Par exemple, avec Python :
 
 ```powershell
-python -m http.server 8000
+py -m http.server 8000 --bind 0.0.0.0
 ```
 
-Puis ouvrir [http://localhost:8000/index.html](http://localhost:8000/index.html) dans un navigateur compatible Web MIDI et autoriser l’accès MIDI lorsqu’il est demandé.
+Puis ouvrir [http://localhost:8000/index.html](http://localhost:8000/index.html) dans un navigateur compatible Web MIDI et autoriser l’accès MIDI lorsqu’il est demandé. Le mode réseau est désactivé par défaut.
 
 ### Synchronisation maître/miroir hors ligne
 
@@ -51,7 +51,7 @@ Puis, sur l’ordinateur maître :
 py server.py
 ```
 
-Ouvrir ensuite le maître avec `http://<IP-DU-PC>:8000/index.html?role=master` et les miroirs avec `http://<IP-DU-PC>:8000/index.html?role=mirror`. Le maître est le seul navigateur qui demande l’accès aux périphériques MIDI. Le serveur local utilise le port HTTP `8000` et le port WebSocket `8765` ; ces ports doivent être autorisés dans le pare-feu Windows.
+Ouvrir ensuite `http://<IP-DU-PC>:8000/index.html`. Dans les réglages, cliquer sur `Lancer le mode maître` pour activer le maître, ou sur `Devenir miroir` pour activer un miroir. Les URL explicites équivalentes sont `?role=master` et `?role=mirror`. Le maître est le seul navigateur qui demande l’accès aux périphériques MIDI. Le serveur local utilise le port HTTP `8000` et le port WebSocket `8765` ; ces ports doivent être autorisés dans le pare-feu Windows.
 
 Le dépôt contient également `install/Simple-Web-Server-Installer-1.2.11-x64.exe`, un installateur Windows fourni pour servir des fichiers localement. Il n’est pas nécessaire si un autre serveur HTTP est déjà disponible.
 
@@ -64,7 +64,8 @@ Le mode est sélectionné à partir de l’URL :
 | `/index.html` | Interface principale avec le profil audio/MIDI par défaut |
 | `/index.html?light` | Interface de contrôle lumière basée sur Sweetlight |
 | `/index.html?page=1` | Ouvre directement la page dont l’identifiant est fourni |
-| `/index.html?client=true` | Instance cliente PeerJS synchronisée avec l’instance principale |
+| `/index.html?role=master` | Active le mode maître réseau |
+| `/index.html?role=mirror` | Active le mode miroir réseau |
 
 Les paramètres peuvent être combinés selon le besoin, par exemple `/index.html?light&page=0`. Le mode lumière et le mode page sont interprétés par la présence de leur nom dans l’URL.
 
@@ -91,7 +92,7 @@ scripts/
   ui.js                     Construction et comportement de l’interface
   validator.js              Validation des formulaires de configuration
   db.js                     Lecture/écriture du profil dans localStorage
-  peer.js                   Synchronisation PeerJS entre instances
+  network.js                Connexion maître/miroir WebSocket
   tools.js                  Utilitaires, journalisation et export
   dist/                     Bibliothèques JavaScript embarquées
   light/                    Profil et configuration du mode Sweetlight
@@ -100,7 +101,7 @@ todo.txt                    Bugs et tâches connus
 install/                    Outil Windows de serveur web local
 ```
 
-Les bibliothèques tierces actuellement embarquées dans `scripts/dist/` comprennent WebMidi, PeerJS et LFO. L’application les charge directement depuis `index.html` ; aucune installation npm n’est requise.
+Les bibliothèques tierces actuellement embarquées dans `scripts/dist/` comprennent WebMidi et LFO. La communication réseau utilise l’API WebSocket native du navigateur et le serveur Python utilise la dépendance `websockets` listée dans `requirements.txt`.
 
 ## Configuration MIDI intégrée
 
@@ -131,7 +132,8 @@ Il n’y a pas de tests automatisés ni de pipeline de build présents dans le d
 
 - Les droits d’accès MIDI sont accordés par le navigateur et peuvent être révoqués.
 - Les noms de ports MIDI sont importants pour la résolution des périphériques.
-- Une instance PeerJS principale utilise l’identifiant `MidiXXXPeer`; une instance cliente se connecte avec `?client=true`.
+- Le mode réseau est désactivé sans paramètre `role`. Le maître et les miroirs doivent utiliser le même serveur local et le même réseau.
+- Seul le maître doit avoir accès aux périphériques MIDI.
 - Les données d’exploitation et les profils peuvent contenir une configuration spécifique au matériel local : ne pas partager d’export sans le vérifier.
 - Les bugs et travaux connus sont listés dans [`todo.txt`](todo.txt).
 
