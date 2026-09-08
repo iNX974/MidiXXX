@@ -7,6 +7,14 @@ function IsNetworkMirror() {
 	return params.get("role") === "mirror" || params.get("mirror") === "true" || params.get("client") === "true";
 }
 
+function SwitchToMirror() {
+	var url = new URL(window.location.href);
+	url.searchParams.set("role", "mirror");
+	url.searchParams.delete("mirror");
+	url.searchParams.delete("client");
+	window.location.href = url.toString();
+}
+
 function InitializeNetwork() {
 	isPeerClient = IsNetworkMirror();
 	var role = isPeerClient ? "mirror" : "master";
