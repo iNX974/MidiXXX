@@ -84,7 +84,8 @@ Les paramètres peuvent être combinés selon le besoin, par exemple `/index.htm
 index.html                  Interface et templates HTML
 css/                        Styles de l’application
 scripts/
-  main.js                   Initialisation et profils audio/MIDI
+  main.js                   Initialisation générale de l’application
+  board/mainBoard.js        Profil de la board audio/MIDI principale
   class.js                  Modèle des profils, pages, boutons et messages
   midi.js                   Envoi, réception et apprentissage MIDI
   ui.js                     Construction et comportement de l’interface

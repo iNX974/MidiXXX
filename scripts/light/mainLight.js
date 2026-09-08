@@ -4278,3 +4278,50 @@ function HandleSpot()
 		SendMidi(message);
 	}	
 }
+function GetItemButtonForLight(index, label, keyboard, channel, note, color) {
+	return {
+		id: index,
+		name: label,
+		type: "Preset",
+		actions: [
+			new MidiXAction(0, "On", "OnPress", "Midi", new MidiXMessage("Sweetlight", channel, "NoteOn", note)),
+			new MidiXAction(1, "Off", "OnRelease", "Midi", new MidiXMessage("Sweetlight", channel, "NoteOff", note))
+		],
+		color: color,
+		triggers: [
+			{
+				device: "Keyboard",
+				keyboardKey: keyboard
+			},
+			{
+				device: "Sweetlight", midiType: "NoteOn", channel: channel, value: note, triggerAction: "StateOn"
+			},
+			{
+				device: "Sweetlight", midiType: "NoteOff", channel: channel, value: note, triggerAction: "StateOff"
+			}
+		]
+	};
+}
+function GetMidiMessageForColorAPC(note, color, action)
+{
+	var channel = 13;
+	var velocity = 3;
+	if(action== "off")	{ channel = 1;	}
+	else if(action == "full"){channel = 7;}
+	else if(action == "dimmed") {channel = 2;}
+	else if(action == "blink"){channel = 15;}
+	else if(action == "blinkfast") {channel = 12;}
+	else if(action == "pulse"){channel = 11;}
+	else if(action == "pulsefast") {channel = 8;}
+	if(color == "white")	{ velocity = 3;}
+	else if(color == "black"){channel = 1 ; }
+	else if(color == "red")	{ velocity = 5; }
+	else if(color == "violet"){velocity = 82;}
+	else if(color == "cyan"){velocity = 32;}
+	else if(color == "blue"){velocity = 45 ;}
+	else if(color == "yellow"){velocity = 9;}
+	else if(color == "green"){velocity = 88;}
+	else if(color == "pink"){velocity = 56;}
+	else if(color == "orange"){ velocity = 96;}
+	return new MidiXMessage("APC Buttons",channel, "NoteOn", note, velocity);
+}
