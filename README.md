@@ -35,6 +35,24 @@ python -m http.server 8000
 
 Puis ouvrir [http://localhost:8000/index.html](http://localhost:8000/index.html) dans un navigateur compatible Web MIDI et autoriser l’accès MIDI lorsqu’il est demandé.
 
+### Synchronisation maître/miroir hors ligne
+
+Pour utiliser plusieurs navigateurs sur le même réseau sans Internet, le dépôt contient un serveur local qui sert les fichiers et relaie les messages entre les navigateurs.
+
+Installer la dépendance une fois, lorsque Python peut accéder au paquet :
+
+```powershell
+py -m pip install -r requirements.txt
+```
+
+Puis, sur l’ordinateur maître :
+
+```powershell
+py server.py
+```
+
+Ouvrir ensuite le maître avec `http://<IP-DU-PC>:8000/index.html?role=master` et les miroirs avec `http://<IP-DU-PC>:8000/index.html?role=mirror`. Le maître est le seul navigateur qui demande l’accès aux périphériques MIDI. Le serveur local utilise le port HTTP `8000` et le port WebSocket `8765` ; ces ports doivent être autorisés dans le pare-feu Windows.
+
 Le dépôt contient également `install/Simple-Web-Server-Installer-1.2.11-x64.exe`, un installateur Windows fourni pour servir des fichiers localement. Il n’est pas nécessaire si un autre serveur HTTP est déjà disponible.
 
 ## Modes d’accès

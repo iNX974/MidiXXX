@@ -622,6 +622,7 @@ function ActionClickFinalise(item, obj)
 	}
 	SetInputMidiMessageToHandle();
 	UpdateButtons(item.id);	
+	BroadcastNetworkState();
 	//SetLastButtons(item);
 	//SetActiveButtons(item);
 }
@@ -1503,6 +1504,7 @@ function GotoPage(id)
 	}
 	BuildButtons();	
 	BuildExp();
+	BroadcastNetworkState();
 }
 function NextPage()
 {

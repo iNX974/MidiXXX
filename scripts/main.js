@@ -4,8 +4,7 @@ function InitApp() {
 		InitButtonConfiguration();
 		InitAllButtons();
 		
-		WebMidi
-			.enable()
+		(IsNetworkMirror() ? Promise.resolve() : WebMidi.enable())
 			.then(onEnabled)
 			.catch(err => alert(err));
 		function onEnabled() {
@@ -18,6 +17,7 @@ function InitApp() {
 				SusbcribeToKeyboardEvents();
 				SetInputMidiMessageToHandle();
 				OpenMainPage();
+				InitializeNetwork();
 				
 				if(IsModeLight() == false)
 				{
@@ -37,7 +37,6 @@ function InitApp() {
 						ClickButton(AppData.Pages[5].items[3]);
 						ClickButton(AppData.Pages[5].items[5]);
 						GotoPage(1);
-						InitializePeer();
 					}
 				}
 				else
